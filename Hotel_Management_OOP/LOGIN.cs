@@ -41,5 +41,13 @@ namespace Hotel_Management_OOP
 
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BookingTab form = new BookingTab();
+            form.ShowDialog();
+
+        }
     }
 }

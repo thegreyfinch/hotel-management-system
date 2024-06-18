@@ -34,17 +34,16 @@
             panelLoad = new Panel();
             panel2 = new Panel();
             timer1 = new System.Windows.Forms.Timer(components);
-            pictureBox1 = new PictureBox();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Salmon;
-            label1.Location = new Point(324, 405);
+            label1.ForeColor = Color.Cornsilk;
+            label1.Location = new Point(342, 375);
             label1.Name = "label1";
             label1.Size = new Size(199, 46);
             label1.TabIndex = 6;
@@ -74,32 +73,21 @@
             timer1.Interval = 25;
             timer1.Tick += timer1_Tick;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.White;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(158, 68);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(522, 331);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
-            // 
             // SplashScreen
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(853, 572);
             Controls.Add(panel2);
             Controls.Add(label1);
-            Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "SplashScreen";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SplashScreen";
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -109,6 +97,5 @@
         private Panel panelLoad;
         private Panel panel2;
         private System.Windows.Forms.Timer timer1;
-        private PictureBox pictureBox1;
     }
 }
