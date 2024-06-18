@@ -21,5 +21,25 @@ namespace Hotel_Management_OOP
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (textBox2.PasswordChar == '*')
+            {
+                pictureBox2.BringToFront();
+                textBox2.PasswordChar = '\0';
+
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (textBox2.PasswordChar == '\0')
+            {
+                pictureBox3.BringToFront();
+                textBox2.PasswordChar = '*';
+
+            }
+        }
     }
 }

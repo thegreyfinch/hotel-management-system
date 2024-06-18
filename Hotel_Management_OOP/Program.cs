@@ -12,10 +12,11 @@ namespace Hotel_Management_OOP
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new Login());
+            Application.Run(new SplashScreen());
             //Application.Run(new NEW_USER());
             //Application.Run(new BOOKING());
-            Application.Run(new HOME_DRAFT());
-            
+            //Application.Run(new HOME_DRAFT());
+
         }
     }
 }
