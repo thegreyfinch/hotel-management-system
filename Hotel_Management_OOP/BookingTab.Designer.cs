@@ -38,6 +38,14 @@
             button7 = new Button();
             button1 = new Button();
             dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
             panel4 = new Panel();
             button3 = new Button();
             pictureBox2 = new PictureBox();
@@ -47,14 +55,6 @@
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
             label1 = new Label();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel4.SuspendLayout();
@@ -107,6 +107,7 @@
             button9.TabIndex = 4;
             button9.Text = "Add... +";
             button9.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click;
             // 
             // button8
             // 
@@ -161,6 +162,62 @@
             dataGridView1.RowHeadersWidth = 56;
             dataGridView1.Size = new Size(1608, 514);
             dataGridView1.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Booking_ID";
+            Column1.MinimumWidth = 7;
+            Column1.Name = "Column1";
+            Column1.Width = 175;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Customer_ID";
+            Column2.MinimumWidth = 7;
+            Column2.Name = "Column2";
+            Column2.Width = 175;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Room_ID";
+            Column3.MinimumWidth = 7;
+            Column3.Name = "Column3";
+            Column3.Width = 135;
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Check-in";
+            Column4.MinimumWidth = 7;
+            Column4.Name = "Column4";
+            Column4.Width = 145;
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Check-out";
+            Column5.MinimumWidth = 7;
+            Column5.Name = "Column5";
+            Column5.Width = 145;
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Price";
+            Column6.MinimumWidth = 7;
+            Column6.Name = "Column6";
+            Column6.Width = 175;
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Booking_Status";
+            Column7.MinimumWidth = 6;
+            Column7.Name = "Column7";
+            Column7.Width = 125;
+            // 
+            // Column8
+            // 
+            Column8.HeaderText = "Booking_Date";
+            Column8.MinimumWidth = 6;
+            Column8.Name = "Column8";
+            Column8.Width = 125;
             // 
             // panel4
             // 
@@ -279,62 +336,6 @@
             label1.TabIndex = 0;
             label1.Text = "Booking";
             label1.Click += label1_Click;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Booking_ID";
-            Column1.MinimumWidth = 7;
-            Column1.Name = "Column1";
-            Column1.Width = 175;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Customer_ID";
-            Column2.MinimumWidth = 7;
-            Column2.Name = "Column2";
-            Column2.Width = 175;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Room_ID";
-            Column3.MinimumWidth = 7;
-            Column3.Name = "Column3";
-            Column3.Width = 135;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Check-in";
-            Column4.MinimumWidth = 7;
-            Column4.Name = "Column4";
-            Column4.Width = 145;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Check-out";
-            Column5.MinimumWidth = 7;
-            Column5.Name = "Column5";
-            Column5.Width = 145;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Price";
-            Column6.MinimumWidth = 7;
-            Column6.Name = "Column6";
-            Column6.Width = 175;
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Booking_Status";
-            Column7.MinimumWidth = 6;
-            Column7.Name = "Column7";
-            Column7.Width = 125;
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Booking_Date";
-            Column8.MinimumWidth = 6;
-            Column8.Name = "Column8";
-            Column8.Width = 125;
             // 
             // BookingTab
             // 

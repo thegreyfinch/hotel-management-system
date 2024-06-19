@@ -19,7 +19,7 @@ namespace Hotel_Management_OOP
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            panelLoad.Width += 3;
+            panelLoad.Width += 8;
             if (panelLoad.Width>= 521)
             {
                 timer1.Stop();

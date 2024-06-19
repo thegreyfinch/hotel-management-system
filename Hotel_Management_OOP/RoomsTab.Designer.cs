@@ -50,6 +50,7 @@
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
+            PricePerNight = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel4.SuspendLayout();
@@ -250,7 +251,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, PricePerNight });
             dataGridView1.Location = new Point(13, 121);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 56;
@@ -290,6 +291,13 @@
             Column3.MinimumWidth = 7;
             Column3.Name = "Column3";
             Column3.Width = 135;
+            // 
+            // PricePerNight
+            // 
+            PricePerNight.HeaderText = "Price Per Night";
+            PricePerNight.MinimumWidth = 6;
+            PricePerNight.Name = "PricePerNight";
+            PricePerNight.Width = 125;
             // 
             // RoomsTab
             // 
@@ -334,5 +342,6 @@
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn PricePerNight;
     }
 }

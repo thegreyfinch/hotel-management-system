@@ -28,5 +28,33 @@ namespace Hotel_Management_OOP
             BookingTab form = new BookingTab();
             form.ShowDialog();
         }
+        private void guestaddbutton_Click(object sender, EventArgs e)
+        {
+            // CheckIfDataExists();
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        /*private void CheckIfDataExists()
+        {
+            if (!File.Exists("HMS.db"))
+            {
+                SQLiteConnection.CreateFile("HMS.db");
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source = HMS.db;Version=3"))
+                {
+                    string commandstring = 
+                }
+            }
+        }
+
+       */
     }
 }
