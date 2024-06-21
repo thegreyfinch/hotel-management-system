@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GuestTab));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             label1 = new Label();
             button3 = new Button();
             button2 = new Button();
@@ -53,19 +53,17 @@
             button8 = new Button();
             button7 = new Button();
             button1 = new Button();
-            dataGridView1 = new DataGridView();
+            dataGridViewGuests = new DataGridView();
+            Gn = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
             panel2 = new Panel();
             tabControl1 = new TabControl();
             Booking = new TabPage();
-            Guests = new TabPage();
-            Rooms = new TabPage();
-            button5 = new Button();
-            dataGridView2 = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            PricePerNight = new DataGridViewTextBoxColumn();
-            dataGridView3 = new DataGridView();
+            dataGridViewBooking = new DataGridView();
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
@@ -74,12 +72,15 @@
             Column6 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
-            Gn = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
+            Guests = new TabPage();
+            Rooms = new TabPage();
+            dataGridViewRooms = new DataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            PricePerNight = new DataGridViewTextBoxColumn();
+            button5 = new Button();
+            pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
@@ -90,14 +91,15 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)HomeOutline).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewGuests).BeginInit();
             panel2.SuspendLayout();
             tabControl1.SuspendLayout();
             Booking.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewBooking).BeginInit();
             Guests.SuspendLayout();
             Rooms.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewRooms).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -108,9 +110,9 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(14, 87);
             label1.Name = "label1";
-            label1.Size = new Size(124, 39);
+            label1.Size = new Size(323, 39);
             label1.TabIndex = 0;
-            label1.Text = "Guests";
+            label1.Text = "Booking and Guests";
             // 
             // button3
             // 
@@ -118,7 +120,7 @@
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold);
-            button3.ForeColor = Color.White;
+            button3.ForeColor = Color.Black;
             button3.Location = new Point(42, 794);
             button3.Name = "button3";
             button3.Size = new Size(176, 60);
@@ -132,7 +134,7 @@
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold);
-            button2.ForeColor = Color.White;
+            button2.ForeColor = Color.Black;
             button2.Location = new Point(42, 598);
             button2.Name = "button2";
             button2.Size = new Size(176, 100);
@@ -146,7 +148,7 @@
             button12.FlatAppearance.BorderSize = 0;
             button12.FlatStyle = FlatStyle.Flat;
             button12.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold);
-            button12.ForeColor = Color.White;
+            button12.ForeColor = Color.Black;
             button12.Location = new Point(58, 434);
             button12.Name = "button12";
             button12.Size = new Size(158, 78);
@@ -161,7 +163,7 @@
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold);
             button4.ForeColor = Color.Black;
-            button4.Location = new Point(71, 306);
+            button4.Location = new Point(80, 315);
             button4.Name = "button4";
             button4.Size = new Size(109, 51);
             button4.TabIndex = 4;
@@ -181,9 +183,7 @@
             // panel4
             // 
             panel4.BackColor = Color.Salmon;
-            panel4.Controls.Add(pictureBox9);
             panel4.Controls.Add(pictureBox8);
-            panel4.Controls.Add(pictureBox7);
             panel4.Controls.Add(pictureBox6);
             panel4.Controls.Add(pictureBox5);
             panel4.Controls.Add(pictureBox4);
@@ -193,6 +193,9 @@
             panel4.Controls.Add(button12);
             panel4.Controls.Add(button4);
             panel4.Controls.Add(pictureBox1);
+            panel4.Controls.Add(pictureBox3);
+            panel4.Controls.Add(pictureBox7);
+            panel4.Controls.Add(pictureBox9);
             panel4.Location = new Point(3, 3);
             panel4.Name = "panel4";
             panel4.Size = new Size(261, 1027);
@@ -201,7 +204,7 @@
             // pictureBox9
             // 
             pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(146, 724);
+            pictureBox9.Location = new Point(100, 724);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(56, 49);
             pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
@@ -211,7 +214,7 @@
             // pictureBox8
             // 
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(71, 724);
+            pictureBox8.Location = new Point(100, 724);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(56, 49);
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
@@ -221,7 +224,7 @@
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(133, 543);
+            pictureBox7.Location = new Point(100, 543);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(56, 49);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
@@ -231,7 +234,7 @@
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(71, 543);
+            pictureBox6.Location = new Point(100, 543);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(56, 49);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
@@ -241,7 +244,7 @@
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(133, 379);
+            pictureBox5.Location = new Point(105, 379);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(56, 49);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -251,7 +254,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(71, 379);
+            pictureBox4.Location = new Point(105, 379);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(56, 49);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -261,7 +264,7 @@
             // HomeOutline
             // 
             HomeOutline.Image = (Image)resources.GetObject("HomeOutline.Image");
-            HomeOutline.Location = new Point(128, 256);
+            HomeOutline.Location = new Point(105, 265);
             HomeOutline.Name = "HomeOutline";
             HomeOutline.Size = new Size(51, 44);
             HomeOutline.SizeMode = PictureBoxSizeMode.Zoom;
@@ -347,27 +350,67 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // dataGridView1
+            // dataGridViewGuests
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
-            dataGridView1.BackgroundColor = Color.FromArgb(255, 224, 192);
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(72, 34, 22);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 8.861538F);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Gn, Column2, Column3, Column4, Column5, Column1 });
-            dataGridView1.Location = new Point(0, 3);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 56;
-            dataGridView1.Size = new Size(1595, 583);
-            dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridViewGuests.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewGuests.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+            dataGridViewGuests.BackgroundColor = Color.FromArgb(255, 224, 192);
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(72, 34, 22);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 8.861538F);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridViewGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewGuests.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewGuests.Columns.AddRange(new DataGridViewColumn[] { Gn, Column2, Column3, Column4, Column5, Column1 });
+            dataGridViewGuests.Location = new Point(0, 3);
+            dataGridViewGuests.Name = "dataGridViewGuests";
+            dataGridViewGuests.RowHeadersWidth = 56;
+            dataGridViewGuests.Size = new Size(1595, 583);
+            dataGridViewGuests.TabIndex = 0;
+            dataGridViewGuests.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // Gn
+            // 
+            Gn.FillWeight = 200F;
+            Gn.HeaderText = "Full_Name";
+            Gn.MinimumWidth = 7;
+            Gn.Name = "Gn";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Sex";
+            Column2.MinimumWidth = 7;
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.FillWeight = 250F;
+            Column3.HeaderText = "Contact_Number";
+            Column3.MinimumWidth = 7;
+            Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            Column4.FillWeight = 200F;
+            Column4.HeaderText = "Age_Category";
+            Column4.MinimumWidth = 7;
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.FillWeight = 200F;
+            Column5.HeaderText = "Room_Number";
+            Column5.MinimumWidth = 7;
+            Column5.Name = "Column5";
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Status";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
             // 
             // panel2
             // 
@@ -388,6 +431,7 @@
             tabControl1.Controls.Add(Booking);
             tabControl1.Controls.Add(Guests);
             tabControl1.Controls.Add(Rooms);
+            tabControl1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tabControl1.Location = new Point(14, 124);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -396,113 +440,33 @@
             // 
             // Booking
             // 
-            Booking.Controls.Add(dataGridView3);
-            Booking.Location = new Point(4, 30);
+            Booking.Controls.Add(dataGridViewBooking);
+            Booking.Location = new Point(4, 34);
             Booking.Name = "Booking";
             Booking.Padding = new Padding(3);
-            Booking.Size = new Size(1598, 589);
+            Booking.Size = new Size(1598, 585);
             Booking.TabIndex = 0;
             Booking.Text = "Booking";
             Booking.UseVisualStyleBackColor = true;
             // 
-            // Guests
+            // dataGridViewBooking
             // 
-            Guests.Controls.Add(dataGridView1);
-            Guests.Location = new Point(4, 30);
-            Guests.Name = "Guests";
-            Guests.Padding = new Padding(3);
-            Guests.Size = new Size(1598, 589);
-            Guests.TabIndex = 1;
-            Guests.Text = "Guests";
-            Guests.UseVisualStyleBackColor = true;
-            // 
-            // Rooms
-            // 
-            Rooms.Controls.Add(dataGridView2);
-            Rooms.Location = new Point(4, 30);
-            Rooms.Name = "Rooms";
-            Rooms.Padding = new Padding(3);
-            Rooms.Size = new Size(1598, 589);
-            Rooms.TabIndex = 2;
-            Rooms.Text = "Rooms";
-            Rooms.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.FromArgb(125, 157, 66);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(1468, 789);
-            button5.Name = "button5";
-            button5.Size = new Size(140, 43);
-            button5.TabIndex = 5;
-            button5.Text = "Save";
-            button5.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView2
-            // 
-            dataGridView2.BackgroundColor = Color.FromArgb(255, 224, 192);
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(72, 34, 22);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 8.861538F);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, PricePerNight });
-            dataGridView2.Location = new Point(0, 3);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 56;
-            dataGridView2.Size = new Size(1598, 586);
-            dataGridView2.TabIndex = 7;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.HeaderText = "Room ID";
-            dataGridViewTextBoxColumn1.MinimumWidth = 7;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.Width = 175;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.HeaderText = "Room Type";
-            dataGridViewTextBoxColumn2.MinimumWidth = 7;
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.Width = 175;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.HeaderText = "Room Status";
-            dataGridViewTextBoxColumn3.MinimumWidth = 7;
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.Width = 135;
-            // 
-            // PricePerNight
-            // 
-            PricePerNight.HeaderText = "Price Per Night";
-            PricePerNight.MinimumWidth = 6;
-            PricePerNight.Name = "PricePerNight";
-            PricePerNight.Width = 125;
-            // 
-            // dataGridView3
-            // 
-            dataGridView3.BackgroundColor = Color.FromArgb(255, 224, 192);
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(72, 34, 22);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 8.861538F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, Column6, Column7, Column8 });
-            dataGridView3.Location = new Point(0, 3);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.RowHeadersWidth = 56;
-            dataGridView3.Size = new Size(1595, 586);
-            dataGridView3.TabIndex = 7;
+            dataGridViewBooking.BackgroundColor = Color.FromArgb(255, 224, 192);
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(72, 34, 22);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 8.861538F);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dataGridViewBooking.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewBooking.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewBooking.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, Column6, Column7, Column8 });
+            dataGridViewBooking.Location = new Point(0, 3);
+            dataGridViewBooking.Name = "dataGridViewBooking";
+            dataGridViewBooking.RowHeadersWidth = 56;
+            dataGridViewBooking.Size = new Size(1595, 586);
+            dataGridViewBooking.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -560,45 +524,96 @@
             Column8.Name = "Column8";
             Column8.Width = 125;
             // 
-            // Gn
+            // Guests
             // 
-            Gn.FillWeight = 200F;
-            Gn.HeaderText = "Full_Name";
-            Gn.MinimumWidth = 7;
-            Gn.Name = "Gn";
+            Guests.Controls.Add(dataGridViewGuests);
+            Guests.Location = new Point(4, 34);
+            Guests.Name = "Guests";
+            Guests.Padding = new Padding(3);
+            Guests.Size = new Size(1598, 585);
+            Guests.TabIndex = 1;
+            Guests.Text = "Guests";
+            Guests.UseVisualStyleBackColor = true;
             // 
-            // Column2
+            // Rooms
             // 
-            Column2.HeaderText = "Sex";
-            Column2.MinimumWidth = 7;
-            Column2.Name = "Column2";
+            Rooms.Controls.Add(dataGridViewRooms);
+            Rooms.Location = new Point(4, 34);
+            Rooms.Name = "Rooms";
+            Rooms.Padding = new Padding(3);
+            Rooms.Size = new Size(1598, 585);
+            Rooms.TabIndex = 2;
+            Rooms.Text = "Rooms";
+            Rooms.UseVisualStyleBackColor = true;
             // 
-            // Column3
+            // dataGridViewRooms
             // 
-            Column3.FillWeight = 250F;
-            Column3.HeaderText = "Contact_Number";
-            Column3.MinimumWidth = 7;
-            Column3.Name = "Column3";
+            dataGridViewRooms.BackgroundColor = Color.FromArgb(255, 224, 192);
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(72, 34, 22);
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 8.861538F);
+            dataGridViewCellStyle6.ForeColor = Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dataGridViewRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewRooms.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewRooms.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, PricePerNight });
+            dataGridViewRooms.GridColor = SystemColors.InactiveCaptionText;
+            dataGridViewRooms.Location = new Point(0, 3);
+            dataGridViewRooms.Name = "dataGridViewRooms";
+            dataGridViewRooms.RowHeadersWidth = 56;
+            dataGridViewRooms.Size = new Size(1598, 586);
+            dataGridViewRooms.TabIndex = 7;
             // 
-            // Column4
+            // dataGridViewTextBoxColumn1
             // 
-            Column4.FillWeight = 200F;
-            Column4.HeaderText = "Age_Category";
-            Column4.MinimumWidth = 7;
-            Column4.Name = "Column4";
+            dataGridViewTextBoxColumn1.HeaderText = "Room ID";
+            dataGridViewTextBoxColumn1.MinimumWidth = 7;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.Width = 175;
             // 
-            // Column5
+            // dataGridViewTextBoxColumn2
             // 
-            Column5.FillWeight = 200F;
-            Column5.HeaderText = "Room_Number";
-            Column5.MinimumWidth = 7;
-            Column5.Name = "Column5";
+            dataGridViewTextBoxColumn2.HeaderText = "Room Type";
+            dataGridViewTextBoxColumn2.MinimumWidth = 7;
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.Width = 175;
             // 
-            // Column1
+            // dataGridViewTextBoxColumn3
             // 
-            Column1.HeaderText = "Status";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
+            dataGridViewTextBoxColumn3.HeaderText = "Room Status";
+            dataGridViewTextBoxColumn3.MinimumWidth = 7;
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.Width = 135;
+            // 
+            // PricePerNight
+            // 
+            PricePerNight.HeaderText = "Price Per Night";
+            PricePerNight.MinimumWidth = 6;
+            PricePerNight.Name = "PricePerNight";
+            PricePerNight.Width = 125;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(125, 157, 66);
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(1468, 789);
+            button5.Name = "button5";
+            button5.Size = new Size(140, 43);
+            button5.TabIndex = 5;
+            button5.Text = "Save";
+            button5.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(105, 265);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(51, 44);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 21;
+            pictureBox3.TabStop = false;
             // 
             // GuestTab
             // 
@@ -610,7 +625,7 @@
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "GuestTab";
-            Text = "GuestTab";
+            Text = "Flora Suites Hotel Management System";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
@@ -622,14 +637,15 @@
             ((System.ComponentModel.ISupportInitialize)HomeOutline).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewGuests).EndInit();
             panel2.ResumeLayout(false);
             tabControl1.ResumeLayout(false);
             Booking.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewBooking).EndInit();
             Guests.ResumeLayout(false);
             Rooms.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewRooms).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
@@ -650,7 +666,7 @@
         private Button button8;
         private Button button7;
         private Button button1;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewGuests;
         private Panel panel2;
         private Button button5;
         private PictureBox pictureBox9;
@@ -665,12 +681,12 @@
         private TabPage Booking;
         private TabPage Guests;
         private TabPage Rooms;
-        private DataGridView dataGridView2;
+        private DataGridView dataGridViewRooms;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn PricePerNight;
-        private DataGridView dataGridView3;
+        private DataGridView dataGridViewBooking;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
@@ -685,5 +701,6 @@
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column1;
+        private PictureBox pictureBox3;
     }
 }

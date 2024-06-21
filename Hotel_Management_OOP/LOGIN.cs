@@ -1,3 +1,4 @@
+using System.Data.SQLite;
 namespace Hotel_Management_OOP
 {
     public partial class Login : Form
@@ -44,10 +45,21 @@ namespace Hotel_Management_OOP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            BookingTab form = new BookingTab();
-            form.ShowDialog();
+            // conditions
 
+            SuccessfulLogin();
+            
+            
+          
+        }
+
+        public void SuccessfulLogin()
+        {
+            this.Hide();
+            //MessageBox.Show("Successful Login!");
+            
+            SplashScreen form = new SplashScreen();
+            form.ShowDialog();
         }
     }
 }

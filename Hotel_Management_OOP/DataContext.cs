@@ -10,10 +10,14 @@ namespace Hotel_Management_OOP
     public class DataContext : DbContext
     {
         // create table
-        public DbSet<Guest> Guests { get; set; }
+        //public DbSet<Guest> Guests { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source = HotelManagement.db"); // connection string
+            optionsBuilder.UseSqlite("Data Source = HMS.db"); // connection string
         }
+
+        public DbSet<User> Users { get; set; }  
     }
+
+    
 }

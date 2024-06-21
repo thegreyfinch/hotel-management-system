@@ -34,7 +34,7 @@
             pictureBox2 = new PictureBox();
             label5 = new Label();
             title = new Label();
-            button1 = new Button();
+            buttonLogin = new Button();
             textBox2 = new TextBox();
             label2 = new Label();
             label1 = new Label();
@@ -54,7 +54,7 @@
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(title);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(buttonLogin);
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
@@ -112,18 +112,18 @@
             title.TabIndex = 0;
             title.Text = "Log In ";
             // 
-            // button1
+            // buttonLogin
             // 
-            button1.BackColor = Color.Salmon;
-            button1.Font = new Font("Segoe UI Variable Small", 11.0769234F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(117, 333);
-            button1.Name = "button1";
-            button1.Size = new Size(266, 62);
-            button1.TabIndex = 7;
-            button1.Text = "Log In";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            buttonLogin.BackColor = Color.Salmon;
+            buttonLogin.Font = new Font("Segoe UI Variable Small", 11.0769234F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonLogin.ForeColor = Color.White;
+            buttonLogin.Location = new Point(117, 333);
+            buttonLogin.Name = "buttonLogin";
+            buttonLogin.Size = new Size(266, 62);
+            buttonLogin.TabIndex = 7;
+            buttonLogin.Text = "Log In";
+            buttonLogin.UseVisualStyleBackColor = false;
+            buttonLogin.Click += button1_Click;
             // 
             // textBox2
             // 
@@ -219,7 +219,7 @@
         private Label label1;
         private Label label3;
         private TextBox textBox2;
-        private Button button1;
+        private Button buttonLogin;
         private Label label2;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;

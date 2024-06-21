@@ -18,8 +18,8 @@ namespace Hotel_Management_OOP
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            //Application.Run(new Login());
-            Application.Run(new SplashScreen());
+            Application.Run(new Login());
+            //Application.Run(new SplashScreen());
             //Application.Run(new GuestTab());
             //Application.Run(new NEW_USER());
             //Application.Run(new BOOKING());
