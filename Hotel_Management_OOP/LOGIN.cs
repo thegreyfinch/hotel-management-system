@@ -46,17 +46,32 @@ namespace Hotel_Management_OOP
         private void button1_Click(object sender, EventArgs e)
         {
             // conditions
+            var Username = textBox1.Text;
+            var Password = textBox2.Text;
 
-            SuccessfulLogin();
-            
-            
+            using (UserDataContext context = new UserDataContext())
+            {
+                bool userfound = context.Users.Any(User => User.Username == Username && User.Password == Password);
+
+                if (userfound)
+                {
+                    //Close();
+                    SuccessfulLogin();
+                    
+                }
+                else
+                {
+                    MessageBox.Show("User Not Found!");
+                    //Close();
+                }
+            }         
           
         }
 
         public void SuccessfulLogin()
         {
             this.Hide();
-            //MessageBox.Show("Successful Login!");
+            MessageBox.Show("Successful Login!");
             
             SplashScreen form = new SplashScreen();
             form.ShowDialog();

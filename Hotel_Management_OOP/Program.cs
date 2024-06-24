@@ -10,7 +10,7 @@ namespace Hotel_Management_OOP
         {
 
             // db create
-            using (var context = new DataContext())
+            using (var context = new UserDataContext())
             {
                 context.Database.EnsureCreated();
             }

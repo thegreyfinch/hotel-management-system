@@ -21,5 +21,19 @@ namespace Hotel_Management_OOP
         {
 
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GuestTab form = new GuestTab();
+            form.ShowDialog();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GuestTab form = new GuestTab();
+            form.ShowDialog();
+        }
     }
 }

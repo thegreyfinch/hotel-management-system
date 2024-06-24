@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Hotel_Management_OOP
 {
-    public class DataContext : DbContext
+    public class UserDataContext : DbContext
     {
         // create table
         //public DbSet<Guest> Guests { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source = HMS.db"); // connection string
+            optionsBuilder.UseSqlite("Data Source = FloraSuitesLoginDB.db"); // connection string
         }
 
         public DbSet<User> Users { get; set; }  

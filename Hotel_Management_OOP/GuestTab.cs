@@ -19,14 +19,14 @@ namespace Hotel_Management_OOP
 
         private void button8_Click(object sender, EventArgs e)
         {
-            RoomsTab form = new RoomsTab();
-            form.ShowDialog();
+            //RoomsTab form = new RoomsTab();
+            //form.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            BookingTab form = new BookingTab();
-            form.ShowDialog();
+            // BookingTab form = new BookingTab();
+            // form.ShowDialog();
         }
         private void guestaddbutton_Click(object sender, EventArgs e)
         {
@@ -40,6 +40,79 @@ namespace Hotel_Management_OOP
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            BillingAndInvoicing form = new BillingAndInvoicing();
+            form.ShowDialog();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BillingAndInvoicing form = new BillingAndInvoicing();
+            form.ShowDialog();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private static void button6_Click(object sender, EventArgs e)
+        {
+            //HomeUserControl.Hide();
+            //UserControl1.Show();
+            //UserControl1.BringToFront();
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewBooking_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Booking_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("You are logged out of your account.");
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //UserControl.Visible = true;
+            //UserControl1.Hide();
+            //HomeUserControl.Show();
+            //HomeUserControl.BringToFront();
+            
 
         }
 

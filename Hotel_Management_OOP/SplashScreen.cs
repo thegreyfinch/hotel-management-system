@@ -25,7 +25,7 @@ namespace Hotel_Management_OOP
                 timer1.Stop();
                 this.Hide();
 
-                BookingTab form = new BookingTab();
+                GuestTab form = new GuestTab();
                 form.ShowDialog();
 
             }
