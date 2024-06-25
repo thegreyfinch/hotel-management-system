@@ -25,53 +25,65 @@ namespace Hotel_Management_OOP
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (textBox2.PasswordChar == '*')
+            if (passtextBox.PasswordChar == '*')
             {
                 pictureBox2.BringToFront();
-                textBox2.PasswordChar = '\0';
+                passtextBox.PasswordChar = '\0';
 
             }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            if (textBox2.PasswordChar == '\0')
+            if (passtextBox.PasswordChar == '\0')
             {
                 pictureBox3.BringToFront();
-                textBox2.PasswordChar = '*';
+                passtextBox.PasswordChar = '*';
 
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var Username = UsernametextBox.Text;
+            var Password = passtextBox.Text;
             // conditions
-            var Username = textBox1.Text;
-            var Password = textBox2.Text;
 
-            using (UserDataContext context = new UserDataContext())
+            //Empty Fields
+            if (UsernametextBox.Text == "" || passtextBox.Text == "")
             {
-                bool userfound = context.Users.Any(User => User.Username == Username && User.Password == Password);
+                MessageBox.Show("Please fill all blank fields", "Error Message",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {//Database List of Approved Users
+                using (UserDataContext context = new UserDataContext())
+                {
+                    bool userfound = context.Users.Any(User => User.Username == Username && User.Password == Password);
 
-                if (userfound)
-                {
-                    //Close();
-                    SuccessfulLogin();
-                    
+                    if (userfound)
+                    {
+                        //Close();
+                        SuccessfulLogin();
+
+                    }
+
+
+                    else
+                    {
+                        MessageBox.Show("User Not Found!", "Error Message", 
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //Close();
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("User Not Found!");
-                    //Close();
-                }
-            }         
-          
+            }
         }
 
         public void SuccessfulLogin()
         {
             this.Hide();
-            MessageBox.Show("Successful Login!");
+            MessageBox.Show("Successful Login!", "Information Message", 
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
             
             SplashScreen form = new SplashScreen();
             form.ShowDialog();

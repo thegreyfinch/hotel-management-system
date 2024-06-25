@@ -236,7 +236,7 @@
             Guests.Location = new Point(4, 34);
             Guests.Name = "Guests";
             Guests.Padding = new Padding(3);
-            Guests.Size = new Size(1598, 525);
+            Guests.Size = new Size(1598, 543);
             Guests.TabIndex = 1;
             Guests.Text = "Guests";
             Guests.UseVisualStyleBackColor = true;
@@ -308,7 +308,7 @@
             Rooms.Location = new Point(4, 34);
             Rooms.Name = "Rooms";
             Rooms.Padding = new Padding(3);
-            Rooms.Size = new Size(1598, 525);
+            Rooms.Size = new Size(1598, 543);
             Rooms.TabIndex = 2;
             Rooms.Text = "Rooms";
             Rooms.UseVisualStyleBackColor = true;
@@ -392,22 +392,23 @@
             panel1.Controls.Add(label1);
             panel1.Controls.Add(button11);
             panel1.Controls.Add(button10);
-            panel1.Location = new Point(0, 1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1629, 174);
+            panel1.Size = new Size(1634, 174);
             panel1.TabIndex = 7;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Microsoft Sans Serif", 20F);
+            label1.Font = new Font("Arial Rounded MT Bold", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
             label1.Location = new Point(14, 95);
             label1.Name = "label1";
-            label1.Size = new Size(323, 39);
+            label1.Size = new Size(420, 39);
             label1.TabIndex = 0;
-            label1.Text = "Booking and Guests";
+            label1.Text = "BOOKING AND GUESTS";
             // 
             // button11
             // 
@@ -429,14 +430,14 @@
             button10.Text = "User Profile";
             button10.UseVisualStyleBackColor = true;
             // 
-            // UserControl1
+            // BookingUserControl
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(panel1);
             Controls.Add(panel2);
-            Name = "UserControl1";
+            Name = "BookingUserControl";
             Size = new Size(1634, 1000);
             panel2.ResumeLayout(false);
             tabControl1.ResumeLayout(false);

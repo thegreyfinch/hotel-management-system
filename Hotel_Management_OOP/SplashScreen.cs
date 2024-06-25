@@ -25,6 +25,7 @@ namespace Hotel_Management_OOP
                 timer1.Stop();
                 this.Hide();
 
+                //MessageBox.Show("   Welcome to Flora Suites\n   Hotel Management System!");
                 GuestTab form = new GuestTab();
                 form.ShowDialog();
 

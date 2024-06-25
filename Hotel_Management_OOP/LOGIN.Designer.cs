@@ -32,14 +32,13 @@
             panel1 = new Panel();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
-            label5 = new Label();
-            title = new Label();
+            Logintitle = new Label();
             buttonLogin = new Button();
-            textBox2 = new TextBox();
-            label2 = new Label();
+            passtextBox = new TextBox();
+            passlabel = new Label();
             label1 = new Label();
-            textBox1 = new TextBox();
-            username = new Label();
+            UsernametextBox = new TextBox();
+            usernamelabel = new Label();
             pictureBox4 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -52,17 +51,16 @@
             panel1.BackColor = Color.White;
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(title);
+            panel1.Controls.Add(Logintitle);
             panel1.Controls.Add(buttonLogin);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(passtextBox);
+            panel1.Controls.Add(passlabel);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(username);
-            panel1.Location = new Point(47, 46);
+            panel1.Controls.Add(UsernametextBox);
+            panel1.Controls.Add(usernamelabel);
+            panel1.Location = new Point(60, 59);
             panel1.Name = "panel1";
-            panel1.Size = new Size(501, 484);
+            panel1.Size = new Size(537, 448);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -70,7 +68,7 @@
             // 
             pictureBox3.BorderStyle = BorderStyle.FixedSingle;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(423, 268);
+            pictureBox3.Location = new Point(434, 227);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(44, 30);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -82,7 +80,7 @@
             // 
             pictureBox2.BorderStyle = BorderStyle.FixedSingle;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(423, 268);
+            pictureBox2.Location = new Point(434, 227);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(44, 30);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -90,34 +88,24 @@
             pictureBox2.TabStop = false;
             pictureBox2.Click += pictureBox3_Click;
             // 
-            // label5
+            // Logintitle
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.FromArgb(255, 128, 0);
-            label5.Location = new Point(132, 417);
-            label5.Name = "label5";
-            label5.Size = new Size(240, 28);
-            label5.TabIndex = 2;
-            label5.Text = "Continue as Administrator";
-            // 
-            // title
-            // 
-            title.AutoSize = true;
-            title.Font = new Font("Georgia", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            title.ForeColor = Color.FromArgb(67, 114, 86);
-            title.Location = new Point(31, 41);
-            title.Name = "title";
-            title.Size = new Size(122, 35);
-            title.TabIndex = 0;
-            title.Text = "Log In ";
+            Logintitle.AutoSize = true;
+            Logintitle.Font = new Font("Tahoma", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Logintitle.ForeColor = Color.FromArgb(67, 114, 86);
+            Logintitle.Location = new Point(31, 41);
+            Logintitle.Name = "Logintitle";
+            Logintitle.Size = new Size(137, 41);
+            Logintitle.TabIndex = 0;
+            Logintitle.Text = "Log In ";
             // 
             // buttonLogin
             // 
             buttonLogin.BackColor = Color.Salmon;
+            buttonLogin.Cursor = Cursors.Hand;
             buttonLogin.Font = new Font("Segoe UI Variable Small", 11.0769234F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonLogin.ForeColor = Color.White;
-            buttonLogin.Location = new Point(117, 333);
+            buttonLogin.Location = new Point(134, 325);
             buttonLogin.Name = "buttonLogin";
             buttonLogin.Size = new Size(266, 62);
             buttonLogin.TabIndex = 7;
@@ -125,63 +113,65 @@
             buttonLogin.UseVisualStyleBackColor = false;
             buttonLogin.Click += button1_Click;
             // 
-            // textBox2
+            // passtextBox
             // 
-            textBox2.BackColor = Color.White;
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Font = new Font("Segoe UI Variable Small Light", 9.969231F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(31, 268);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(396, 30);
-            textBox2.TabIndex = 5;
+            passtextBox.BackColor = Color.White;
+            passtextBox.BorderStyle = BorderStyle.FixedSingle;
+            passtextBox.Font = new Font("Segoe UI Variable Small Light", 9.969231F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            passtextBox.Location = new Point(131, 227);
+            passtextBox.MaxLength = 20;
+            passtextBox.Name = "passtextBox";
+            passtextBox.PasswordChar = '*';
+            passtextBox.Size = new Size(305, 30);
+            passtextBox.TabIndex = 5;
             // 
-            // label2
+            // passlabel
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Variable Small Semibol", 10F);
-            label2.Location = new Point(31, 227);
-            label2.Name = "label2";
-            label2.Size = new Size(86, 22);
-            label2.TabIndex = 4;
-            label2.Text = "Password";
+            passlabel.AutoSize = true;
+            passlabel.Font = new Font("Tahoma", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            passlabel.Location = new Point(31, 231);
+            passlabel.Name = "passlabel";
+            passlabel.Size = new Size(90, 22);
+            passlabel.TabIndex = 4;
+            passlabel.Text = "Password:";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Variable Small Semibol", 8F);
             label1.ForeColor = SystemColors.ControlDarkDark;
-            label1.Location = new Point(31, 186);
+            label1.Location = new Point(31, 179);
             label1.Name = "label1";
             label1.Size = new Size(186, 19);
             label1.TabIndex = 3;
             label1.Text = "Username is case sensitive.";
             // 
-            // textBox1
+            // UsernametextBox
             // 
-            textBox1.BackColor = Color.White;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Segoe UI Variable Small Light", 9.969231F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(31, 147);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(436, 30);
-            textBox1.TabIndex = 2;
+            UsernametextBox.BackColor = Color.White;
+            UsernametextBox.BorderStyle = BorderStyle.FixedSingle;
+            UsernametextBox.Font = new Font("Segoe UI Variable Small Light", 9.969231F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UsernametextBox.Location = new Point(131, 133);
+            UsernametextBox.MaxLength = 20;
+            UsernametextBox.Name = "UsernametextBox";
+            UsernametextBox.Size = new Size(347, 30);
+            UsernametextBox.TabIndex = 2;
             // 
-            // username
+            // usernamelabel
             // 
-            username.AutoSize = true;
-            username.Font = new Font("Segoe UI Variable Small Semibol", 10F);
-            username.Location = new Point(31, 106);
-            username.Name = "username";
-            username.Size = new Size(90, 22);
-            username.TabIndex = 1;
-            username.Text = "Username";
+            usernamelabel.AutoSize = true;
+            usernamelabel.Font = new Font("Tahoma", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            usernamelabel.Location = new Point(31, 136);
+            usernamelabel.Name = "usernamelabel";
+            usernamelabel.Size = new Size(94, 22);
+            usernamelabel.TabIndex = 1;
+            usernamelabel.Text = "Username:";
             // 
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.Transparent;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(644, 129);
+            pictureBox4.Location = new Point(652, 121);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(387, 325);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -195,13 +185,13 @@
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1153, 584);
+            ClientSize = new Size(1153, 573);
             Controls.Add(pictureBox4);
             Controls.Add(panel1);
             Name = "Login";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Flora Suite (Login)";
+            Text = "Flora Suites (Login)";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -213,17 +203,16 @@
         #endregion
 
         private Panel panel1;
-        private Label title;
-        private TextBox textBox1;
-        private Label username;
+        private Label Logintitle;
+        private TextBox UsernametextBox;
+        private Label usernamelabel;
         private Label label1;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox passtextBox;
         private Button buttonLogin;
-        private Label label2;
+        private Label passlabel;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
-        private Label label5;
         private PictureBox pictureBox4;
     }
 }

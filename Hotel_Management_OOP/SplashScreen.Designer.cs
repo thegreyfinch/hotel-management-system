@@ -34,8 +34,10 @@
             panel2 = new Panel();
             timer1 = new System.Windows.Forms.Timer(components);
             pictureBox4 = new PictureBox();
+            BGpictureBox1 = new PictureBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BGpictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panelLoad
@@ -59,12 +61,13 @@
             // timer1
             // 
             timer1.Enabled = true;
-            timer1.Interval = 20;
+            timer1.Interval = 16;
             timer1.Tick += timer1_Tick;
             // 
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.Transparent;
+            pictureBox4.BackgroundImageLayout = ImageLayout.Center;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new Point(230, 98);
             pictureBox4.Name = "pictureBox4";
@@ -72,6 +75,16 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 9;
             pictureBox4.TabStop = false;
+            // 
+            // BGpictureBox1
+            // 
+            BGpictureBox1.Image = (Image)resources.GetObject("BGpictureBox1.Image");
+            BGpictureBox1.Location = new Point(-7, -13);
+            BGpictureBox1.Name = "BGpictureBox1";
+            BGpictureBox1.Size = new Size(864, 579);
+            BGpictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            BGpictureBox1.TabIndex = 10;
+            BGpictureBox1.TabStop = false;
             // 
             // SplashScreen
             // 
@@ -83,6 +96,7 @@
             ClientSize = new Size(853, 560);
             Controls.Add(pictureBox4);
             Controls.Add(panel2);
+            Controls.Add(BGpictureBox1);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "SplashScreen";
@@ -90,6 +104,7 @@
             Text = "SplashScreen";
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BGpictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -98,5 +113,6 @@
         private Panel panel2;
         private System.Windows.Forms.Timer timer1;
         private PictureBox pictureBox4;
+        private PictureBox BGpictureBox1;
     }
 }
