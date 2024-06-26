@@ -70,6 +70,9 @@
             label17 = new Label();
             panel11 = new Panel();
             label15 = new Label();
+            panel12 = new Panel();
+            dateTimePicker1 = new DateTimePicker();
+            label20 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
@@ -88,6 +91,7 @@
             panel9.SuspendLayout();
             panel10.SuspendLayout();
             panel11.SuspendLayout();
+            panel12.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -100,7 +104,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1634, 126);
+            panel1.Size = new Size(1638, 126);
             panel1.TabIndex = 8;
             // 
             // LogOutlabel2
@@ -141,12 +145,10 @@
             // panel2
             // 
             panel2.AutoScroll = true;
-            panel2.BackColor = Color.FromArgb(255, 192, 128);
-            panel2.Controls.Add(label14);
+            panel2.BackColor = Color.FromArgb(250, 204, 166);
+            panel2.Controls.Add(panel12);
             panel2.Controls.Add(pictureBox12);
-            panel2.Controls.Add(label16);
             panel2.Controls.Add(pictureBox14);
-            panel2.Controls.Add(label18);
             panel2.Controls.Add(pictureBox16);
             panel2.Controls.Add(label10);
             panel2.Controls.Add(label11);
@@ -171,7 +173,7 @@
             panel2.Controls.Add(panel11);
             panel2.Location = new Point(0, 121);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1672, 879);
+            panel2.Size = new Size(1672, 835);
             panel2.TabIndex = 9;
             panel2.Paint += panel2_Paint;
             // 
@@ -180,7 +182,7 @@
             label14.AutoSize = true;
             label14.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label14.ForeColor = Color.FromArgb(64, 0, 0);
-            label14.Location = new Point(856, 725);
+            label14.Location = new Point(104, 133);
             label14.Name = "label14";
             label14.Size = new Size(69, 34);
             label14.TabIndex = 36;
@@ -189,7 +191,7 @@
             // pictureBox12
             // 
             pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
-            pictureBox12.Location = new Point(837, 596);
+            pictureBox12.Location = new Point(1394, 574);
             pictureBox12.Name = "pictureBox12";
             pictureBox12.Size = new Size(116, 110);
             pictureBox12.SizeMode = PictureBoxSizeMode.Zoom;
@@ -201,7 +203,7 @@
             label16.AutoSize = true;
             label16.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.FromArgb(64, 0, 0);
-            label16.Location = new Point(550, 725);
+            label16.Location = new Point(104, 133);
             label16.Name = "label16";
             label16.Size = new Size(69, 34);
             label16.TabIndex = 32;
@@ -210,7 +212,7 @@
             // pictureBox14
             // 
             pictureBox14.Image = (Image)resources.GetObject("pictureBox14.Image");
-            pictureBox14.Location = new Point(531, 596);
+            pictureBox14.Location = new Point(1088, 574);
             pictureBox14.Name = "pictureBox14";
             pictureBox14.Size = new Size(116, 110);
             pictureBox14.SizeMode = PictureBoxSizeMode.Zoom;
@@ -222,7 +224,7 @@
             label18.AutoSize = true;
             label18.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label18.ForeColor = Color.FromArgb(64, 0, 0);
-            label18.Location = new Point(244, 725);
+            label18.Location = new Point(114, 133);
             label18.Name = "label18";
             label18.Size = new Size(69, 34);
             label18.TabIndex = 28;
@@ -231,7 +233,7 @@
             // pictureBox16
             // 
             pictureBox16.Image = (Image)resources.GetObject("pictureBox16.Image");
-            pictureBox16.Location = new Point(225, 596);
+            pictureBox16.Location = new Point(782, 574);
             pictureBox16.Name = "pictureBox16";
             pictureBox16.Size = new Size(116, 110);
             pictureBox16.SizeMode = PictureBoxSizeMode.Zoom;
@@ -243,7 +245,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.FromArgb(64, 0, 0);
-            label10.Location = new Point(550, 451);
+            label10.Location = new Point(1107, 429);
             label10.Name = "label10";
             label10.Size = new Size(69, 34);
             label10.TabIndex = 20;
@@ -254,7 +256,7 @@
             label11.AutoSize = true;
             label11.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label11.ForeColor = Color.FromArgb(72, 34, 22);
-            label11.Location = new Point(468, 498);
+            label11.Location = new Point(1025, 476);
             label11.Name = "label11";
             label11.Size = new Size(250, 34);
             label11.TabIndex = 19;
@@ -265,7 +267,7 @@
             label12.AutoSize = true;
             label12.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label12.ForeColor = Color.FromArgb(64, 0, 0);
-            label12.Location = new Point(244, 451);
+            label12.Location = new Point(801, 429);
             label12.Name = "label12";
             label12.Size = new Size(69, 34);
             label12.TabIndex = 16;
@@ -276,7 +278,7 @@
             label13.AutoSize = true;
             label13.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.FromArgb(72, 34, 22);
-            label13.Location = new Point(173, 498);
+            label13.Location = new Point(730, 476);
             label13.Name = "label13";
             label13.Size = new Size(216, 34);
             label13.TabIndex = 15;
@@ -285,7 +287,7 @@
             // pictureBox10
             // 
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(225, 322);
+            pictureBox10.Location = new Point(782, 300);
             pictureBox10.Name = "pictureBox10";
             pictureBox10.Size = new Size(116, 110);
             pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
@@ -297,7 +299,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(64, 0, 0);
-            label6.Location = new Point(548, 177);
+            label6.Location = new Point(1105, 155);
             label6.Name = "label6";
             label6.Size = new Size(69, 34);
             label6.TabIndex = 12;
@@ -306,7 +308,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(529, 48);
+            pictureBox4.Location = new Point(1086, 26);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(116, 110);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -318,7 +320,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(64, 0, 0);
-            label4.Location = new Point(244, 177);
+            label4.Location = new Point(801, 155);
             label4.Name = "label4";
             label4.Size = new Size(69, 34);
             label4.TabIndex = 8;
@@ -327,7 +329,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(225, 48);
+            pictureBox2.Location = new Point(782, 26);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(116, 110);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -339,7 +341,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(64, 0, 0);
-            label3.Location = new Point(856, 177);
+            label3.Location = new Point(1413, 155);
             label3.Name = "label3";
             label3.Size = new Size(69, 34);
             label3.TabIndex = 4;
@@ -351,7 +353,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(72, 34, 22);
-            label2.Location = new Point(799, 224);
+            label2.Location = new Point(1356, 202);
             label2.Name = "label2";
             label2.Size = new Size(189, 34);
             label2.TabIndex = 3;
@@ -360,7 +362,7 @@
             // TotalRoomspictureBox2
             // 
             TotalRoomspictureBox2.Image = (Image)resources.GetObject("TotalRoomspictureBox2.Image");
-            TotalRoomspictureBox2.Location = new Point(837, 48);
+            TotalRoomspictureBox2.Location = new Point(1394, 26);
             TotalRoomspictureBox2.Name = "TotalRoomspictureBox2";
             TotalRoomspictureBox2.Size = new Size(116, 110);
             TotalRoomspictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -369,7 +371,7 @@
             // 
             // panel3
             // 
-            panel3.Location = new Point(752, 37);
+            panel3.Location = new Point(1309, 15);
             panel3.Name = "panel3";
             panel3.Size = new Size(282, 234);
             panel3.TabIndex = 37;
@@ -378,7 +380,7 @@
             // panel4
             // 
             panel4.Controls.Add(label5);
-            panel4.Location = new Point(140, 37);
+            panel4.Location = new Point(697, 15);
             panel4.Name = "panel4";
             panel4.Size = new Size(282, 234);
             panel4.TabIndex = 38;
@@ -397,7 +399,7 @@
             // panel5
             // 
             panel5.Controls.Add(label7);
-            panel5.Location = new Point(444, 37);
+            panel5.Location = new Point(1001, 15);
             panel5.Name = "panel5";
             panel5.Size = new Size(282, 234);
             panel5.TabIndex = 39;
@@ -415,7 +417,7 @@
             // 
             // panel6
             // 
-            panel6.Location = new Point(140, 311);
+            panel6.Location = new Point(697, 289);
             panel6.Name = "panel6";
             panel6.Size = new Size(282, 234);
             panel6.TabIndex = 40;
@@ -423,7 +425,7 @@
             // panel7
             // 
             panel7.Controls.Add(pictureBox1);
-            panel7.Location = new Point(446, 311);
+            panel7.Location = new Point(1003, 289);
             panel7.Name = "panel7";
             panel7.Size = new Size(282, 234);
             panel7.TabIndex = 41;
@@ -443,7 +445,7 @@
             panel8.Controls.Add(pictureBox3);
             panel8.Controls.Add(label9);
             panel8.Controls.Add(label8);
-            panel8.Location = new Point(752, 312);
+            panel8.Location = new Point(1309, 290);
             panel8.Name = "panel8";
             panel8.Size = new Size(282, 234);
             panel8.TabIndex = 42;
@@ -482,8 +484,9 @@
             // 
             // panel9
             // 
+            panel9.Controls.Add(label14);
             panel9.Controls.Add(label19);
-            panel9.Location = new Point(140, 585);
+            panel9.Location = new Point(697, 563);
             panel9.Name = "panel9";
             panel9.Size = new Size(282, 234);
             panel9.TabIndex = 43;
@@ -493,7 +496,7 @@
             label19.AutoSize = true;
             label19.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label19.ForeColor = Color.FromArgb(72, 34, 22);
-            label19.Location = new Point(23, 187);
+            label19.Location = new Point(22, 176);
             label19.Name = "label19";
             label19.Size = new Size(243, 34);
             label19.TabIndex = 27;
@@ -502,7 +505,8 @@
             // panel10
             // 
             panel10.Controls.Add(label17);
-            panel10.Location = new Point(446, 585);
+            panel10.Controls.Add(label16);
+            panel10.Location = new Point(1003, 563);
             panel10.Name = "panel10";
             panel10.Size = new Size(282, 234);
             panel10.TabIndex = 44;
@@ -512,7 +516,7 @@
             label17.AutoSize = true;
             label17.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label17.ForeColor = Color.FromArgb(72, 34, 22);
-            label17.Location = new Point(100, 187);
+            label17.Location = new Point(102, 176);
             label17.Name = "label17";
             label17.Size = new Size(82, 34);
             label17.TabIndex = 31;
@@ -522,7 +526,8 @@
             // panel11
             // 
             panel11.Controls.Add(label15);
-            panel11.Location = new Point(752, 585);
+            panel11.Controls.Add(label18);
+            panel11.Location = new Point(1309, 563);
             panel11.Name = "panel11";
             panel11.Size = new Size(282, 234);
             panel11.TabIndex = 45;
@@ -532,11 +537,38 @@
             label15.AutoSize = true;
             label15.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.FromArgb(72, 34, 22);
-            label15.Location = new Point(84, 187);
+            label15.Location = new Point(85, 176);
             label15.Name = "label15";
             label15.Size = new Size(117, 34);
             label15.TabIndex = 35;
             label15.Text = "Female";
+            // 
+            // panel12
+            // 
+            panel12.Controls.Add(label20);
+            panel12.Controls.Add(dateTimePicker1);
+            panel12.Location = new Point(20, 15);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(651, 508);
+            panel12.TabIndex = 46;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(37, 68);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(586, 29);
+            dateTimePicker1.TabIndex = 0;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label20.ForeColor = Color.FromArgb(72, 34, 22);
+            label20.Location = new Point(230, 11);
+            label20.Name = "label20";
+            label20.Size = new Size(168, 34);
+            label20.TabIndex = 8;
+            label20.Text = "CALENDAR";
             // 
             // HomeUserControl
             // 
@@ -546,7 +578,7 @@
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "HomeUserControl";
-            Size = new Size(1634, 1000);
+            Size = new Size(1638, 925);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -573,6 +605,8 @@
             panel10.PerformLayout();
             panel11.ResumeLayout(false);
             panel11.PerformLayout();
+            panel12.ResumeLayout(false);
+            panel12.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -619,5 +653,8 @@
         private Panel panel11;
         private PictureBox pictureBox1;
         private PictureBox pictureBox3;
+        private Panel panel12;
+        private Label label20;
+        private DateTimePicker dateTimePicker1;
     }
 }

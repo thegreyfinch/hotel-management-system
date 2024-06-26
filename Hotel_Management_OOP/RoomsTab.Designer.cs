@@ -46,11 +46,11 @@
             button7 = new Button();
             button1 = new Button();
             dataGridView1 = new DataGridView();
-            panel2 = new Panel();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             PricePerNight = new DataGridViewTextBoxColumn();
+            panel2 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel4.SuspendLayout();
@@ -202,6 +202,7 @@
             button9.TabIndex = 4;
             button9.Text = "Add... +";
             button9.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click;
             // 
             // button8
             // 
@@ -258,19 +259,6 @@
             dataGridView1.Size = new Size(1608, 514);
             dataGridView1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(250, 204, 166);
-            panel2.Controls.Add(button9);
-            panel2.Controls.Add(button8);
-            panel2.Controls.Add(button7);
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(dataGridView1);
-            panel2.Location = new Point(270, 168);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1629, 862);
-            panel2.TabIndex = 4;
-            // 
             // Column1
             // 
             Column1.HeaderText = "Room ID";
@@ -298,6 +286,19 @@
             PricePerNight.MinimumWidth = 6;
             PricePerNight.Name = "PricePerNight";
             PricePerNight.Width = 125;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(250, 204, 166);
+            panel2.Controls.Add(button9);
+            panel2.Controls.Add(button8);
+            panel2.Controls.Add(button7);
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(dataGridView1);
+            panel2.Location = new Point(270, 168);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1629, 862);
+            panel2.TabIndex = 4;
             // 
             // RoomsTab
             // 

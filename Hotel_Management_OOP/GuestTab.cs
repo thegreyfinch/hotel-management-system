@@ -10,19 +10,25 @@ using System.Windows.Forms;
 
 namespace Hotel_Management_OOP
 {
+
     public partial class GuestTab : Form
     {
         // Instantiate user controls
-        public UserControl HomeUserControl;
-        public UserControl BookingUserControl;
+        //public UserControl HomeUserControl;
+        //public UserControl BookingUserControl;
+
+        HomeUserControl Dashboard = new HomeUserControl();
+        BookingUserControl Booking = new BookingUserControl();
+        BillingUserControl1 Billing = new BillingUserControl1();
+        SettingsUserControl Settings = new SettingsUserControl();
 
         public GuestTab()
         {
             InitializeComponent();
-            InitializeUserControls();
+            //InitializeUserControls();
         }
 
-        private void InitializeUserControls()
+        /*private void InitializeUserControls()
         {
             this.HomeUserControl = new Hotel_Management_OOP.HomeUserControl();
             this.BookingUserControl = new Hotel_Management_OOP.BookingUserControl();
@@ -47,11 +53,15 @@ namespace Hotel_Management_OOP
             this.HomeUserControl.Visible = false;
             this.BookingUserControl.Visible = false;
         }
+        */
 
         private void button6_Click(object sender, EventArgs e)
         {
-            HomeUserControl.Visible = false;
-            BookingUserControl.Visible = true;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(Booking);
+            Booking.Dock = DockStyle.Fill;
+            //HomeUserControl.Visible = false;
+            //BookingUserControl.Visible = true;
             //BookingUserControl.Show();
             //BookingUserControl.BringToFront();
 
@@ -61,21 +71,24 @@ namespace Hotel_Management_OOP
         {
             //HomeUserControl.Show();
             //HomeUserControl.BringToFront();
-            HomeUserControl.Visible = true;
-            BookingUserControl.Visible = false;
+            //HomeUserControl.Visible = true;
+            //BookingUserControl.Visible = false;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(Dashboard);
+            Dashboard.Dock = DockStyle.Fill;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            BillingAndInvoicing form = new BillingAndInvoicing();
-            form.ShowDialog();
+            //BillingAndInvoicing form = new BillingAndInvoicing();
+            // form.ShowDialog();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            BillingAndInvoicing form = new BillingAndInvoicing();
-            form.ShowDialog();
+            //this.Hide();
+            //BillingAndInvoicing form = new BillingAndInvoicing();
+            //form.ShowDialog();
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -98,12 +111,18 @@ namespace Hotel_Management_OOP
 
         private void button9_Click(object sender, EventArgs e)
         {
-            BillingAndInvoicing form = new BillingAndInvoicing();
-            form.ShowDialog();
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(Billing);
+            Billing.Dock = DockStyle.Fill;
+            //BillingAndInvoicing form = new BillingAndInvoicing();
+            //form.ShowDialog();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(Settings);
+            Settings.Dock = DockStyle.Fill;
         }
 
         private void dataGridViewBooking_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -144,6 +163,12 @@ namespace Hotel_Management_OOP
                 Application.Exit();
             }
 
+        }
+
+        private void pictureBox6_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+            //WindowState.Minimize();
         }
     }
 }

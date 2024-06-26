@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookingUserControl));
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             panel2 = new Panel();
             button1 = new Button();
             tabControl1 = new TabControl();
@@ -66,7 +66,6 @@
             panel1 = new Panel();
             label1 = new Label();
             button11 = new Button();
-            button10 = new Button();
             panel2.SuspendLayout();
             tabControl1.SuspendLayout();
             Booking.SuspendLayout();
@@ -82,14 +81,14 @@
             // panel2
             // 
             panel2.AutoScroll = true;
-            panel2.BackColor = Color.FromArgb(255, 192, 128);
+            panel2.BackColor = Color.LightSalmon;
             panel2.Controls.Add(button1);
             panel2.Controls.Add(tabControl1);
             panel2.Controls.Add(button5);
             panel2.Controls.Add(guestaddbutton);
             panel2.Location = new Point(0, 181);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1629, 818);
+            panel2.Size = new Size(1638, 818);
             panel2.TabIndex = 6;
             // 
             // button1
@@ -97,7 +96,7 @@
             button1.BackColor = Color.Maroon;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(392, 647);
+            button1.Location = new Point(1130, 614);
             button1.Name = "button1";
             button1.Size = new Size(191, 59);
             button1.TabIndex = 7;
@@ -133,14 +132,14 @@
             // dataGridViewBooking
             // 
             dataGridViewBooking.BackgroundColor = Color.FromArgb(255, 224, 192);
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(72, 34, 22);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridViewBooking.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(72, 34, 22);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridViewBooking.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridViewBooking.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewBooking.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, Column6, Column7, Column8 });
             dataGridViewBooking.Location = new Point(0, 3);
@@ -246,14 +245,14 @@
             dataGridViewGuests.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewGuests.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             dataGridViewGuests.BackgroundColor = Color.FromArgb(255, 224, 192);
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(72, 34, 22);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridViewGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(72, 34, 22);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dataGridViewGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dataGridViewGuests.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewGuests.Columns.AddRange(new DataGridViewColumn[] { Gn, Column2, Column3, Column4, Column5, Column1 });
             dataGridViewGuests.Location = new Point(0, 3);
@@ -316,14 +315,14 @@
             // dataGridViewRooms
             // 
             dataGridViewRooms.BackgroundColor = Color.FromArgb(255, 224, 192);
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(72, 34, 22);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridViewRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(72, 34, 22);
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dataGridViewRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dataGridViewRooms.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewRooms.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, PricePerNight });
             dataGridViewRooms.GridColor = SystemColors.InactiveCaptionText;
@@ -366,7 +365,7 @@
             button5.BackColor = Color.FromArgb(125, 157, 66);
             button5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(1291, 647);
+            button5.Location = new Point(1402, 614);
             button5.Name = "button5";
             button5.Size = new Size(218, 59);
             button5.TabIndex = 5;
@@ -378,12 +377,13 @@
             guestaddbutton.BackColor = Color.Coral;
             guestaddbutton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guestaddbutton.ForeColor = Color.White;
-            guestaddbutton.Location = new Point(104, 647);
+            guestaddbutton.Location = new Point(852, 614);
             guestaddbutton.Name = "guestaddbutton";
             guestaddbutton.Size = new Size(193, 59);
             guestaddbutton.TabIndex = 4;
             guestaddbutton.Text = "Add... +";
             guestaddbutton.UseVisualStyleBackColor = false;
+            guestaddbutton.Click += guestaddbutton_Click;
             // 
             // panel1
             // 
@@ -391,11 +391,10 @@
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(label1);
             panel1.Controls.Add(button11);
-            panel1.Controls.Add(button10);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1634, 174);
+            panel1.Size = new Size(1638, 174);
             panel1.TabIndex = 7;
             // 
             // label1
@@ -404,7 +403,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial Rounded MT Bold", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(14, 95);
+            label1.Location = new Point(31, 94);
             label1.Name = "label1";
             label1.Size = new Size(420, 39);
             label1.TabIndex = 0;
@@ -413,22 +412,13 @@
             // button11
             // 
             button11.Image = (Image)resources.GetObject("button11.Image");
-            button11.Location = new Point(1468, 112);
+            button11.Location = new Point(1468, 83);
             button11.Name = "button11";
-            button11.Size = new Size(140, 48);
+            button11.Size = new Size(140, 77);
             button11.TabIndex = 8;
             button11.Text = "Log Out";
             button11.UseVisualStyleBackColor = true;
             button11.Click += button11_Click;
-            // 
-            // button10
-            // 
-            button10.Location = new Point(1468, 24);
-            button10.Name = "button10";
-            button10.Size = new Size(140, 66);
-            button10.TabIndex = 7;
-            button10.Text = "User Profile";
-            button10.UseVisualStyleBackColor = true;
             // 
             // BookingUserControl
             // 
@@ -438,7 +428,7 @@
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "BookingUserControl";
-            Size = new Size(1634, 1000);
+            Size = new Size(1638, 925);
             panel2.ResumeLayout(false);
             tabControl1.ResumeLayout(false);
             Booking.ResumeLayout(false);
@@ -489,6 +479,5 @@
         private Panel panel1;
         private Label label1;
         private Button button11;
-        private Button button10;
     }
 }

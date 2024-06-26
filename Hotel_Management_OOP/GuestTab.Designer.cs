@@ -43,12 +43,12 @@
             button6 = new Button();
             panel3 = new Panel();
             HomeOutline = new PictureBox();
-            userControl11 = new BookingUserControl();
-            homeUserControl1 = new HomeUserControl();
             button1 = new Button();
             panel1 = new Panel();
+            pictureBox6 = new PictureBox();
             pictureBox4 = new PictureBox();
             FloraSuitesHMS = new Label();
+            panelMain = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel4.SuspendLayout();
             panel7.SuspendLayout();
@@ -60,6 +60,7 @@
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)HomeOutline).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
@@ -69,6 +70,8 @@
             button4.BackgroundImageLayout = ImageLayout.None;
             button4.Cursor = Cursors.Hand;
             button4.FlatAppearance.BorderSize = 0;
+            button4.FlatAppearance.MouseDownBackColor = Color.DarkSalmon;
+            button4.FlatAppearance.MouseOverBackColor = Color.LightSalmon;
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.White;
@@ -77,8 +80,8 @@
             button4.Name = "button4";
             button4.Size = new Size(252, 56);
             button4.TabIndex = 4;
-            button4.Text = "HOME";
-            button4.UseVisualStyleBackColor = false;
+            button4.Text = "           DASHBOARD";
+            button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
             // pictureBox1
@@ -128,6 +131,8 @@
             button2.BackgroundImageLayout = ImageLayout.None;
             button2.Cursor = Cursors.Hand;
             button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseDownBackColor = Color.DarkSalmon;
+            button2.FlatAppearance.MouseOverBackColor = Color.LightSalmon;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
@@ -164,6 +169,8 @@
             button9.BackgroundImageLayout = ImageLayout.None;
             button9.Cursor = Cursors.Hand;
             button9.FlatAppearance.BorderSize = 0;
+            button9.FlatAppearance.MouseDownBackColor = Color.DarkSalmon;
+            button9.FlatAppearance.MouseOverBackColor = Color.LightSalmon;
             button9.FlatStyle = FlatStyle.Flat;
             button9.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button9.ForeColor = Color.White;
@@ -200,6 +207,8 @@
             button6.BackgroundImageLayout = ImageLayout.None;
             button6.Cursor = Cursors.Hand;
             button6.FlatAppearance.BorderSize = 0;
+            button6.FlatAppearance.MouseDownBackColor = Color.DarkSalmon;
+            button6.FlatAppearance.MouseOverBackColor = Color.LightSalmon;
             button6.FlatStyle = FlatStyle.Flat;
             button6.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button6.ForeColor = Color.White;
@@ -231,22 +240,6 @@
             HomeOutline.TabIndex = 13;
             HomeOutline.TabStop = false;
             // 
-            // userControl11
-            // 
-            userControl11.BackColor = SystemColors.ActiveBorder;
-            userControl11.Location = new Point(266, 76);
-            userControl11.Name = "userControl11";
-            userControl11.Size = new Size(1930, 1000);
-            userControl11.TabIndex = 0;
-            // 
-            // homeUserControl1
-            // 
-            homeUserControl1.BackColor = Color.White;
-            homeUserControl1.Location = new Point(266, 76);
-            homeUserControl1.Name = "homeUserControl1";
-            homeUserControl1.Size = new Size(2042, 1250);
-            homeUserControl1.TabIndex = 3;
-            // 
             // button1
             // 
             button1.BackColor = Color.Salmon;
@@ -261,6 +254,7 @@
             // panel1
             // 
             panel1.BackColor = Color.Salmon;
+            panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(FloraSuitesHMS);
             panel1.Dock = DockStyle.Top;
@@ -268,6 +262,18 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1902, 74);
             panel1.TabIndex = 11;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Cursor = Cursors.Hand;
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(1792, 14);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(44, 45);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 2;
+            pictureBox6.TabStop = false;
+            pictureBox6.Click += pictureBox6_Click_1;
             // 
             // pictureBox4
             // 
@@ -292,23 +298,33 @@
             FloraSuitesHMS.TabIndex = 0;
             FloraSuitesHMS.Text = "Flora Suites Hotel Management System";
             // 
+            // panelMain
+            // 
+            panelMain.Location = new Point(261, 76);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(1648, 957);
+            panelMain.TabIndex = 12;
+            // 
             // GuestTab
             // 
+            AllowDrop = true;
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.White;
-            ClientSize = new Size(1902, 1001);
+            ClientSize = new Size(1902, 1033);
+            Controls.Add(panelMain);
             Controls.Add(panel1);
             Controls.Add(button1);
             Controls.Add(panel4);
-            Controls.Add(homeUserControl1);
-            Controls.Add(userControl11);
             Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
+            MaximumSize = new Size(1920, 1080);
+            MinimumSize = new Size(1300, 800);
             Name = "GuestTab";
             ShowIcon = false;
-            StartPosition = FormStartPosition.WindowsDefaultBounds;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Flora Suites Hotel Management System";
             TopMost = true;
             WindowState = FormWindowState.Maximized;
@@ -324,6 +340,7 @@
             ((System.ComponentModel.ISupportInitialize)HomeOutline).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
         }
@@ -343,11 +360,11 @@
         private Panel panel7;
         private PictureBox pictureBox5;
         private Button button2;
-        private BookingUserControl userControl11;
-        private HomeUserControl homeUserControl1;
         private Button button1;
         private Panel panel1;
         private PictureBox pictureBox4;
         private Label FloraSuitesHMS;
+        private Panel panelMain;
+        private PictureBox pictureBox6;
     }
 }

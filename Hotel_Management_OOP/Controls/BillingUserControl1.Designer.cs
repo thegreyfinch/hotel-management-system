@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillingUserControl1));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel1 = new Panel();
+            panel2 = new Panel();
+            LogOutlabel2 = new Label();
+            LogOutButton = new Button();
+            label1 = new Label();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             dataGridView2 = new DataGridView();
@@ -58,7 +63,9 @@
             dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
             PaymentMethod = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
+            panel3 = new Panel();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -71,11 +78,60 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(panel2);
             panel1.Controls.Add(tabControl1);
+            panel1.Controls.Add(panel3);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1634, 1000);
             panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
+            panel2.BackgroundImageLayout = ImageLayout.Stretch;
+            panel2.Controls.Add(LogOutlabel2);
+            panel2.Controls.Add(LogOutButton);
+            panel2.Controls.Add(label1);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1634, 174);
+            panel2.TabIndex = 8;
+            // 
+            // LogOutlabel2
+            // 
+            LogOutlabel2.AutoSize = true;
+            LogOutlabel2.BackColor = Color.Transparent;
+            LogOutlabel2.Font = new Font("Tahoma", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LogOutlabel2.Location = new Point(1537, 111);
+            LogOutlabel2.Name = "LogOutlabel2";
+            LogOutlabel2.Size = new Size(74, 22);
+            LogOutlabel2.TabIndex = 11;
+            LogOutlabel2.Text = "Log Out";
+            // 
+            // LogOutButton
+            // 
+            LogOutButton.BackColor = Color.Salmon;
+            LogOutButton.Cursor = Cursors.Hand;
+            LogOutButton.Image = (Image)resources.GetObject("LogOutButton.Image");
+            LogOutButton.Location = new Point(1543, 45);
+            LogOutButton.Name = "LogOutButton";
+            LogOutButton.Size = new Size(62, 62);
+            LogOutButton.TabIndex = 10;
+            LogOutButton.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Arial Rounded MT Bold", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(14, 95);
+            label1.Name = "label1";
+            label1.Size = new Size(397, 39);
+            label1.TabIndex = 0;
+            label1.Text = "BILLING AND INVOICE";
             // 
             // tabControl1
             // 
@@ -84,12 +140,12 @@
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tabControl1.Location = new Point(13, 243);
+            tabControl1.Location = new Point(14, 210);
             tabControl1.Multiline = true;
             tabControl1.Name = "tabControl1";
             tabControl1.RightToLeft = RightToLeft.No;
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1608, 514);
+            tabControl1.Size = new Size(1628, 506);
             tabControl1.TabIndex = 7;
             // 
             // tabPage1
@@ -100,7 +156,7 @@
             tabPage1.Location = new Point(4, 37);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1600, 473);
+            tabPage1.Size = new Size(1620, 465);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Billing";
             // 
@@ -108,7 +164,7 @@
             // 
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
-            dataGridView2.BackgroundColor = Color.FromArgb(255, 224, 192);
+            dataGridView2.BackgroundColor = Color.FromArgb(250, 204, 166);
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(72, 34, 22);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -122,7 +178,7 @@
             dataGridView2.Location = new Point(1, 12);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 56;
-            dataGridView2.Size = new Size(1598, 449);
+            dataGridView2.Size = new Size(1616, 449);
             dataGridView2.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn4
@@ -171,7 +227,7 @@
             tabPage2.Location = new Point(4, 37);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1600, 473);
+            tabPage2.Size = new Size(1620, 465);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Payment";
             // 
@@ -234,7 +290,7 @@
             tabPage3.Location = new Point(4, 37);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(1600, 473);
+            tabPage3.Size = new Size(1620, 465);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Bill & Invoice";
             tabPage3.UseVisualStyleBackColor = true;
@@ -310,6 +366,14 @@
             dataGridViewTextBoxColumn10.MinimumWidth = 6;
             dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
+            // panel3
+            // 
+            panel3.BackColor = Color.LightSalmon;
+            panel3.Location = new Point(3, 177);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1629, 820);
+            panel3.TabIndex = 9;
+            // 
             // BillingUserControl1
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
@@ -318,6 +382,8 @@
             Name = "BillingUserControl1";
             Size = new Size(1634, 1000);
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
@@ -357,5 +423,10 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private DataGridViewTextBoxColumn PaymentMethod;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private Panel panel2;
+        private Label label1;
+        private Label LogOutlabel2;
+        private Button LogOutButton;
+        private Panel panel3;
     }
 }

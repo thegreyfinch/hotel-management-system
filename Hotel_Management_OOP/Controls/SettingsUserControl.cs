@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Hotel_Management_OOP
 {
-    public partial class BookingUserControl : UserControl
+    public partial class SettingsUserControl : UserControl
     {
-        public BookingUserControl()
+        public SettingsUserControl()
         {
             InitializeComponent();
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("You are logged out of your account.");
-            Application.Exit();
         }
     }
 }
