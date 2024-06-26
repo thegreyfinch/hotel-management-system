@@ -260,14 +260,14 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1902, 74);
+            panel1.Size = new Size(1920, 74);
             panel1.TabIndex = 11;
             // 
             // pictureBox6
             // 
             pictureBox6.Cursor = Cursors.Hand;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(1792, 14);
+            pictureBox6.Location = new Point(1765, 14);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(44, 45);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
@@ -279,7 +279,7 @@
             // 
             pictureBox4.Cursor = Cursors.Hand;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(1851, 14);
+            pictureBox4.Location = new Point(1830, 14);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(44, 45);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -300,9 +300,9 @@
             // 
             // panelMain
             // 
-            panelMain.Location = new Point(261, 76);
+            panelMain.Location = new Point(254, 76);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1648, 957);
+            panelMain.Size = new Size(1666, 1004);
             panelMain.TabIndex = 12;
             // 
             // GuestTab
@@ -313,7 +313,7 @@
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.White;
-            ClientSize = new Size(1902, 1033);
+            ClientSize = new Size(1920, 1080);
             Controls.Add(panelMain);
             Controls.Add(panel1);
             Controls.Add(button1);
