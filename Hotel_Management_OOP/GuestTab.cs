@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hotel_Management_OOP
 {
@@ -25,7 +26,7 @@ namespace Hotel_Management_OOP
         public GuestTab()
         {
             InitializeComponent();
-            panelMain.Controls.Clear();
+            //panelMain.Controls.Clear();
             panelMain.Controls.Add(Dashboard);
             Dashboard.Dock = DockStyle.Fill;
             //InitializeUserControls();
@@ -181,9 +182,9 @@ namespace Hotel_Management_OOP
 
             if (check == DialogResult.Yes)
             {
-                MessageBox.Show("You are logged out of your account.", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 this.Hide();
-
+                MessageBox.Show("You are logged out of your account.", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+      
                 Login form = new Login();
                 form.ShowDialog();
 
@@ -191,6 +192,11 @@ namespace Hotel_Management_OOP
                 //Application.Exit();
             }
 
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }

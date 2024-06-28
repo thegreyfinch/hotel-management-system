@@ -61,7 +61,7 @@
             // timer1
             // 
             timer1.Enabled = true;
-            timer1.Interval = 16;
+            timer1.Interval = 15;
             timer1.Tick += timer1_Tick;
             // 
             // pictureBox4

@@ -32,6 +32,8 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            comboBox1 = new ComboBox();
+            label6 = new Label();
             label4 = new Label();
             button2 = new Button();
             button1 = new Button();
@@ -48,6 +50,7 @@
             label2 = new Label();
             pictureBox2 = new PictureBox();
             label5 = new Label();
+            UserRole = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -60,10 +63,9 @@
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1638, 126);
+            panel1.Size = new Size(1638, 174);
             panel1.TabIndex = 9;
             // 
             // label1
@@ -72,7 +74,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial Rounded MT Bold", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(16, 47);
+            label1.Location = new Point(27, 88);
             label1.Name = "label1";
             label1.Size = new Size(192, 39);
             label1.TabIndex = 0;
@@ -81,6 +83,8 @@
             // panel2
             // 
             panel2.BackColor = Color.Snow;
+            panel2.Controls.Add(comboBox1);
+            panel2.Controls.Add(label6);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button1);
@@ -92,10 +96,30 @@
             panel2.Controls.Add(label3);
             panel2.Controls.Add(UsernametextBox);
             panel2.Controls.Add(panel3);
-            panel2.Location = new Point(2, 129);
+            panel2.Location = new Point(0, 173);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1633, 868);
+            panel2.Size = new Size(1638, 752);
             panel2.TabIndex = 10;
+            // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Receptionist", "Manager", "Admin" });
+            comboBox1.Location = new Point(534, 214);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(261, 33);
+            comboBox1.TabIndex = 21;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(396, 217);
+            label6.Name = "label6";
+            label6.Size = new Size(102, 24);
+            label6.TabIndex = 20;
+            label6.Text = "User Role:";
             // 
             // label4
             // 
@@ -114,7 +138,7 @@
             button2.Cursor = Cursors.Hand;
             button2.Font = new Font("Segoe UI Variable Small", 11.0769234F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(588, 384);
+            button2.Location = new Point(588, 433);
             button2.Name = "button2";
             button2.Size = new Size(150, 51);
             button2.TabIndex = 18;
@@ -127,7 +151,7 @@
             button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Segoe UI Variable Small", 11.0769234F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(588, 314);
+            button1.Location = new Point(588, 363);
             button1.Name = "button1";
             button1.Size = new Size(150, 51);
             button1.TabIndex = 17;
@@ -136,14 +160,15 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = Color.FromArgb(250, 204, 166);
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Username, Password });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Username, Password, UserRole });
             dataGridView1.Location = new Point(838, 105);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(407, 371);
+            dataGridView1.Size = new Size(526, 379);
             dataGridView1.TabIndex = 16;
             // 
             // Username
@@ -151,14 +176,12 @@
             Username.HeaderText = "Username";
             Username.MinimumWidth = 6;
             Username.Name = "Username";
-            Username.Width = 125;
             // 
             // Password
             // 
             Password.HeaderText = "Password";
             Password.MinimumWidth = 6;
             Password.Name = "Password";
-            Password.Width = 125;
             // 
             // buttonLogin
             // 
@@ -166,7 +189,7 @@
             buttonLogin.Cursor = Cursors.Hand;
             buttonLogin.Font = new Font("Segoe UI Variable Small", 11.0769234F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonLogin.ForeColor = Color.White;
-            buttonLogin.Location = new Point(588, 240);
+            buttonLogin.Location = new Point(588, 289);
             buttonLogin.Name = "buttonLogin";
             buttonLogin.Size = new Size(150, 51);
             buttonLogin.TabIndex = 15;
@@ -209,7 +232,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(72, 34, 22);
-            label3.Location = new Point(349, 27);
+            label3.Location = new Point(396, 32);
             label3.Name = "label3";
             label3.Size = new Size(167, 34);
             label3.TabIndex = 11;
@@ -268,6 +291,12 @@
             label5.TabIndex = 8;
             label5.Text = "[Username]";
             // 
+            // UserRole
+            // 
+            UserRole.HeaderText = "Role";
+            UserRole.MinimumWidth = 6;
+            UserRole.Name = "UserRole";
+            // 
             // SettingsUserControl
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
@@ -309,5 +338,8 @@
         private Button button2;
         private Button button1;
         private Label label4;
+        private ComboBox comboBox1;
+        private Label label6;
+        private DataGridViewTextBoxColumn UserRole;
     }
 }

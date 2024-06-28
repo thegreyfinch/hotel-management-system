@@ -71,8 +71,8 @@ namespace Hotel_Management_OOP
 
         private void button8_Click(object sender, EventArgs e)
         {
-            RoomsTab form = new RoomsTab();
-            form.ShowDialog();
+            //RoomsTab form = new RoomsTab();
+            //form.ShowDialog();
         }
 
         private void button9_Click(object sender, EventArgs e)

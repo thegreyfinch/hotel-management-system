@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookingUserControl));
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookingUserControl));
             panel2 = new Panel();
-            button1 = new Button();
             tabControl1 = new TabControl();
             Booking = new TabPage();
             dataGridViewBooking = new DataGridView();
@@ -45,8 +44,6 @@
             Column6 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
-            button12 = new Button();
-            pictureBox4 = new PictureBox();
             Guests = new TabPage();
             dataGridViewGuests = new DataGridView();
             Gn = new DataGridViewTextBoxColumn();
@@ -62,14 +59,20 @@
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             PricePerNight = new DataGridViewTextBoxColumn();
             button5 = new Button();
+            button1 = new Button();
             guestaddbutton = new Button();
             panel1 = new Panel();
             label1 = new Label();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button6 = new Button();
+            button7 = new Button();
+            button8 = new Button();
             panel2.SuspendLayout();
             tabControl1.SuspendLayout();
             Booking.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewBooking).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             Guests.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewGuests).BeginInit();
             Rooms.SuspendLayout();
@@ -81,50 +84,38 @@
             // 
             panel2.AutoScroll = true;
             panel2.BackColor = Color.Snow;
-            panel2.Controls.Add(button1);
             panel2.Controls.Add(tabControl1);
-            panel2.Controls.Add(button5);
-            panel2.Controls.Add(guestaddbutton);
-            panel2.Location = new Point(0, 181);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 180);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1638, 818);
+            panel2.Size = new Size(1638, 745);
             panel2.TabIndex = 6;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Maroon;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(1130, 614);
-            button1.Name = "button1";
-            button1.Size = new Size(191, 59);
-            button1.TabIndex = 7;
-            button1.Text = "Remove... -";
-            button1.UseVisualStyleBackColor = false;
             // 
             // tabControl1
             // 
             tabControl1.Controls.Add(Booking);
             tabControl1.Controls.Add(Guests);
             tabControl1.Controls.Add(Rooms);
+            tabControl1.Dock = DockStyle.Fill;
             tabControl1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tabControl1.Location = new Point(14, 17);
+            tabControl1.Location = new Point(0, 0);
             tabControl1.Name = "tabControl1";
             tabControl1.Padding = new Point(65, 3);
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1606, 581);
+            tabControl1.Size = new Size(1638, 745);
             tabControl1.TabIndex = 6;
             // 
             // Booking
             // 
-            Booking.BackColor = Color.FromArgb(64, 0, 0);
+            Booking.BackColor = Color.Snow;
+            Booking.Controls.Add(button5);
             Booking.Controls.Add(dataGridViewBooking);
-            Booking.Controls.Add(button12);
-            Booking.Controls.Add(pictureBox4);
+            Booking.Controls.Add(button1);
+            Booking.Controls.Add(guestaddbutton);
             Booking.Location = new Point(4, 34);
             Booking.Name = "Booking";
             Booking.Padding = new Padding(3);
-            Booking.Size = new Size(1598, 543);
+            Booking.Size = new Size(1630, 707);
             Booking.TabIndex = 0;
             Booking.Text = "Booking";
             // 
@@ -142,10 +133,10 @@
             dataGridViewBooking.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewBooking.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewBooking.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, Column6, Column7, Column8 });
-            dataGridViewBooking.Location = new Point(0, 3);
+            dataGridViewBooking.Location = new Point(3, 3);
             dataGridViewBooking.Name = "dataGridViewBooking";
             dataGridViewBooking.RowHeadersWidth = 56;
-            dataGridViewBooking.Size = new Size(1595, 540);
+            dataGridViewBooking.Size = new Size(1624, 554);
             dataGridViewBooking.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn4
@@ -196,38 +187,16 @@
             Column8.MinimumWidth = 6;
             Column8.Name = "Column8";
             // 
-            // button12
-            // 
-            button12.BackgroundImageLayout = ImageLayout.None;
-            button12.FlatAppearance.BorderSize = 0;
-            button12.FlatStyle = FlatStyle.Flat;
-            button12.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            button12.ForeColor = Color.White;
-            button12.Location = new Point(64, 137);
-            button12.Name = "button12";
-            button12.Size = new Size(158, 72);
-            button12.TabIndex = 7;
-            button12.Text = "Booking \r\nand Guests";
-            button12.TextAlign = ContentAlignment.MiddleLeft;
-            button12.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(6, 176);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(56, 54);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 14;
-            pictureBox4.TabStop = false;
-            // 
             // Guests
             // 
+            Guests.Controls.Add(button2);
+            Guests.Controls.Add(button3);
+            Guests.Controls.Add(button4);
             Guests.Controls.Add(dataGridViewGuests);
             Guests.Location = new Point(4, 34);
             Guests.Name = "Guests";
             Guests.Padding = new Padding(3);
-            Guests.Size = new Size(1598, 543);
+            Guests.Size = new Size(1630, 707);
             Guests.TabIndex = 1;
             Guests.Text = "Guests";
             Guests.UseVisualStyleBackColor = true;
@@ -247,10 +216,10 @@
             dataGridViewGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewGuests.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewGuests.Columns.AddRange(new DataGridViewColumn[] { Gn, Column2, Column3, Column4, Column5, Column1 });
-            dataGridViewGuests.Location = new Point(0, 3);
+            dataGridViewGuests.Location = new Point(3, 3);
             dataGridViewGuests.Name = "dataGridViewGuests";
             dataGridViewGuests.RowHeadersWidth = 56;
-            dataGridViewGuests.Size = new Size(1595, 639);
+            dataGridViewGuests.Size = new Size(1624, 524);
             dataGridViewGuests.TabIndex = 0;
             // 
             // Gn
@@ -295,17 +264,21 @@
             // 
             // Rooms
             // 
+            Rooms.Controls.Add(button6);
+            Rooms.Controls.Add(button7);
+            Rooms.Controls.Add(button8);
             Rooms.Controls.Add(dataGridViewRooms);
             Rooms.Location = new Point(4, 34);
             Rooms.Name = "Rooms";
             Rooms.Padding = new Padding(3);
-            Rooms.Size = new Size(1598, 543);
+            Rooms.Size = new Size(1630, 707);
             Rooms.TabIndex = 2;
             Rooms.Text = "Rooms";
             Rooms.UseVisualStyleBackColor = true;
             // 
             // dataGridViewRooms
             // 
+            dataGridViewRooms.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewRooms.BackgroundColor = Color.FromArgb(255, 224, 192);
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(72, 34, 22);
@@ -318,10 +291,10 @@
             dataGridViewRooms.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewRooms.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, PricePerNight });
             dataGridViewRooms.GridColor = SystemColors.InactiveCaptionText;
-            dataGridViewRooms.Location = new Point(0, 3);
+            dataGridViewRooms.Location = new Point(3, 3);
             dataGridViewRooms.Name = "dataGridViewRooms";
             dataGridViewRooms.RowHeadersWidth = 56;
-            dataGridViewRooms.Size = new Size(1598, 642);
+            dataGridViewRooms.Size = new Size(1624, 524);
             dataGridViewRooms.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn1
@@ -329,47 +302,55 @@
             dataGridViewTextBoxColumn1.HeaderText = "Room ID";
             dataGridViewTextBoxColumn1.MinimumWidth = 7;
             dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.Width = 175;
             // 
             // dataGridViewTextBoxColumn2
             // 
             dataGridViewTextBoxColumn2.HeaderText = "Room Type";
             dataGridViewTextBoxColumn2.MinimumWidth = 7;
             dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.Width = 175;
             // 
             // dataGridViewTextBoxColumn3
             // 
             dataGridViewTextBoxColumn3.HeaderText = "Room Status";
             dataGridViewTextBoxColumn3.MinimumWidth = 7;
             dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.Width = 135;
             // 
             // PricePerNight
             // 
             PricePerNight.HeaderText = "Price Per Night";
             PricePerNight.MinimumWidth = 6;
             PricePerNight.Name = "PricePerNight";
-            PricePerNight.Width = 125;
             // 
             // button5
             // 
             button5.BackColor = Color.FromArgb(125, 157, 66);
             button5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(1402, 614);
+            button5.Location = new Point(1331, 590);
             button5.Name = "button5";
             button5.Size = new Size(218, 59);
             button5.TabIndex = 5;
             button5.Text = "Save";
             button5.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.Maroon;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(1105, 590);
+            button1.Name = "button1";
+            button1.Size = new Size(191, 59);
+            button1.TabIndex = 7;
+            button1.Text = "Remove... -";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // guestaddbutton
             // 
             guestaddbutton.BackColor = Color.Coral;
             guestaddbutton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guestaddbutton.ForeColor = Color.White;
-            guestaddbutton.Location = new Point(852, 614);
+            guestaddbutton.Location = new Point(875, 590);
             guestaddbutton.Name = "guestaddbutton";
             guestaddbutton.Size = new Size(193, 59);
             guestaddbutton.TabIndex = 4;
@@ -401,6 +382,78 @@
             label1.TabIndex = 0;
             label1.Text = "BOOKING AND GUESTS";
             // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(125, 157, 66);
+            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(1327, 583);
+            button2.Name = "button2";
+            button2.Size = new Size(218, 59);
+            button2.TabIndex = 9;
+            button2.Text = "Save";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Maroon;
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(1101, 583);
+            button3.Name = "button3";
+            button3.Size = new Size(191, 59);
+            button3.TabIndex = 10;
+            button3.Text = "Remove... -";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.Coral;
+            button4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(871, 583);
+            button4.Name = "button4";
+            button4.Size = new Size(193, 59);
+            button4.TabIndex = 8;
+            button4.Text = "Add... +";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.FromArgb(125, 157, 66);
+            button6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(1338, 581);
+            button6.Name = "button6";
+            button6.Size = new Size(218, 59);
+            button6.TabIndex = 9;
+            button6.Text = "Save";
+            button6.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            button7.BackColor = Color.Maroon;
+            button7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button7.ForeColor = Color.White;
+            button7.Location = new Point(1112, 581);
+            button7.Name = "button7";
+            button7.Size = new Size(191, 59);
+            button7.TabIndex = 10;
+            button7.Text = "Remove... -";
+            button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            button8.BackColor = Color.Coral;
+            button8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button8.ForeColor = Color.White;
+            button8.Location = new Point(882, 581);
+            button8.Name = "button8";
+            button8.Size = new Size(193, 59);
+            button8.TabIndex = 8;
+            button8.Text = "Add... +";
+            button8.UseVisualStyleBackColor = false;
+            // 
             // BookingUserControl
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
@@ -414,7 +467,6 @@
             tabControl1.ResumeLayout(false);
             Booking.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewBooking).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             Guests.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewGuests).EndInit();
             Rooms.ResumeLayout(false);
@@ -439,8 +491,6 @@
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
-        private Button button12;
-        private PictureBox pictureBox4;
         private TabPage Guests;
         private DataGridView dataGridViewGuests;
         private DataGridViewTextBoxColumn Gn;
@@ -459,5 +509,11 @@
         private Button guestaddbutton;
         private Panel panel1;
         private Label label1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private Button button6;
+        private Button button7;
+        private Button button8;
     }
 }

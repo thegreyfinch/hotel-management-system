@@ -7,9 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using Syncfusion.Windows.Forms.Chart;
+using System.Data.SQLite; //edit 
+using Microsoft.EntityFrameworkCore;
 
 namespace Hotel_Management_OOP
 {
+    //SqlConnection conn = new SqlConnection("Data.Source=.;initial catalog=users;integrated security=true"); //edit
     public partial class BookingUserControl : UserControl
     {
         public BookingUserControl()
@@ -25,9 +30,24 @@ namespace Hotel_Management_OOP
 
         private void guestaddbutton_Click(object sender, EventArgs e)
         {
-            this.SendToBack();
-            BOOKING form = new BOOKING();
-            form.ShowDialog();
+            /* SqlCommand cmd = new SqlCommand("Select Booking_ID,Customer_ID,Room_ID,Check-in,Check-out,Price, Booking_Status, Booking_Date group from dataGridViewBooking where ID_group=@parm1", conn); //edit
+             cmd.Parameters.AddWithValue("@parm1", TextBox.Text); //edit
+             SQLiteDataAdapter da = new SQLiteDataAdapter();  //edit
+             da.SelectCommand = cmd;   //edit
+             DataTable dt = new DataTable(); //edit
+             dt.Clear();  //edit
+             da.Fill(dt);  //edit
+             dataGridViewBooking.DataSource = dt;   //edit
+             dataGridViewBooking.AllowUserToAddRows = false;   //edit
+
+             this.SendToBack();
+             BOOKING form = new BOOKING();
+             form.ShowDialog();
+            */
+
+            //this.SendToBack();
+            //BOOKING form = new BOOKING();
+            //form.ShowDialog();
         }
     }
 }

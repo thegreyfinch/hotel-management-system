@@ -30,23 +30,25 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel1 = new Panel();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
             label1 = new Label();
             button1 = new Button();
+            label3 = new Label();
             panel2 = new Panel();
-            label5 = new Label();
             comboBox2 = new ComboBox();
             label4 = new Label();
             dateTimePicker2 = new DateTimePicker();
-            label3 = new Label();
             comboBox1 = new ComboBox();
             dateTimePicker1 = new DateTimePicker();
             button2 = new Button();
             textBox1 = new TextBox();
             label2 = new Label();
             dataGridView1 = new DataGridView();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
             Column1 = new DataGridViewTextBoxColumn();
             NoGuests = new DataGridViewTextBoxColumn();
             RoomID = new DataGridViewTextBoxColumn();
@@ -55,7 +57,6 @@
             CheckinDate = new DataGridViewTextBoxColumn();
             CheckOutDate = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
-            label9 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -63,6 +64,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(label10);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(label7);
@@ -75,6 +77,72 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1297, 225);
             panel1.TabIndex = 0;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI Variable Text Semibold", 9F);
+            label10.ForeColor = Color.FromArgb(72, 34, 22);
+            label10.Location = new Point(16, 101);
+            label10.Name = "label10";
+            label10.Size = new Size(89, 20);
+            label10.TabIndex = 16;
+            label10.Text = "Room Type:";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI Variable Text Semibold", 9F);
+            label9.ForeColor = Color.FromArgb(72, 34, 22);
+            label9.Location = new Point(16, 125);
+            label9.Name = "label9";
+            label9.Size = new Size(136, 20);
+            label9.TabIndex = 15;
+            label9.Text = "Number of Guests:";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Variable Text Semibold", 9F);
+            label8.ForeColor = Color.FromArgb(72, 34, 22);
+            label8.Location = new Point(16, 49);
+            label8.Name = "label8";
+            label8.Size = new Size(123, 20);
+            label8.TabIndex = 14;
+            label8.Text = "Customer Name:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Variable Text Semibold", 9F);
+            label7.ForeColor = Color.FromArgb(72, 34, 22);
+            label7.Location = new Point(16, 76);
+            label7.Name = "label7";
+            label7.Size = new Size(114, 20);
+            label7.TabIndex = 13;
+            label7.Text = "Room Number:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Variable Text Semibold", 9F);
+            label6.ForeColor = Color.FromArgb(72, 34, 22);
+            label6.Location = new Point(409, 49);
+            label6.Name = "label6";
+            label6.Size = new Size(109, 20);
+            label6.TabIndex = 12;
+            label6.Text = "Check-in Date:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Variable Text Semibold", 12F, FontStyle.Bold);
+            label5.ForeColor = Color.FromArgb(72, 34, 22);
+            label5.Location = new Point(13, 12);
+            label5.Name = "label5";
+            label5.Size = new Size(180, 27);
+            label5.TabIndex = 11;
+            label5.Text = "BOOKING DETAILS";
             // 
             // label1
             // 
@@ -99,6 +167,17 @@
             button1.Text = "ADD BOOKING";
             button1.UseVisualStyleBackColor = false;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Variable Text Semibold", 9F);
+            label3.ForeColor = Color.FromArgb(72, 34, 22);
+            label3.Location = new Point(409, 78);
+            label3.Name = "label3";
+            label3.Size = new Size(119, 20);
+            label3.TabIndex = 7;
+            label3.Text = "Check-out Date:";
+            // 
             // panel2
             // 
             panel2.Controls.Add(comboBox2);
@@ -114,17 +193,6 @@
             panel2.Size = new Size(1297, 182);
             panel2.TabIndex = 1;
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Variable Text Semibold", 12F, FontStyle.Bold);
-            label5.ForeColor = Color.FromArgb(72, 34, 22);
-            label5.Location = new Point(13, 12);
-            label5.Name = "label5";
-            label5.Size = new Size(180, 27);
-            label5.TabIndex = 11;
-            label5.Text = "BOOKING DETAILS";
-            // 
             // comboBox2
             // 
             comboBox2.BackColor = Color.FromArgb(250, 204, 166);
@@ -136,7 +204,7 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(288, 28);
             comboBox2.TabIndex = 10;
-            comboBox2.Text = "Room Type ID (All)";
+            comboBox2.Text = "Room Type (All)";
             comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // label4
@@ -158,17 +226,6 @@
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(254, 27);
             dateTimePicker2.TabIndex = 8;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Variable Text Semibold", 9F);
-            label3.ForeColor = Color.FromArgb(72, 34, 22);
-            label3.Location = new Point(409, 78);
-            label3.Name = "label3";
-            label3.Size = new Size(119, 20);
-            label3.TabIndex = 7;
-            label3.Text = "Check-out Date:";
             // 
             // comboBox1
             // 
@@ -247,39 +304,6 @@
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Variable Text Semibold", 9F);
-            label6.ForeColor = Color.FromArgb(72, 34, 22);
-            label6.Location = new Point(409, 49);
-            label6.Name = "label6";
-            label6.Size = new Size(109, 20);
-            label6.TabIndex = 12;
-            label6.Text = "Check-in Date:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI Variable Text Semibold", 9F);
-            label7.ForeColor = Color.FromArgb(72, 34, 22);
-            label7.Location = new Point(16, 76);
-            label7.Name = "label7";
-            label7.Size = new Size(53, 20);
-            label7.TabIndex = 13;
-            label7.Text = "Room:";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Variable Text Semibold", 9F);
-            label8.ForeColor = Color.FromArgb(72, 34, 22);
-            label8.Location = new Point(16, 49);
-            label8.Name = "label8";
-            label8.Size = new Size(123, 20);
-            label8.TabIndex = 14;
-            label8.Text = "Customer Name:";
-            // 
             // Column1
             // 
             Column1.HeaderText = "Name";
@@ -327,17 +351,6 @@
             Column3.HeaderText = "Cost";
             Column3.MinimumWidth = 7;
             Column3.Name = "Column3";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI Variable Text Semibold", 9F);
-            label9.ForeColor = Color.FromArgb(72, 34, 22);
-            label9.Location = new Point(16, 102);
-            label9.Name = "label9";
-            label9.Size = new Size(136, 20);
-            label9.TabIndex = 15;
-            label9.Text = "Number of Guests:";
             // 
             // BOOKING
             // 
@@ -388,5 +401,6 @@
         private DataGridViewTextBoxColumn CheckinDate;
         private DataGridViewTextBoxColumn CheckOutDate;
         private DataGridViewTextBoxColumn Column3;
+        private Label label10;
     }
 }

@@ -7207,23 +7207,6 @@
         ckSWJP877HhOvjaLiK87hGz+fxq3gHltyRclYMLFS14E8ZKH/wbJCVLbRfCj9wAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="LogOutButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAqZJREFUaEPt
-        2surTWEcxnFFcsllIAOUkgEjSiJlIOUvIMplhDImAxIjJkYGSgaKgQhRxsqtDCQTEyW3chm6z2zf53TW
-        6Tnv/q3bPmvvtcp56lN+b+9e6/0te6/W5czo9XqpuTiG9xhFtB/tbw6i9RRKBxbjEdrIQyxCuqZC6cAd
-        tJlbSNdUyIvlKMpPnMXhBh3HR3iWwddVyIsDKMtvnELt/+oCa+DZj2heyAsdkar5gD3wz0+FR+uI5oS8
-        qNNAlhfYCN/OIDwjbUD5i0uo9d1NeEbeQBb9yI9iJny7VXhaayDLZ+yAb7uMp/UGFH2t9sK3X8TTiQaU
-        H1gC30ceT2caUE7C95HnDbJsQzQn5MUwGrgC30ee1biAI+O1TgS7sH28zuXFMBq4Cd9HVeeRRWe2aM4Y
-        L7rUwFN4ziGa19kGdD2kM5lH9wx9c73oUgNyEGn6mvBimA0swGnokqOOt0gz6es08Q8Ms4FrY1Vz2YqR
-        NvBgrGouuncZaQM6Yi+h66Q6viHNM8zGSBsYxEqkT0YeYyEm5vkHutRAtHgd+UmLFy+61MB9eLT4eeib
-        60WXGriHLHpe1HfkM150qYFVuIvLyF28eNFmA/Ohy4cNNlaJF2028ASKrn/WIZoT8qLNBjxaRzQn5MV0
-        A0GmGyjjxXQDQf6LBnRl6elUA7eha5g8umi7Dk+tp91e7EbbeQ1fUykvlqLN6O3PFviaSqUDF9FGdLe2
-        Hul6SqUDekecfienkufQbyvPIWxCuo7KwkHsxFdMNVVPowMLB8fNwgn8wqC5gWjbjQkHEyugG4v0UV+V
-        6HPRNhsTDubYDP3Y6mQfom01JhwsoVdHn1CWVxjkhV8t4WAF+qOQM/iDKO+wFtFnGxUO1qCb76v4DuUL
-        9Kal8Ea8Ob0Z/wCzRFJEWjDgvAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

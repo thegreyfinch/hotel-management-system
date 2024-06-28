@@ -90,7 +90,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 17);
+            pictureBox1.Location = new Point(0, 71);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(261, 237);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -107,9 +107,10 @@
             panel4.Controls.Add(panel3);
             panel4.Controls.Add(pictureBox1);
             panel4.Controls.Add(button3);
-            panel4.Location = new Point(0, 68);
+            panel4.Dock = DockStyle.Fill;
+            panel4.Location = new Point(0, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(263, 1040);
+            panel4.Size = new Size(1920, 1055);
             panel4.TabIndex = 2;
             // 
             // pictureBox7
@@ -128,7 +129,7 @@
             panel7.BackColor = Color.Transparent;
             panel7.Controls.Add(pictureBox5);
             panel7.Controls.Add(button2);
-            panel7.Location = new Point(0, 666);
+            panel7.Location = new Point(0, 706);
             panel7.Name = "panel7";
             panel7.Size = new Size(261, 63);
             panel7.TabIndex = 25;
@@ -169,7 +170,7 @@
             panel6.BackColor = Color.Transparent;
             panel6.Controls.Add(pictureBox3);
             panel6.Controls.Add(button9);
-            panel6.Location = new Point(0, 547);
+            panel6.Location = new Point(0, 587);
             panel6.Name = "panel6";
             panel6.Size = new Size(261, 63);
             panel6.TabIndex = 24;
@@ -209,7 +210,7 @@
             panel5.BackColor = Color.Transparent;
             panel5.Controls.Add(pictureBox2);
             panel5.Controls.Add(button6);
-            panel5.Location = new Point(0, 428);
+            panel5.Location = new Point(0, 468);
             panel5.Name = "panel5";
             panel5.Size = new Size(261, 63);
             panel5.TabIndex = 23;
@@ -249,7 +250,7 @@
             panel3.BackColor = Color.Transparent;
             panel3.Controls.Add(HomeOutline);
             panel3.Controls.Add(button4);
-            panel3.Location = new Point(0, 317);
+            panel3.Location = new Point(0, 357);
             panel3.Name = "panel3";
             panel3.Size = new Size(261, 63);
             panel3.TabIndex = 22;
@@ -345,10 +346,12 @@
             // panelMain
             // 
             panelMain.BackColor = Color.White;
-            panelMain.Location = new Point(261, 68);
+            panelMain.Dock = DockStyle.Right;
+            panelMain.Location = new Point(261, 74);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1659, 988);
+            panelMain.Size = new Size(1659, 981);
             panelMain.TabIndex = 12;
+            panelMain.Paint += panelMain_Paint;
             // 
             // GuestTab
             // 
