@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeUserControl));
             panel1 = new Panel();
-            LogOutlabel2 = new Label();
             label1 = new Label();
-            LogOutButton = new Button();
             panel2 = new Panel();
-            label14 = new Label();
+            panel13 = new Panel();
+            label21 = new Label();
+            panel12 = new Panel();
+            label20 = new Label();
+            dateTimePicker1 = new DateTimePicker();
             pictureBox12 = new PictureBox();
-            label16 = new Label();
             pictureBox14 = new PictureBox();
-            label18 = new Label();
             pictureBox16 = new PictureBox();
             label10 = new Label();
             label11 = new Label();
@@ -65,16 +65,18 @@
             label9 = new Label();
             label8 = new Label();
             panel9 = new Panel();
+            label14 = new Label();
             label19 = new Label();
             panel10 = new Panel();
             label17 = new Label();
+            label16 = new Label();
             panel11 = new Panel();
             label15 = new Label();
-            panel12 = new Panel();
-            dateTimePicker1 = new DateTimePicker();
-            label20 = new Label();
+            label18 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            panel13.SuspendLayout();
+            panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
@@ -91,32 +93,18 @@
             panel9.SuspendLayout();
             panel10.SuspendLayout();
             panel11.SuspendLayout();
-            panel12.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Controls.Add(LogOutlabel2);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(LogOutButton);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1638, 126);
             panel1.TabIndex = 8;
-            // 
-            // LogOutlabel2
-            // 
-            LogOutlabel2.AutoSize = true;
-            LogOutlabel2.BackColor = Color.Transparent;
-            LogOutlabel2.Font = new Font("Tahoma", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LogOutlabel2.Location = new Point(1548, 84);
-            LogOutlabel2.Name = "LogOutlabel2";
-            LogOutlabel2.Size = new Size(74, 22);
-            LogOutlabel2.TabIndex = 9;
-            LogOutlabel2.Text = "Log Out";
             // 
             // label1
             // 
@@ -130,22 +118,11 @@
             label1.TabIndex = 0;
             label1.Text = "DASHBOARD";
             // 
-            // LogOutButton
-            // 
-            LogOutButton.BackColor = Color.Salmon;
-            LogOutButton.Cursor = Cursors.Hand;
-            LogOutButton.Image = (Image)resources.GetObject("LogOutButton.Image");
-            LogOutButton.Location = new Point(1554, 18);
-            LogOutButton.Name = "LogOutButton";
-            LogOutButton.Size = new Size(62, 62);
-            LogOutButton.TabIndex = 8;
-            LogOutButton.UseVisualStyleBackColor = false;
-            LogOutButton.Click += button11_Click;
-            // 
             // panel2
             // 
             panel2.AutoScroll = true;
             panel2.BackColor = Color.FromArgb(250, 204, 166);
+            panel2.Controls.Add(panel13);
             panel2.Controls.Add(panel12);
             panel2.Controls.Add(pictureBox12);
             panel2.Controls.Add(pictureBox14);
@@ -177,16 +154,52 @@
             panel2.TabIndex = 9;
             panel2.Paint += panel2_Paint;
             // 
-            // label14
+            // panel13
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.ForeColor = Color.FromArgb(64, 0, 0);
-            label14.Location = new Point(104, 133);
-            label14.Name = "label14";
-            label14.Size = new Size(69, 34);
-            label14.TabIndex = 36;
-            label14.Text = "100";
+            panel13.Controls.Add(label21);
+            panel13.Location = new Point(20, 535);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(651, 262);
+            panel13.TabIndex = 47;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label21.ForeColor = Color.FromArgb(72, 34, 22);
+            label21.Location = new Point(17, 14);
+            label21.Name = "label21";
+            label21.Size = new Size(147, 34);
+            label21.TabIndex = 9;
+            label21.Text = "REPORTS";
+            // 
+            // panel12
+            // 
+            panel12.Controls.Add(label20);
+            panel12.Controls.Add(dateTimePicker1);
+            panel12.Location = new Point(20, 15);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(651, 508);
+            panel12.TabIndex = 46;
+            panel12.Paint += panel12_Paint;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label20.ForeColor = Color.FromArgb(72, 34, 22);
+            label20.Location = new Point(230, 11);
+            label20.Name = "label20";
+            label20.Size = new Size(168, 34);
+            label20.TabIndex = 8;
+            label20.Text = "CALENDAR";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(37, 68);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(586, 29);
+            dateTimePicker1.TabIndex = 0;
             // 
             // pictureBox12
             // 
@@ -198,17 +211,6 @@
             pictureBox12.TabIndex = 34;
             pictureBox12.TabStop = false;
             // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.ForeColor = Color.FromArgb(64, 0, 0);
-            label16.Location = new Point(104, 133);
-            label16.Name = "label16";
-            label16.Size = new Size(69, 34);
-            label16.TabIndex = 32;
-            label16.Text = "100";
-            // 
             // pictureBox14
             // 
             pictureBox14.Image = (Image)resources.GetObject("pictureBox14.Image");
@@ -218,17 +220,6 @@
             pictureBox14.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox14.TabIndex = 30;
             pictureBox14.TabStop = false;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label18.ForeColor = Color.FromArgb(64, 0, 0);
-            label18.Location = new Point(114, 133);
-            label18.Name = "label18";
-            label18.Size = new Size(69, 34);
-            label18.TabIndex = 28;
-            label18.Text = "100";
             // 
             // pictureBox16
             // 
@@ -491,6 +482,17 @@
             panel9.Size = new Size(282, 234);
             panel9.TabIndex = 43;
             // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.ForeColor = Color.FromArgb(64, 0, 0);
+            label14.Location = new Point(104, 133);
+            label14.Name = "label14";
+            label14.Size = new Size(69, 34);
+            label14.TabIndex = 36;
+            label14.Text = "100";
+            // 
             // label19
             // 
             label19.AutoSize = true;
@@ -523,6 +525,17 @@
             label17.Text = "Male";
             label17.Click += label17_Click;
             // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label16.ForeColor = Color.FromArgb(64, 0, 0);
+            label16.Location = new Point(104, 133);
+            label16.Name = "label16";
+            label16.Size = new Size(69, 34);
+            label16.TabIndex = 32;
+            label16.Text = "100";
+            // 
             // panel11
             // 
             panel11.Controls.Add(label15);
@@ -543,32 +556,16 @@
             label15.TabIndex = 35;
             label15.Text = "Female";
             // 
-            // panel12
+            // label18
             // 
-            panel12.Controls.Add(label20);
-            panel12.Controls.Add(dateTimePicker1);
-            panel12.Location = new Point(20, 15);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(651, 508);
-            panel12.TabIndex = 46;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(37, 68);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(586, 29);
-            dateTimePicker1.TabIndex = 0;
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label20.ForeColor = Color.FromArgb(72, 34, 22);
-            label20.Location = new Point(230, 11);
-            label20.Name = "label20";
-            label20.Size = new Size(168, 34);
-            label20.TabIndex = 8;
-            label20.Text = "CALENDAR";
+            label18.AutoSize = true;
+            label18.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label18.ForeColor = Color.FromArgb(64, 0, 0);
+            label18.Location = new Point(114, 133);
+            label18.Name = "label18";
+            label18.Size = new Size(69, 34);
+            label18.TabIndex = 28;
+            label18.Text = "100";
             // 
             // HomeUserControl
             // 
@@ -583,6 +580,10 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel13.ResumeLayout(false);
+            panel13.PerformLayout();
+            panel12.ResumeLayout(false);
+            panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
@@ -605,8 +606,6 @@
             panel10.PerformLayout();
             panel11.ResumeLayout(false);
             panel11.PerformLayout();
-            panel12.ResumeLayout(false);
-            panel12.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -614,9 +613,7 @@
 
         private Panel panel1;
         private Label label1;
-        private Button LogOutButton;
         private Panel panel2;
-        private Label LogOutlabel2;
         private Label label2;
         private PictureBox TotalRoomspictureBox2;
         private Label label3;
@@ -656,5 +653,7 @@
         private Panel panel12;
         private Label label20;
         private DateTimePicker dateTimePicker1;
+        private Panel panel13;
+        private Label label21;
     }
 }

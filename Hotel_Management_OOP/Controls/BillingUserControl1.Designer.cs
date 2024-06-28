@@ -37,6 +37,11 @@
             LogOutlabel2 = new Label();
             LogOutButton = new Button();
             label1 = new Label();
+            panel3 = new Panel();
+            button2 = new Button();
+            textBox1 = new TextBox();
+            panel4 = new Panel();
+            guestaddbutton = new Button();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             dataGridView2 = new DataGridView();
@@ -63,9 +68,10 @@
             dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
             PaymentMethod = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
-            panel3 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            panel4.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
@@ -79,7 +85,6 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(panel2);
-            panel1.Controls.Add(tabControl1);
             panel1.Controls.Add(panel3);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -120,6 +125,7 @@
             LogOutButton.Size = new Size(62, 62);
             LogOutButton.TabIndex = 10;
             LogOutButton.UseVisualStyleBackColor = false;
+            LogOutButton.Click += LogOutButton_Click;
             // 
             // label1
             // 
@@ -133,6 +139,60 @@
             label1.TabIndex = 0;
             label1.Text = "BILLING AND INVOICE";
             // 
+            // panel3
+            // 
+            panel3.BackColor = Color.Snow;
+            panel3.Controls.Add(button2);
+            panel3.Controls.Add(textBox1);
+            panel3.Controls.Add(panel4);
+            panel3.Controls.Add(tabControl1);
+            panel3.Location = new Point(0, 174);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1691, 823);
+            panel3.TabIndex = 9;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(72, 34, 22);
+            button2.Font = new Font("Segoe UI Variable Text", 8.861538F);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(327, 22);
+            button2.Name = "button2";
+            button2.Size = new Size(84, 36);
+            button2.TabIndex = 9;
+            button2.Text = "Search";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Font = new Font("Segoe UI Variable Text Light", 8.861538F);
+            textBox1.Location = new Point(28, 26);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(290, 27);
+            textBox1.TabIndex = 8;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(guestaddbutton);
+            panel4.Location = new Point(0, 520);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(1563, 297);
+            panel4.TabIndex = 0;
+            // 
+            // guestaddbutton
+            // 
+            guestaddbutton.BackColor = Color.Coral;
+            guestaddbutton.Cursor = Cursors.Hand;
+            guestaddbutton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guestaddbutton.ForeColor = Color.White;
+            guestaddbutton.Location = new Point(1398, 30);
+            guestaddbutton.Name = "guestaddbutton";
+            guestaddbutton.Size = new Size(193, 59);
+            guestaddbutton.TabIndex = 5;
+            guestaddbutton.Text = "Generate Invoice";
+            guestaddbutton.UseVisualStyleBackColor = false;
+            // 
             // tabControl1
             // 
             tabControl1.Appearance = TabAppearance.Buttons;
@@ -140,12 +200,12 @@
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tabControl1.Location = new Point(14, 210);
+            tabControl1.Location = new Point(21, 84);
             tabControl1.Multiline = true;
             tabControl1.Name = "tabControl1";
             tabControl1.RightToLeft = RightToLeft.No;
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1628, 506);
+            tabControl1.Size = new Size(1631, 394);
             tabControl1.TabIndex = 7;
             // 
             // tabPage1
@@ -156,7 +216,7 @@
             tabPage1.Location = new Point(4, 37);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1620, 465);
+            tabPage1.Size = new Size(1623, 353);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Billing";
             // 
@@ -178,7 +238,7 @@
             dataGridView2.Location = new Point(1, 12);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 56;
-            dataGridView2.Size = new Size(1616, 449);
+            dataGridView2.Size = new Size(1602, 449);
             dataGridView2.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn4
@@ -227,7 +287,7 @@
             tabPage2.Location = new Point(4, 37);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1620, 465);
+            tabPage2.Size = new Size(1623, 353);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Payment";
             // 
@@ -290,7 +350,7 @@
             tabPage3.Location = new Point(4, 37);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(1620, 465);
+            tabPage3.Size = new Size(1623, 353);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Bill & Invoice";
             tabPage3.UseVisualStyleBackColor = true;
@@ -366,14 +426,6 @@
             dataGridViewTextBoxColumn10.MinimumWidth = 6;
             dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
-            // panel3
-            // 
-            panel3.BackColor = Color.LightSalmon;
-            panel3.Location = new Point(3, 177);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1629, 820);
-            panel3.TabIndex = 9;
-            // 
             // BillingUserControl1
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
@@ -384,6 +436,9 @@
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel4.ResumeLayout(false);
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
@@ -428,5 +483,9 @@
         private Label LogOutlabel2;
         private Button LogOutButton;
         private Panel panel3;
+        private Panel panel4;
+        private Button guestaddbutton;
+        private TextBox textBox1;
+        private Button button2;
     }
 }

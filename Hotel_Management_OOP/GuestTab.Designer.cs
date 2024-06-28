@@ -32,6 +32,7 @@
             button4 = new Button();
             pictureBox1 = new PictureBox();
             panel4 = new Panel();
+            pictureBox7 = new PictureBox();
             panel7 = new Panel();
             pictureBox5 = new PictureBox();
             button2 = new Button();
@@ -43,6 +44,7 @@
             button6 = new Button();
             panel3 = new Panel();
             HomeOutline = new PictureBox();
+            button3 = new Button();
             button1 = new Button();
             panel1 = new Panel();
             pictureBox6 = new PictureBox();
@@ -51,6 +53,7 @@
             panelMain = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel6.SuspendLayout();
@@ -66,7 +69,7 @@
             // 
             // button4
             // 
-            button4.BackColor = Color.Salmon;
+            button4.BackColor = Color.Transparent;
             button4.BackgroundImageLayout = ImageLayout.None;
             button4.Cursor = Cursors.Hand;
             button4.FlatAppearance.BorderSize = 0;
@@ -80,35 +83,49 @@
             button4.Name = "button4";
             button4.Size = new Size(252, 56);
             button4.TabIndex = 4;
-            button4.Text = "           DASHBOARD";
-            button4.UseVisualStyleBackColor = true;
+            button4.Text = "        DASHBOARD";
+            button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(10, 9);
+            pictureBox1.Location = new Point(0, 17);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(238, 227);
+            pictureBox1.Size = new Size(261, 237);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // panel4
             // 
-            panel4.BackColor = Color.Salmon;
+            panel4.BackColor = Color.DarkSalmon;
+            panel4.Controls.Add(pictureBox7);
             panel4.Controls.Add(panel7);
             panel4.Controls.Add(panel6);
             panel4.Controls.Add(panel5);
             panel4.Controls.Add(panel3);
             panel4.Controls.Add(pictureBox1);
-            panel4.Location = new Point(0, 76);
+            panel4.Controls.Add(button3);
+            panel4.Location = new Point(0, 68);
             panel4.Name = "panel4";
-            panel4.Size = new Size(261, 1032);
+            panel4.Size = new Size(263, 1040);
             panel4.TabIndex = 2;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.BackColor = Color.Transparent;
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(23, 883);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(43, 36);
+            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.TabIndex = 26;
+            pictureBox7.TabStop = false;
             // 
             // panel7
             // 
+            panel7.BackColor = Color.Transparent;
             panel7.Controls.Add(pictureBox5);
             panel7.Controls.Add(button2);
             panel7.Location = new Point(0, 666);
@@ -118,6 +135,7 @@
             // 
             // pictureBox5
             // 
+            pictureBox5.BackColor = Color.Transparent;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.Location = new Point(23, 14);
             pictureBox5.Name = "pictureBox5";
@@ -130,6 +148,7 @@
             // 
             button2.BackgroundImageLayout = ImageLayout.None;
             button2.Cursor = Cursors.Hand;
+            button2.FlatAppearance.BorderColor = Color.White;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatAppearance.MouseDownBackColor = Color.DarkSalmon;
             button2.FlatAppearance.MouseOverBackColor = Color.LightSalmon;
@@ -141,12 +160,13 @@
             button2.Name = "button2";
             button2.Size = new Size(252, 56);
             button2.TabIndex = 4;
-            button2.Text = "     SETTINGS";
+            button2.Text = "    SETTINGS";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click_1;
             // 
             // panel6
             // 
+            panel6.BackColor = Color.Transparent;
             panel6.Controls.Add(pictureBox3);
             panel6.Controls.Add(button9);
             panel6.Location = new Point(0, 547);
@@ -156,6 +176,7 @@
             // 
             // pictureBox3
             // 
+            pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(23, 14);
             pictureBox3.Name = "pictureBox3";
@@ -179,12 +200,13 @@
             button9.Name = "button9";
             button9.Size = new Size(252, 56);
             button9.TabIndex = 4;
-            button9.Text = " BILLING";
+            button9.Text = "BILLING";
             button9.UseVisualStyleBackColor = true;
             button9.Click += button9_Click;
             // 
             // panel5
             // 
+            panel5.BackColor = Color.Transparent;
             panel5.Controls.Add(pictureBox2);
             panel5.Controls.Add(button6);
             panel5.Location = new Point(0, 428);
@@ -194,6 +216,7 @@
             // 
             // pictureBox2
             // 
+            pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(23, 14);
             pictureBox2.Name = "pictureBox2";
@@ -217,12 +240,13 @@
             button6.Name = "button6";
             button6.Size = new Size(252, 56);
             button6.TabIndex = 4;
-            button6.Text = "    BOOKING";
+            button6.Text = "  BOOKING";
             button6.UseVisualStyleBackColor = true;
             button6.Click += button6_Click;
             // 
             // panel3
             // 
+            panel3.BackColor = Color.Transparent;
             panel3.Controls.Add(HomeOutline);
             panel3.Controls.Add(button4);
             panel3.Location = new Point(0, 317);
@@ -232,6 +256,7 @@
             // 
             // HomeOutline
             // 
+            HomeOutline.BackColor = Color.Transparent;
             HomeOutline.Image = (Image)resources.GetObject("HomeOutline.Image");
             HomeOutline.Location = new Point(20, 13);
             HomeOutline.Name = "HomeOutline";
@@ -239,6 +264,25 @@
             HomeOutline.SizeMode = PictureBoxSizeMode.Zoom;
             HomeOutline.TabIndex = 13;
             HomeOutline.TabStop = false;
+            // 
+            // button3
+            // 
+            button3.BackgroundImageLayout = ImageLayout.None;
+            button3.Cursor = Cursors.Hand;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.MouseDownBackColor = Color.DarkSalmon;
+            button3.FlatAppearance.MouseOverBackColor = Color.LightSalmon;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.White;
+            button3.ImageAlign = ContentAlignment.MiddleLeft;
+            button3.Location = new Point(0, 872);
+            button3.Name = "button3";
+            button3.Size = new Size(261, 56);
+            button3.TabIndex = 14;
+            button3.Text = "    LOG OUT";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button1
             // 
@@ -253,7 +297,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Salmon;
+            panel1.BackColor = Color.DarkSalmon;
             panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(FloraSuitesHMS);
@@ -267,9 +311,9 @@
             // 
             pictureBox6.Cursor = Cursors.Hand;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(1765, 14);
+            pictureBox6.Location = new Point(1819, 25);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(44, 45);
+            pictureBox6.Size = new Size(20, 24);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 2;
             pictureBox6.TabStop = false;
@@ -279,9 +323,9 @@
             // 
             pictureBox4.Cursor = Cursors.Hand;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(1830, 14);
+            pictureBox4.Location = new Point(1867, 25);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(44, 45);
+            pictureBox4.Size = new Size(27, 24);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 1;
             pictureBox4.TabStop = false;
@@ -300,9 +344,10 @@
             // 
             // panelMain
             // 
-            panelMain.Location = new Point(254, 76);
+            panelMain.BackColor = Color.White;
+            panelMain.Location = new Point(261, 68);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1666, 1004);
+            panelMain.Size = new Size(1659, 988);
             panelMain.TabIndex = 12;
             // 
             // GuestTab
@@ -313,7 +358,7 @@
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.White;
-            ClientSize = new Size(1920, 1080);
+            ClientSize = new Size(1920, 1055);
             Controls.Add(panelMain);
             Controls.Add(panel1);
             Controls.Add(button1);
@@ -330,6 +375,7 @@
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel6.ResumeLayout(false);
@@ -366,5 +412,7 @@
         private Label FloraSuitesHMS;
         private Panel panelMain;
         private PictureBox pictureBox6;
+        private PictureBox pictureBox7;
+        private Button button3;
     }
 }

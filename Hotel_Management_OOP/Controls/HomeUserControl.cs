@@ -67,5 +67,11 @@ namespace Hotel_Management_OOP
         {
 
         }
+
+        private void panel12_Paint(object sender, PaintEventArgs e)
+        {
+            dateTimePicker1.MinDate = DateTime.Now;
+            dateTimePicker1.MaxDate = DateTime.Now.AddDays(15);
+        }
     }
 }

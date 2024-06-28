@@ -16,5 +16,10 @@ namespace Hotel_Management_OOP
         {
             InitializeComponent();
         }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

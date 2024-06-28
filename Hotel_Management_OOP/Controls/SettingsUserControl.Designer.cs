@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsUserControl));
             panel1 = new Panel();
-            LogOutlabel2 = new Label();
             label1 = new Label();
-            LogOutButton = new Button();
             panel2 = new Panel();
             label4 = new Label();
             button2 = new Button();
@@ -61,25 +59,12 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Controls.Add(LogOutlabel2);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(LogOutButton);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1638, 126);
             panel1.TabIndex = 9;
-            // 
-            // LogOutlabel2
-            // 
-            LogOutlabel2.AutoSize = true;
-            LogOutlabel2.BackColor = Color.Transparent;
-            LogOutlabel2.Font = new Font("Tahoma", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LogOutlabel2.Location = new Point(1548, 84);
-            LogOutlabel2.Name = "LogOutlabel2";
-            LogOutlabel2.Size = new Size(74, 22);
-            LogOutlabel2.TabIndex = 9;
-            LogOutlabel2.Text = "Log Out";
             // 
             // label1
             // 
@@ -92,17 +77,6 @@
             label1.Size = new Size(192, 39);
             label1.TabIndex = 0;
             label1.Text = "SETTINGS";
-            // 
-            // LogOutButton
-            // 
-            LogOutButton.BackColor = Color.Salmon;
-            LogOutButton.Cursor = Cursors.Hand;
-            LogOutButton.Image = (Image)resources.GetObject("LogOutButton.Image");
-            LogOutButton.Location = new Point(1554, 18);
-            LogOutButton.Name = "LogOutButton";
-            LogOutButton.Size = new Size(62, 62);
-            LogOutButton.TabIndex = 8;
-            LogOutButton.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -130,13 +104,13 @@
             label4.ForeColor = Color.FromArgb(72, 34, 22);
             label4.Location = new Point(838, 27);
             label4.Name = "label4";
-            label4.Size = new Size(210, 34);
+            label4.Size = new Size(213, 34);
             label4.TabIndex = 19;
-            label4.Text = "Esisting Users";
+            label4.Text = "Existing Users";
             // 
             // button2
             // 
-            button2.BackColor = Color.Firebrick;
+            button2.BackColor = Color.Maroon;
             button2.Cursor = Cursors.Hand;
             button2.Font = new Font("Segoe UI Variable Small", 11.0769234F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
@@ -149,7 +123,7 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.Coral;
+            button1.BackColor = Color.Olive;
             button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Segoe UI Variable Small", 11.0769234F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
@@ -162,7 +136,7 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.BackgroundColor = Color.LightSalmon;
+            dataGridView1.BackgroundColor = Color.FromArgb(250, 204, 166);
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Username, Password });
@@ -188,7 +162,7 @@
             // 
             // buttonLogin
             // 
-            buttonLogin.BackColor = Color.SandyBrown;
+            buttonLogin.BackColor = Color.DarkSalmon;
             buttonLogin.Cursor = Cursors.Hand;
             buttonLogin.Font = new Font("Segoe UI Variable Small", 11.0769234F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonLogin.ForeColor = Color.White;
@@ -317,9 +291,7 @@
         #endregion
 
         private Panel panel1;
-        private Label LogOutlabel2;
         private Label label1;
-        private Button LogOutButton;
         private Panel panel2;
         private Panel panel3;
         private Label label5;

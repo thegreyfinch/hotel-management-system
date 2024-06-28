@@ -25,6 +25,9 @@ namespace Hotel_Management_OOP
         public GuestTab()
         {
             InitializeComponent();
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(Dashboard);
+            Dashboard.Dock = DockStyle.Fill;
             //InitializeUserControls();
         }
 
@@ -169,6 +172,25 @@ namespace Hotel_Management_OOP
         {
             this.WindowState = FormWindowState.Minimized;
             //WindowState.Minimize();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult check = MessageBox.Show("Are you sure you want to log out?",
+               "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (check == DialogResult.Yes)
+            {
+                MessageBox.Show("You are logged out of your account.", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                this.Hide();
+
+                Login form = new Login();
+                form.ShowDialog();
+
+
+                //Application.Exit();
+            }
+
         }
     }
 }
