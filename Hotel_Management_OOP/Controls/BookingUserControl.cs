@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using Syncfusion.Windows.Forms.Chart;
 using System.Data.SQLite; //edit 
 using Microsoft.EntityFrameworkCore;
+using Hotel_Management_OOP.Controls;
 
 namespace Hotel_Management_OOP
 {
@@ -20,6 +20,17 @@ namespace Hotel_Management_OOP
         public BookingUserControl()
         {
             InitializeComponent();
+            BookingTabUserControl bookingTabUserControl = new BookingTabUserControl();
+            GuestTabUserControl guestTabUserControl = new GuestTabUserControl();
+            RoomsTabUserControl roomsTabUserControl = new RoomsTabUserControl();
+
+            bookingTabUserControl.Location = new Point(10,10);
+            bookingTabUserControl.Name = "Booking Tab";
+            bookingTabUserControl.Size = new Size (200, 100);
+
+            this.Controls.Add(bookingTabUserControl);
+            this.Controls.Add(guestTabUserControl);
+            this.Controls.Add(roomsTabUserControl);
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -48,6 +59,16 @@ namespace Hotel_Management_OOP
             //this.SendToBack();
             //BOOKING form = new BOOKING();
             //form.ShowDialog();
+        }
+
+        private void Booking_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

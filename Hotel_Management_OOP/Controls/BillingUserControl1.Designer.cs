@@ -40,6 +40,10 @@
             panel6 = new Panel();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            button5 = new Button();
+            button1 = new Button();
+            button3 = new Button();
+            guestaddbutton = new Button();
             dataGridView2 = new DataGridView();
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             Operator = new DataGridViewTextBoxColumn();
@@ -66,11 +70,7 @@
             dataGridViewTextBoxColumn10 = new DataGridViewTextBoxColumn();
             button2 = new Button();
             textBox1 = new TextBox();
-            guestaddbutton = new Button();
             panel5 = new Panel();
-            button5 = new Button();
-            button1 = new Button();
-            button3 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -171,6 +171,55 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Billing";
             // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(125, 157, 66);
+            button5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(1096, 567);
+            button5.Name = "button5";
+            button5.Size = new Size(218, 59);
+            button5.TabIndex = 9;
+            button5.Text = "Save";
+            button5.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Maroon;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(870, 567);
+            button1.Name = "button1";
+            button1.Size = new Size(191, 59);
+            button1.TabIndex = 10;
+            button1.Text = "Remove... -";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Coral;
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(640, 567);
+            button3.Name = "button3";
+            button3.Size = new Size(193, 59);
+            button3.TabIndex = 8;
+            button3.Text = "Add... +";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // guestaddbutton
+            // 
+            guestaddbutton.BackColor = Color.Tomato;
+            guestaddbutton.Cursor = Cursors.Hand;
+            guestaddbutton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guestaddbutton.ForeColor = Color.White;
+            guestaddbutton.Location = new Point(1345, 567);
+            guestaddbutton.Name = "guestaddbutton";
+            guestaddbutton.Size = new Size(222, 59);
+            guestaddbutton.TabIndex = 5;
+            guestaddbutton.Text = "Generate Invoice";
+            guestaddbutton.UseVisualStyleBackColor = false;
+            // 
             // dataGridView2
             // 
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -248,7 +297,7 @@
             tabPage2.Location = new Point(4, 34);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1621, 512);
+            tabPage2.Size = new Size(1621, 693);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Payment";
             // 
@@ -271,7 +320,7 @@
             dataGridView1.Location = new Point(3, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 56;
-            dataGridView1.Size = new Size(1615, 506);
+            dataGridView1.Size = new Size(1615, 687);
             dataGridView1.TabIndex = 1;
             // 
             // Gn
@@ -312,7 +361,7 @@
             tabPage3.Location = new Point(4, 34);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(1621, 512);
+            tabPage3.Size = new Size(1621, 693);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Bill & Invoice";
             tabPage3.UseVisualStyleBackColor = true;
@@ -336,7 +385,7 @@
             dataGridView3.Location = new Point(3, 3);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.RowHeadersWidth = 56;
-            dataGridView3.Size = new Size(1615, 506);
+            dataGridView3.Size = new Size(1615, 687);
             dataGridView3.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn3
@@ -412,61 +461,12 @@
             textBox1.Size = new Size(290, 27);
             textBox1.TabIndex = 8;
             // 
-            // guestaddbutton
-            // 
-            guestaddbutton.BackColor = Color.Tomato;
-            guestaddbutton.Cursor = Cursors.Hand;
-            guestaddbutton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guestaddbutton.ForeColor = Color.White;
-            guestaddbutton.Location = new Point(1345, 567);
-            guestaddbutton.Name = "guestaddbutton";
-            guestaddbutton.Size = new Size(222, 59);
-            guestaddbutton.TabIndex = 5;
-            guestaddbutton.Text = "Generate Invoice";
-            guestaddbutton.UseVisualStyleBackColor = false;
-            // 
             // panel5
             // 
             panel5.Location = new Point(2, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1632, 86);
+            panel5.Size = new Size(1653, 86);
             panel5.TabIndex = 10;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.FromArgb(125, 157, 66);
-            button5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(1096, 567);
-            button5.Name = "button5";
-            button5.Size = new Size(218, 59);
-            button5.TabIndex = 9;
-            button5.Text = "Save";
-            button5.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Maroon;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(870, 567);
-            button1.Name = "button1";
-            button1.Size = new Size(191, 59);
-            button1.TabIndex = 10;
-            button1.Text = "Remove... -";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.Coral;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(640, 567);
-            button3.Name = "button3";
-            button3.Size = new Size(193, 59);
-            button3.TabIndex = 8;
-            button3.Text = "Add... +";
-            button3.UseVisualStyleBackColor = false;
             // 
             // BillingUserControl1
             // 

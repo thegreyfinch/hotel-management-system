@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using static Syncfusion.Windows.Forms.TabBar;
+
 
 namespace Hotel_Management_OOP
 {

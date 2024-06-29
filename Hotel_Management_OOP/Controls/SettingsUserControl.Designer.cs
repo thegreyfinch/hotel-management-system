@@ -32,6 +32,7 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            UserRoletextBox = new TextBox();
             UserIDtextbox = new TextBox();
             label7 = new Label();
             comboBox1 = new ComboBox();
@@ -50,7 +51,6 @@
             label2 = new Label();
             pictureBox2 = new PictureBox();
             label5 = new Label();
-            UserRoletextBox = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -65,7 +65,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1638, 174);
+            panel1.Size = new Size(1660, 174);
             panel1.TabIndex = 9;
             // 
             // label1
@@ -101,8 +101,19 @@
             panel2.Controls.Add(panel3);
             panel2.Location = new Point(0, 187);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1638, 752);
+            panel2.Size = new Size(1679, 752);
             panel2.TabIndex = 10;
+            // 
+            // UserRoletextBox
+            // 
+            UserRoletextBox.BackColor = Color.White;
+            UserRoletextBox.BorderStyle = BorderStyle.FixedSingle;
+            UserRoletextBox.Font = new Font("Segoe UI Variable Small Light", 9.969231F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UserRoletextBox.Location = new Point(532, 238);
+            UserRoletextBox.MaxLength = 20;
+            UserRoletextBox.Name = "UserRoletextBox";
+            UserRoletextBox.Size = new Size(263, 30);
+            UserRoletextBox.TabIndex = 24;
             // 
             // UserIDtextbox
             // 
@@ -306,17 +317,6 @@
             label5.Size = new Size(184, 34);
             label5.TabIndex = 8;
             label5.Text = "[Username]";
-            // 
-            // UserRoletextBox
-            // 
-            UserRoletextBox.BackColor = Color.White;
-            UserRoletextBox.BorderStyle = BorderStyle.FixedSingle;
-            UserRoletextBox.Font = new Font("Segoe UI Variable Small Light", 9.969231F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            UserRoletextBox.Location = new Point(532, 238);
-            UserRoletextBox.MaxLength = 20;
-            UserRoletextBox.Name = "UserRoletextBox";
-            UserRoletextBox.Size = new Size(263, 30);
-            UserRoletextBox.TabIndex = 24;
             // 
             // SettingsUserControl
             // 

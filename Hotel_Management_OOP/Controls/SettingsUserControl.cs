@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
-using Syncfusion.Windows.Forms.Tools;
+
 using Microsoft.VisualBasic.ApplicationServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-using Syncfusion.Windows.Forms;
+
 
 
 namespace Hotel_Management_OOP

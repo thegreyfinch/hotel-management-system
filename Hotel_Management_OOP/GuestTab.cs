@@ -26,9 +26,10 @@ namespace Hotel_Management_OOP
         public GuestTab()
         {
             InitializeComponent();
+
             //panelMain.Controls.Clear();
-            panelMain.Controls.Add(Dashboard);
-            Dashboard.Dock = DockStyle.Fill;
+            //panelMain.Controls.Add(Dashboard);
+            //Dashboard.Dock = DockStyle.Fill;
             //InitializeUserControls();
         }
 
@@ -184,7 +185,7 @@ namespace Hotel_Management_OOP
             {
                 this.Hide();
                 MessageBox.Show("You are logged out of your account.", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-      
+
                 Login form = new Login();
                 form.ShowDialog();
 
@@ -196,7 +197,12 @@ namespace Hotel_Management_OOP
 
         private void panelMain_Paint(object sender, PaintEventArgs e)
         {
-            
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

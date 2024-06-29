@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Hotel_Management_OOP.Controls
+{
+    public partial class GuestTabUserControl : UserControl
+    {
+        public GuestTabUserControl()
+        {
+            InitializeComponent();
+        }
+
+        private void GuestTabUserControl_Load(object sender, EventArgs e)
+        {
+
+             
+        }
+    }
+}

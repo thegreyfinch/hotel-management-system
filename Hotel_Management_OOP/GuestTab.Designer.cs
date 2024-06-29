@@ -51,6 +51,9 @@
             pictureBox4 = new PictureBox();
             FloraSuitesHMS = new Label();
             panelMain = new Panel();
+            panelHide = new Panel();
+            label1 = new Label();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -65,6 +68,8 @@
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            panelMain.SuspendLayout();
+            panelHide.SuspendLayout();
             SuspendLayout();
             // 
             // button4
@@ -346,12 +351,47 @@
             // panelMain
             // 
             panelMain.BackColor = Color.White;
+            panelMain.Controls.Add(panelHide);
             panelMain.Dock = DockStyle.Right;
             panelMain.Location = new Point(261, 74);
             panelMain.Name = "panelMain";
             panelMain.Size = new Size(1659, 981);
             panelMain.TabIndex = 12;
             panelMain.Paint += panelMain_Paint;
+            // 
+            // panelHide
+            // 
+            panelHide.BackgroundImage = (Image)resources.GetObject("panelHide.BackgroundImage");
+            panelHide.Controls.Add(label1);
+            panelHide.Controls.Add(label2);
+            panelHide.Location = new Point(0, 0);
+            panelHide.Name = "panelHide";
+            panelHide.Size = new Size(1690, 1006);
+            panelHide.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(23, 78);
+            label1.Name = "label1";
+            label1.Size = new Size(209, 38);
+            label1.TabIndex = 0;
+            label1.Text = "Welcome User!";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.ForeColor = SystemColors.WindowFrame;
+            label2.Location = new Point(23, 146);
+            label2.Name = "label2";
+            label2.Size = new Size(732, 23);
+            label2.TabIndex = 1;
+            label2.Text = "Flora Suites Hotel Management System is a tool that will aid the Hotel's booking management.\r\n";
+            label2.Click += label2_Click;
             // 
             // GuestTab
             // 
@@ -391,6 +431,9 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            panelMain.ResumeLayout(false);
+            panelHide.ResumeLayout(false);
+            panelHide.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -417,5 +460,8 @@
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
         private Button button3;
+        private Label label2;
+        private Label label1;
+        private Panel panelHide;
     }
 }

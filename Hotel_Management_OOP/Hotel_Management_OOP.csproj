@@ -28,7 +28,6 @@
     <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="8.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.6" />
     <PackageReference Include="QuestPDF" Version="2024.6.2" />
-    <PackageReference Include="Syncfusion.Chart.Windows" Version="26.1.39" />
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.118" />
   </ItemGroup>
 
