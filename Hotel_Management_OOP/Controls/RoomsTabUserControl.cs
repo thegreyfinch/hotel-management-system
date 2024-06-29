@@ -16,5 +16,10 @@ namespace Hotel_Management_OOP.Controls
         {
             InitializeComponent();
         }
+
+        private void RoomsTabUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

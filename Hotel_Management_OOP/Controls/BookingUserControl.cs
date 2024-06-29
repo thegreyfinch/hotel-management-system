@@ -17,20 +17,28 @@ namespace Hotel_Management_OOP
     //SqlConnection conn = new SqlConnection("Data.Source=.;initial catalog=users;integrated security=true"); //edit
     public partial class BookingUserControl : UserControl
     {
-        public BookingUserControl()
-        {
-            InitializeComponent();
-            BookingTabUserControl bookingTabUserControl = new BookingTabUserControl();
-            GuestTabUserControl guestTabUserControl = new GuestTabUserControl();
-            RoomsTabUserControl roomsTabUserControl = new RoomsTabUserControl();
+        //HomeUserControl Dashboard = new HomeUserControl();
+        //BookingUserControl Booking = new BookingUserControl();
+       // BillingUserControl1 Billing = new BillingUserControl1();
+        //SettingsUserControl Settings = new SettingsUserControl();
 
-            bookingTabUserControl.Location = new Point(10,10);
-            bookingTabUserControl.Name = "Booking Tab";
-            bookingTabUserControl.Size = new Size (200, 100);
+        BookingTabUserControl BookingTab = new BookingTabUserControl();
+        GuestTabUserControl GuestTab = new GuestTabUserControl();
+        RoomsTabUserControl RoomsTab = new RoomsTabUserControl();
+
+       /* bookingTabUserControl.Location = new Point(10, 10);
+        bookingTabUserControl.Name = "Booking Tab";
+            bookingTabUserControl.Size = new Size(200, 100);
 
             this.Controls.Add(bookingTabUserControl);
             this.Controls.Add(guestTabUserControl);
             this.Controls.Add(roomsTabUserControl);
+       */
+
+        public BookingUserControl()
+        {
+            InitializeComponent();
+           
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -63,12 +71,33 @@ namespace Hotel_Management_OOP
 
         private void Booking_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
+         
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panelMain2.Controls.Clear();
+            panelMain2.Controls.Add(BookingTab);
+            BookingTab.Dock = DockStyle.Fill;
+        }
+
+        private void GuestTabbutton_Click(object sender, EventArgs e)
+        {
+            panelMain2.Controls.Clear();
+            panelMain2.Controls.Add(GuestTab);
+            GuestTab.Dock = DockStyle.Fill;
+        }
+
+        private void RoomsTabbutton_Click(object sender, EventArgs e)
+        {
+            panelMain2.Controls.Clear();
+            panelMain2.Controls.Add(RoomsTab);
+            RoomsTab.Dock = DockStyle.Fill;
         }
     }
 }

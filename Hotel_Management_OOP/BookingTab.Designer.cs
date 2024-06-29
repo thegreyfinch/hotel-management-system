@@ -34,9 +34,6 @@
             button10 = new Button();
             panel2 = new Panel();
             button9 = new Button();
-            button8 = new Button();
-            button7 = new Button();
-            button1 = new Button();
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
@@ -88,9 +85,6 @@
             // 
             panel2.BackColor = Color.FromArgb(250, 204, 166);
             panel2.Controls.Add(button9);
-            panel2.Controls.Add(button8);
-            panel2.Controls.Add(button7);
-            panel2.Controls.Add(button1);
             panel2.Controls.Add(dataGridView1);
             panel2.Location = new Point(269, 169);
             panel2.Name = "panel2";
@@ -108,41 +102,6 @@
             button9.Text = "Add... +";
             button9.UseVisualStyleBackColor = false;
             button9.Click += button9_Click;
-            // 
-            // button8
-            // 
-            button8.BackColor = Color.FromArgb(72, 34, 22);
-            button8.ForeColor = Color.White;
-            button8.Location = new Point(386, 46);
-            button8.Name = "button8";
-            button8.Size = new Size(156, 53);
-            button8.TabIndex = 3;
-            button8.Text = "Rooms Tab";
-            button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click;
-            // 
-            // button7
-            // 
-            button7.BackColor = Color.FromArgb(72, 34, 22);
-            button7.ForeColor = Color.White;
-            button7.Location = new Point(205, 46);
-            button7.Name = "button7";
-            button7.Size = new Size(156, 53);
-            button7.TabIndex = 2;
-            button7.Text = "Guests Tab";
-            button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(72, 34, 22);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(13, 46);
-            button1.Name = "button1";
-            button1.Size = new Size(162, 53);
-            button1.TabIndex = 1;
-            button1.Text = "Booking Tab";
-            button1.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -366,7 +325,6 @@
         private Panel panel2;
         private Panel panel4;
         private PictureBox pictureBox1;
-        private Button button1;
         private DataGridView dataGridView1;
         private Button button4;
         private Label label2;
@@ -374,8 +332,6 @@
         private Button button11;
         private Button button10;
         private Button button9;
-        private Button button8;
-        private Button button7;
         private Button button2;
         private Button button12;
         private Label label1;

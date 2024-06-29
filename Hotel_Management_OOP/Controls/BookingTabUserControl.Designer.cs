@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dataGridViewBooking = new DataGridView();
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
@@ -59,6 +59,7 @@
             AddBookingBtn = new Button();
             textBox1 = new TextBox();
             button2 = new Button();
+            label20 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewBooking).BeginInit();
             SuspendLayout();
             // 
@@ -66,20 +67,20 @@
             // 
             dataGridViewBooking.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewBooking.BackgroundColor = Color.FromArgb(255, 224, 192);
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(72, 34, 22);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGridViewBooking.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(72, 34, 22);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewBooking.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewBooking.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewBooking.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8, Column6, Column7, Column8 });
-            dataGridViewBooking.Location = new Point(14, 82);
+            dataGridViewBooking.Location = new Point(29, 82);
             dataGridViewBooking.Name = "dataGridViewBooking";
             dataGridViewBooking.RowHeadersWidth = 56;
-            dataGridViewBooking.Size = new Size(1624, 368);
+            dataGridViewBooking.Size = new Size(1593, 238);
             dataGridViewBooking.TabIndex = 8;
             // 
             // dataGridViewTextBoxColumn4
@@ -134,7 +135,7 @@
             // 
             BookingdatetextBox8.BorderStyle = BorderStyle.FixedSingle;
             BookingdatetextBox8.Cursor = Cursors.IBeam;
-            BookingdatetextBox8.Location = new Point(834, 589);
+            BookingdatetextBox8.Location = new Point(824, 439);
             BookingdatetextBox8.Name = "BookingdatetextBox8";
             BookingdatetextBox8.Size = new Size(423, 29);
             BookingdatetextBox8.TabIndex = 41;
@@ -143,7 +144,7 @@
             // 
             BStatustextBox7.BorderStyle = BorderStyle.FixedSingle;
             BStatustextBox7.Cursor = Cursors.IBeam;
-            BStatustextBox7.Location = new Point(834, 545);
+            BStatustextBox7.Location = new Point(824, 395);
             BStatustextBox7.Name = "BStatustextBox7";
             BStatustextBox7.Size = new Size(423, 29);
             BStatustextBox7.TabIndex = 40;
@@ -152,7 +153,7 @@
             // 
             PricetextBox6.BorderStyle = BorderStyle.FixedSingle;
             PricetextBox6.Cursor = Cursors.IBeam;
-            PricetextBox6.Location = new Point(834, 500);
+            PricetextBox6.Location = new Point(824, 350);
             PricetextBox6.Name = "PricetextBox6";
             PricetextBox6.Size = new Size(423, 29);
             PricetextBox6.TabIndex = 39;
@@ -160,7 +161,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(692, 592);
+            label9.Location = new Point(682, 442);
             label9.Name = "label9";
             label9.Size = new Size(106, 21);
             label9.TabIndex = 38;
@@ -169,7 +170,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(692, 546);
+            label8.Location = new Point(682, 396);
             label8.Name = "label8";
             label8.Size = new Size(116, 21);
             label8.TabIndex = 37;
@@ -178,7 +179,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(692, 502);
+            label7.Location = new Point(682, 352);
             label7.Name = "label7";
             label7.Size = new Size(47, 21);
             label7.TabIndex = 36;
@@ -188,7 +189,7 @@
             // 
             CheckouttextBox5.BorderStyle = BorderStyle.FixedSingle;
             CheckouttextBox5.Cursor = Cursors.IBeam;
-            CheckouttextBox5.Location = new Point(162, 688);
+            CheckouttextBox5.Location = new Point(152, 538);
             CheckouttextBox5.Name = "CheckouttextBox5";
             CheckouttextBox5.Size = new Size(423, 29);
             CheckouttextBox5.TabIndex = 35;
@@ -197,7 +198,7 @@
             // 
             CheckintextBox4.BorderStyle = BorderStyle.FixedSingle;
             CheckintextBox4.Cursor = Cursors.IBeam;
-            CheckintextBox4.Location = new Point(162, 643);
+            CheckintextBox4.Location = new Point(152, 493);
             CheckintextBox4.Name = "CheckintextBox4";
             CheckintextBox4.Size = new Size(423, 29);
             CheckintextBox4.TabIndex = 34;
@@ -206,7 +207,7 @@
             // 
             RoomIDtextBox3.BorderStyle = BorderStyle.FixedSingle;
             RoomIDtextBox3.Cursor = Cursors.IBeam;
-            RoomIDtextBox3.Location = new Point(162, 595);
+            RoomIDtextBox3.Location = new Point(152, 445);
             RoomIDtextBox3.Name = "RoomIDtextBox3";
             RoomIDtextBox3.Size = new Size(423, 29);
             RoomIDtextBox3.TabIndex = 33;
@@ -215,7 +216,7 @@
             // 
             CustIDextBox2.BorderStyle = BorderStyle.FixedSingle;
             CustIDextBox2.Cursor = Cursors.IBeam;
-            CustIDextBox2.Location = new Point(162, 545);
+            CustIDextBox2.Location = new Point(152, 395);
             CustIDextBox2.Name = "CustIDextBox2";
             CustIDextBox2.Size = new Size(423, 29);
             CustIDextBox2.TabIndex = 32;
@@ -223,7 +224,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(39, 690);
+            label6.Location = new Point(29, 540);
             label6.Name = "label6";
             label6.Size = new Size(84, 21);
             label6.TabIndex = 31;
@@ -232,7 +233,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(39, 645);
+            label5.Location = new Point(29, 495);
             label5.Name = "label5";
             label5.Size = new Size(74, 21);
             label5.TabIndex = 30;
@@ -241,7 +242,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(39, 595);
+            label4.Location = new Point(29, 445);
             label4.Name = "label4";
             label4.Size = new Size(74, 21);
             label4.TabIndex = 29;
@@ -250,7 +251,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(39, 551);
+            label3.Location = new Point(29, 401);
             label3.Name = "label3";
             label3.Size = new Size(93, 21);
             label3.TabIndex = 28;
@@ -259,7 +260,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(39, 502);
+            label2.Location = new Point(29, 352);
             label2.Name = "label2";
             label2.Size = new Size(89, 21);
             label2.TabIndex = 27;
@@ -269,7 +270,7 @@
             // 
             BookingIDtextBox1.BorderStyle = BorderStyle.FixedSingle;
             BookingIDtextBox1.Cursor = Cursors.IBeam;
-            BookingIDtextBox1.Location = new Point(162, 499);
+            BookingIDtextBox1.Location = new Point(152, 349);
             BookingIDtextBox1.Name = "BookingIDtextBox1";
             BookingIDtextBox1.Size = new Size(423, 29);
             BookingIDtextBox1.TabIndex = 26;
@@ -279,7 +280,7 @@
             SaveBookingBtn.BackColor = Color.FromArgb(125, 157, 66);
             SaveBookingBtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             SaveBookingBtn.ForeColor = Color.White;
-            SaveBookingBtn.Location = new Point(1399, 647);
+            SaveBookingBtn.Location = new Point(1389, 485);
             SaveBookingBtn.Name = "SaveBookingBtn";
             SaveBookingBtn.Size = new Size(191, 59);
             SaveBookingBtn.TabIndex = 43;
@@ -291,7 +292,7 @@
             RemoveBookingBtn.BackColor = Color.Maroon;
             RemoveBookingBtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             RemoveBookingBtn.ForeColor = Color.White;
-            RemoveBookingBtn.Location = new Point(1399, 559);
+            RemoveBookingBtn.Location = new Point(1389, 409);
             RemoveBookingBtn.Name = "RemoveBookingBtn";
             RemoveBookingBtn.Size = new Size(191, 59);
             RemoveBookingBtn.TabIndex = 44;
@@ -303,7 +304,7 @@
             AddBookingBtn.BackColor = Color.Coral;
             AddBookingBtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddBookingBtn.ForeColor = Color.White;
-            AddBookingBtn.Location = new Point(1399, 476);
+            AddBookingBtn.Location = new Point(1389, 336);
             AddBookingBtn.Name = "AddBookingBtn";
             AddBookingBtn.Size = new Size(193, 59);
             AddBookingBtn.TabIndex = 42;
@@ -314,7 +315,7 @@
             // 
             textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.Font = new Font("Segoe UI Variable Text Light", 8.861538F);
-            textBox1.Location = new Point(26, 29);
+            textBox1.Location = new Point(1126, 27);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(290, 27);
             textBox1.TabIndex = 45;
@@ -324,18 +325,30 @@
             button2.BackColor = Color.FromArgb(72, 34, 22);
             button2.Font = new Font("Segoe UI Variable Text", 8.861538F);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(345, 23);
+            button2.Location = new Point(1445, 21);
             button2.Name = "button2";
             button2.Size = new Size(84, 36);
             button2.TabIndex = 46;
             button2.Text = "Search";
             button2.UseVisualStyleBackColor = false;
             // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label20.ForeColor = Color.FromArgb(72, 34, 22);
+            label20.Location = new Point(29, 27);
+            label20.Name = "label20";
+            label20.Size = new Size(143, 34);
+            label20.TabIndex = 47;
+            label20.Text = "Bookings";
+            // 
             // BookingTabUserControl
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
+            Controls.Add(label20);
             Controls.Add(button2);
             Controls.Add(textBox1);
             Controls.Add(SaveBookingBtn);
@@ -359,7 +372,7 @@
             Controls.Add(BookingIDtextBox1);
             Controls.Add(dataGridViewBooking);
             Name = "BookingTabUserControl";
-            Size = new Size(1638, 745);
+            Size = new Size(1638, 641);
             ((System.ComponentModel.ISupportInitialize)dataGridViewBooking).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -397,5 +410,6 @@
         private Button AddBookingBtn;
         private TextBox textBox1;
         private Button button2;
+        private Label label20;
     }
 }

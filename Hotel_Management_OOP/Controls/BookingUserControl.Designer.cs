@@ -29,62 +29,62 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookingUserControl));
-            panel2 = new Panel();
-            tabControl1 = new TabControl();
-            Guests = new TabPage();
-            Rooms = new TabPage();
+            panelMain2 = new Panel();
+            RoomsTabbutton = new Button();
+            GuestTabbutton = new Button();
+            BookingTabbutton = new Button();
             panel1 = new Panel();
             label1 = new Label();
-            Booking = new TabPage();
-            panel2.SuspendLayout();
-            tabControl1.SuspendLayout();
+            panel2 = new Panel();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
-            // panel2
+            // panelMain2
             // 
-            panel2.AutoScroll = true;
-            panel2.BackColor = Color.Snow;
-            panel2.Controls.Add(tabControl1);
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 180);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1638, 745);
-            panel2.TabIndex = 6;
+            panelMain2.AutoScroll = true;
+            panelMain2.BackColor = Color.Snow;
+            panelMain2.Dock = DockStyle.Bottom;
+            panelMain2.Location = new Point(0, 284);
+            panelMain2.Name = "panelMain2";
+            panelMain2.Size = new Size(1638, 641);
+            panelMain2.TabIndex = 6;
             // 
-            // tabControl1
+            // RoomsTabbutton
             // 
-            tabControl1.Controls.Add(Booking);
-            tabControl1.Controls.Add(Guests);
-            tabControl1.Controls.Add(Rooms);
-            tabControl1.Dock = DockStyle.Fill;
-            tabControl1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tabControl1.Location = new Point(0, 0);
-            tabControl1.Name = "tabControl1";
-            tabControl1.Padding = new Point(65, 3);
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1638, 745);
-            tabControl1.TabIndex = 6;
+            RoomsTabbutton.BackColor = Color.FromArgb(72, 34, 22);
+            RoomsTabbutton.ForeColor = Color.White;
+            RoomsTabbutton.Location = new Point(436, 24);
+            RoomsTabbutton.Name = "RoomsTabbutton";
+            RoomsTabbutton.Size = new Size(156, 53);
+            RoomsTabbutton.TabIndex = 6;
+            RoomsTabbutton.Text = "Rooms Tab";
+            RoomsTabbutton.UseVisualStyleBackColor = false;
+            RoomsTabbutton.Click += RoomsTabbutton_Click;
             // 
-            // Guests
+            // GuestTabbutton
             // 
-            Guests.Location = new Point(4, 34);
-            Guests.Name = "Guests";
-            Guests.Padding = new Padding(3);
-            Guests.Size = new Size(1630, 707);
-            Guests.TabIndex = 1;
-            Guests.Text = "Guests";
-            Guests.UseVisualStyleBackColor = true;
+            GuestTabbutton.BackColor = Color.FromArgb(72, 34, 22);
+            GuestTabbutton.ForeColor = Color.White;
+            GuestTabbutton.Location = new Point(238, 25);
+            GuestTabbutton.Name = "GuestTabbutton";
+            GuestTabbutton.Size = new Size(156, 53);
+            GuestTabbutton.TabIndex = 5;
+            GuestTabbutton.Text = "Guests Tab";
+            GuestTabbutton.UseVisualStyleBackColor = false;
+            GuestTabbutton.Click += GuestTabbutton_Click;
             // 
-            // Rooms
+            // BookingTabbutton
             // 
-            Rooms.Location = new Point(4, 34);
-            Rooms.Name = "Rooms";
-            Rooms.Padding = new Padding(3);
-            Rooms.Size = new Size(1630, 707);
-            Rooms.TabIndex = 2;
-            Rooms.Text = "Rooms";
-            Rooms.UseVisualStyleBackColor = true;
+            BookingTabbutton.BackColor = Color.FromArgb(72, 34, 22);
+            BookingTabbutton.ForeColor = Color.White;
+            BookingTabbutton.Location = new Point(29, 25);
+            BookingTabbutton.Name = "BookingTabbutton";
+            BookingTabbutton.Size = new Size(162, 53);
+            BookingTabbutton.TabIndex = 4;
+            BookingTabbutton.Text = "Booking Tab";
+            BookingTabbutton.UseVisualStyleBackColor = false;
+            BookingTabbutton.Click += button1_Click;
             // 
             // panel1
             // 
@@ -110,44 +110,43 @@
             label1.TabIndex = 0;
             label1.Text = "BOOKING AND GUESTS";
             // 
-            // Booking
+            // panel2
             // 
-            Booking.BackColor = Color.Snow;
-            Booking.Location = new Point(4, 34);
-            Booking.Name = "Booking";
-            Booking.Padding = new Padding(3);
-            Booking.Size = new Size(1630, 707);
-            Booking.TabIndex = 0;
-            Booking.Text = "Booking";
-            Booking.Click += Booking_Click;
+            panel2.Controls.Add(RoomsTabbutton);
+            panel2.Controls.Add(BookingTabbutton);
+            panel2.Controls.Add(GuestTabbutton);
+            panel2.Location = new Point(2, 177);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1636, 101);
+            panel2.TabIndex = 8;
             // 
             // BookingUserControl
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(panel1);
             Controls.Add(panel2);
+            Controls.Add(panel1);
+            Controls.Add(panelMain2);
             Name = "BookingUserControl";
             Size = new Size(1638, 925);
-            panel2.ResumeLayout(false);
-            tabControl1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel2;
-        private TabControl tabControl1;
-        private TabPage Guests;
-        private TabPage Rooms;
+        private Panel panelMain2;
         private Panel panel1;
         private Label label1;
         private TextBox textBox2;
         private Label label10;
         private TextBox textBox3;
-        private TabPage Booking;
+        private Button RoomsTabbutton;
+        private Button GuestTabbutton;
+        private Button BookingTabbutton;
+        private Panel panel2;
     }
 }

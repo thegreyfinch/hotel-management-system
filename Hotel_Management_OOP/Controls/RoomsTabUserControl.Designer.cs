@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             button2 = new Button();
             textBox1 = new TextBox();
             dataGridViewRooms = new DataGridView();
@@ -48,6 +48,7 @@
             SaveRoomBtn = new Button();
             RemoveRoombtn = new Button();
             AddRoomBtn = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewRooms).BeginInit();
             SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             button2.BackColor = Color.FromArgb(72, 34, 22);
             button2.Font = new Font("Segoe UI Variable Text", 8.861538F);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(352, 15);
+            button2.Location = new Point(1482, 20);
             button2.Name = "button2";
             button2.Size = new Size(84, 36);
             button2.TabIndex = 50;
@@ -67,7 +68,7 @@
             // 
             textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.Font = new Font("Segoe UI Variable Text Light", 8.861538F);
-            textBox1.Location = new Point(33, 21);
+            textBox1.Location = new Point(1163, 26);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(290, 27);
             textBox1.TabIndex = 49;
@@ -76,21 +77,21 @@
             // 
             dataGridViewRooms.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewRooms.BackgroundColor = Color.FromArgb(255, 224, 192);
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(72, 34, 22);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridViewRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(72, 34, 22);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridViewRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewRooms.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewRooms.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, PricePerNight });
             dataGridViewRooms.GridColor = SystemColors.InactiveCaptionText;
-            dataGridViewRooms.Location = new Point(3, 67);
+            dataGridViewRooms.Location = new Point(20, 79);
             dataGridViewRooms.Name = "dataGridViewRooms";
             dataGridViewRooms.RowHeadersWidth = 56;
-            dataGridViewRooms.Size = new Size(1624, 313);
+            dataGridViewRooms.Size = new Size(1607, 326);
             dataGridViewRooms.TabIndex = 51;
             // 
             // dataGridViewTextBoxColumn1
@@ -121,7 +122,7 @@
             // 
             PriceperNighttextBox4.BorderStyle = BorderStyle.FixedSingle;
             PriceperNighttextBox4.Cursor = Cursors.IBeam;
-            PriceperNighttextBox4.Location = new Point(186, 597);
+            PriceperNighttextBox4.Location = new Point(186, 571);
             PriceperNighttextBox4.Name = "PriceperNighttextBox4";
             PriceperNighttextBox4.Size = new Size(393, 29);
             PriceperNighttextBox4.TabIndex = 60;
@@ -130,7 +131,7 @@
             // 
             RoomStattextBox5.BorderStyle = BorderStyle.FixedSingle;
             RoomStattextBox5.Cursor = Cursors.IBeam;
-            RoomStattextBox5.Location = new Point(186, 549);
+            RoomStattextBox5.Location = new Point(186, 523);
             RoomStattextBox5.Name = "RoomStattextBox5";
             RoomStattextBox5.Size = new Size(393, 29);
             RoomStattextBox5.TabIndex = 59;
@@ -139,7 +140,7 @@
             // 
             RoomTypetextBox7.BorderStyle = BorderStyle.FixedSingle;
             RoomTypetextBox7.Cursor = Cursors.IBeam;
-            RoomTypetextBox7.Location = new Point(186, 499);
+            RoomTypetextBox7.Location = new Point(186, 473);
             RoomTypetextBox7.Name = "RoomTypetextBox7";
             RoomTypetextBox7.Size = new Size(393, 29);
             RoomTypetextBox7.TabIndex = 58;
@@ -147,7 +148,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(33, 644);
+            label12.Location = new Point(33, 611);
             label12.Name = "label12";
             label12.Size = new Size(0, 21);
             label12.TabIndex = 57;
@@ -155,7 +156,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(33, 599);
+            label16.Location = new Point(33, 573);
             label16.Name = "label16";
             label16.Size = new Size(117, 21);
             label16.TabIndex = 56;
@@ -164,7 +165,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(33, 549);
+            label18.Location = new Point(33, 523);
             label18.Name = "label18";
             label18.Size = new Size(101, 21);
             label18.TabIndex = 55;
@@ -173,7 +174,7 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(33, 505);
+            label19.Location = new Point(33, 479);
             label19.Name = "label19";
             label19.Size = new Size(91, 21);
             label19.TabIndex = 54;
@@ -182,7 +183,7 @@
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(33, 456);
+            label20.Location = new Point(33, 430);
             label20.Name = "label20";
             label20.Size = new Size(72, 21);
             label20.TabIndex = 53;
@@ -192,7 +193,7 @@
             // 
             RoomIdtextBox8.BorderStyle = BorderStyle.FixedSingle;
             RoomIdtextBox8.Cursor = Cursors.IBeam;
-            RoomIdtextBox8.Location = new Point(186, 453);
+            RoomIdtextBox8.Location = new Point(186, 427);
             RoomIdtextBox8.Name = "RoomIdtextBox8";
             RoomIdtextBox8.Size = new Size(393, 29);
             RoomIdtextBox8.TabIndex = 52;
@@ -202,7 +203,7 @@
             SaveRoomBtn.BackColor = Color.FromArgb(125, 157, 66);
             SaveRoomBtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             SaveRoomBtn.ForeColor = Color.White;
-            SaveRoomBtn.Location = new Point(1375, 623);
+            SaveRoomBtn.Location = new Point(1375, 559);
             SaveRoomBtn.Name = "SaveRoomBtn";
             SaveRoomBtn.Size = new Size(193, 59);
             SaveRoomBtn.TabIndex = 62;
@@ -214,7 +215,7 @@
             RemoveRoombtn.BackColor = Color.Maroon;
             RemoveRoombtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             RemoveRoombtn.ForeColor = Color.White;
-            RemoveRoombtn.Location = new Point(1375, 528);
+            RemoveRoombtn.Location = new Point(1375, 491);
             RemoveRoombtn.Name = "RemoveRoombtn";
             RemoveRoombtn.Size = new Size(191, 59);
             RemoveRoombtn.TabIndex = 63;
@@ -226,17 +227,30 @@
             AddRoomBtn.BackColor = Color.Coral;
             AddRoomBtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddRoomBtn.ForeColor = Color.White;
-            AddRoomBtn.Location = new Point(1375, 435);
+            AddRoomBtn.Location = new Point(1375, 421);
             AddRoomBtn.Name = "AddRoomBtn";
             AddRoomBtn.Size = new Size(193, 59);
             AddRoomBtn.TabIndex = 61;
             AddRoomBtn.Text = "Add... +";
             AddRoomBtn.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(72, 34, 22);
+            label1.Location = new Point(23, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(110, 34);
+            label1.TabIndex = 64;
+            label1.Text = "Rooms";
+            // 
             // RoomsTabUserControl
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Snow;
+            Controls.Add(label1);
             Controls.Add(SaveRoomBtn);
             Controls.Add(RemoveRoombtn);
             Controls.Add(AddRoomBtn);
@@ -253,7 +267,8 @@
             Controls.Add(button2);
             Controls.Add(textBox1);
             Name = "RoomsTabUserControl";
-            Size = new Size(1638, 925);
+            Size = new Size(1638, 641);
+            Load += RoomsTabUserControl_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewRooms).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -280,5 +295,6 @@
         private Button SaveRoomBtn;
         private Button RemoveRoombtn;
         private Button AddRoomBtn;
+        private Label label1;
     }
 }
