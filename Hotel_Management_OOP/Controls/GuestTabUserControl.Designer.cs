@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             button2 = new Button();
             textBox1 = new TextBox();
             dataGridViewGuests = new DataGridView();
@@ -38,22 +38,11 @@
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
-            textBox2 = new TextBox();
-            label11 = new Label();
-            RoomNumtextBox = new TextBox();
-            AgeCattextBox = new TextBox();
-            textBox6 = new TextBox();
-            SextextBox = new TextBox();
-            label13 = new Label();
-            label14 = new Label();
-            label15 = new Label();
-            Sex = new Label();
-            label17 = new Label();
-            FullNametextBox = new TextBox();
             SaveGuestBtn = new Button();
             RemoveGuestbtn = new Button();
             AddGuestbtn = new Button();
             label20 = new Label();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewGuests).BeginInit();
             SuspendLayout();
             // 
@@ -62,9 +51,9 @@
             button2.BackColor = Color.FromArgb(72, 34, 22);
             button2.Font = new Font("Segoe UI Variable Text", 8.861538F);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(1467, 22);
+            button2.Location = new Point(1185, 27);
             button2.Name = "button2";
-            button2.Size = new Size(84, 36);
+            button2.Size = new Size(138, 36);
             button2.TabIndex = 48;
             button2.Text = "Search";
             button2.UseVisualStyleBackColor = false;
@@ -73,9 +62,9 @@
             // 
             textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.Font = new Font("Segoe UI Variable Text Light", 8.861538F);
-            textBox1.Location = new Point(1148, 28);
+            textBox1.Location = new Point(852, 33);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(290, 27);
+            textBox1.Size = new Size(319, 27);
             textBox1.TabIndex = 47;
             // 
             // dataGridViewGuests
@@ -83,20 +72,20 @@
             dataGridViewGuests.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewGuests.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             dataGridViewGuests.BackgroundColor = Color.FromArgb(255, 224, 192);
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(72, 34, 22);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridViewGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(72, 34, 22);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewGuests.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewGuests.Columns.AddRange(new DataGridViewColumn[] { Gn, Column2, Column3, Column4, Column5, Column1 });
             dataGridViewGuests.Location = new Point(27, 77);
             dataGridViewGuests.Name = "dataGridViewGuests";
             dataGridViewGuests.RowHeadersWidth = 56;
-            dataGridViewGuests.Size = new Size(1603, 311);
+            dataGridViewGuests.Size = new Size(1586, 428);
             dataGridViewGuests.TabIndex = 49;
             // 
             // Gn
@@ -139,124 +128,16 @@
             Column1.MinimumWidth = 6;
             Column1.Name = "Column1";
             // 
-            // textBox2
-            // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Cursor = Cursors.IBeam;
-            textBox2.Location = new Point(800, 476);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(393, 29);
-            textBox2.TabIndex = 61;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(647, 476);
-            label11.Name = "label11";
-            label11.Size = new Size(55, 21);
-            label11.TabIndex = 60;
-            label11.Text = "Status:";
-            // 
-            // RoomNumtextBox
-            // 
-            RoomNumtextBox.BorderStyle = BorderStyle.FixedSingle;
-            RoomNumtextBox.Cursor = Cursors.IBeam;
-            RoomNumtextBox.Location = new Point(800, 428);
-            RoomNumtextBox.Name = "RoomNumtextBox";
-            RoomNumtextBox.Size = new Size(393, 29);
-            RoomNumtextBox.TabIndex = 59;
-            // 
-            // AgeCattextBox
-            // 
-            AgeCattextBox.BorderStyle = BorderStyle.FixedSingle;
-            AgeCattextBox.Cursor = Cursors.IBeam;
-            AgeCattextBox.Location = new Point(180, 572);
-            AgeCattextBox.Name = "AgeCattextBox";
-            AgeCattextBox.Size = new Size(393, 29);
-            AgeCattextBox.TabIndex = 58;
-            // 
-            // textBox6
-            // 
-            textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Cursor = Cursors.IBeam;
-            textBox6.Location = new Point(180, 524);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(393, 29);
-            textBox6.TabIndex = 57;
-            // 
-            // SextextBox
-            // 
-            SextextBox.BorderStyle = BorderStyle.FixedSingle;
-            SextextBox.Cursor = Cursors.IBeam;
-            SextextBox.Location = new Point(180, 474);
-            SextextBox.Name = "SextextBox";
-            SextextBox.Size = new Size(393, 29);
-            SextextBox.TabIndex = 56;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(647, 430);
-            label13.Name = "label13";
-            label13.Size = new Size(117, 21);
-            label13.TabIndex = 55;
-            label13.Text = "Room Number:";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(27, 574);
-            label14.Name = "label14";
-            label14.Size = new Size(107, 21);
-            label14.TabIndex = 54;
-            label14.Text = "Age Category:";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new Point(27, 524);
-            label15.Name = "label15";
-            label15.Size = new Size(128, 21);
-            label15.TabIndex = 53;
-            label15.Text = "Contact Number:";
-            // 
-            // Sex
-            // 
-            Sex.AutoSize = true;
-            Sex.Location = new Point(27, 480);
-            Sex.Name = "Sex";
-            Sex.Size = new Size(37, 21);
-            Sex.TabIndex = 52;
-            Sex.Text = "Sex:";
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Location = new Point(27, 431);
-            label17.Name = "label17";
-            label17.Size = new Size(84, 21);
-            label17.TabIndex = 51;
-            label17.Text = "Full Name:";
-            // 
-            // FullNametextBox
-            // 
-            FullNametextBox.BorderStyle = BorderStyle.FixedSingle;
-            FullNametextBox.Cursor = Cursors.IBeam;
-            FullNametextBox.Location = new Point(180, 428);
-            FullNametextBox.Name = "FullNametextBox";
-            FullNametextBox.Size = new Size(393, 29);
-            FullNametextBox.TabIndex = 50;
-            // 
             // SaveGuestBtn
             // 
             SaveGuestBtn.BackColor = Color.FromArgb(125, 157, 66);
             SaveGuestBtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             SaveGuestBtn.ForeColor = Color.White;
-            SaveGuestBtn.Location = new Point(1360, 542);
+            SaveGuestBtn.Location = new Point(1158, 539);
             SaveGuestBtn.Name = "SaveGuestBtn";
             SaveGuestBtn.Size = new Size(191, 59);
             SaveGuestBtn.TabIndex = 63;
-            SaveGuestBtn.Text = "Save";
+            SaveGuestBtn.Text = "Edit";
             SaveGuestBtn.UseVisualStyleBackColor = false;
             // 
             // RemoveGuestbtn
@@ -264,11 +145,11 @@
             RemoveGuestbtn.BackColor = Color.Maroon;
             RemoveGuestbtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             RemoveGuestbtn.ForeColor = Color.White;
-            RemoveGuestbtn.Location = new Point(1362, 474);
+            RemoveGuestbtn.Location = new Point(1388, 539);
             RemoveGuestbtn.Name = "RemoveGuestbtn";
             RemoveGuestbtn.Size = new Size(191, 59);
             RemoveGuestbtn.TabIndex = 64;
-            RemoveGuestbtn.Text = "Remove... -";
+            RemoveGuestbtn.Text = "Save";
             RemoveGuestbtn.UseVisualStyleBackColor = false;
             // 
             // AddGuestbtn
@@ -276,7 +157,7 @@
             AddGuestbtn.BackColor = Color.Coral;
             AddGuestbtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             AddGuestbtn.ForeColor = Color.White;
-            AddGuestbtn.Location = new Point(1360, 408);
+            AddGuestbtn.Location = new Point(924, 539);
             AddGuestbtn.Name = "AddGuestbtn";
             AddGuestbtn.Size = new Size(193, 59);
             AddGuestbtn.TabIndex = 62;
@@ -294,27 +175,29 @@
             label20.TabIndex = 65;
             label20.Text = "Guests";
             // 
+            // comboBox1
+            // 
+            comboBox1.BackColor = Color.FromArgb(250, 204, 166);
+            comboBox1.Font = new Font("Segoe UI Variable Text", 8.861538F);
+            comboBox1.ForeColor = Color.FromArgb(72, 34, 22);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Checked-In", "Checked-Out", "Cancelled", "Extended", "Reserved" });
+            comboBox1.Location = new Point(1360, 32);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(253, 28);
+            comboBox1.TabIndex = 66;
+            comboBox1.Text = "Status (All)";
+            // 
             // GuestTabUserControl
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
+            Controls.Add(comboBox1);
             Controls.Add(label20);
             Controls.Add(SaveGuestBtn);
             Controls.Add(RemoveGuestbtn);
             Controls.Add(AddGuestbtn);
-            Controls.Add(textBox2);
-            Controls.Add(label11);
-            Controls.Add(RoomNumtextBox);
-            Controls.Add(AgeCattextBox);
-            Controls.Add(textBox6);
-            Controls.Add(SextextBox);
-            Controls.Add(label13);
-            Controls.Add(label14);
-            Controls.Add(label15);
-            Controls.Add(Sex);
-            Controls.Add(label17);
-            Controls.Add(FullNametextBox);
             Controls.Add(dataGridViewGuests);
             Controls.Add(button2);
             Controls.Add(textBox1);
@@ -337,21 +220,10 @@
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column1;
-        private TextBox textBox2;
-        private Label label11;
-        private TextBox RoomNumtextBox;
-        private TextBox AgeCattextBox;
-        private TextBox textBox6;
-        private TextBox SextextBox;
-        private Label label13;
-        private Label label14;
-        private Label label15;
-        private Label Sex;
-        private Label label17;
-        private TextBox FullNametextBox;
         private Button SaveGuestBtn;
         private Button RemoveGuestbtn;
         private Button AddGuestbtn;
         private Label label20;
+        private ComboBox comboBox1;
     }
 }

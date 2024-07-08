@@ -45,10 +45,11 @@
             panelMain2.AutoScroll = true;
             panelMain2.BackColor = Color.Snow;
             panelMain2.Dock = DockStyle.Bottom;
-            panelMain2.Location = new Point(0, 284);
+            panelMain2.Location = new Point(0, 260);
             panelMain2.Name = "panelMain2";
-            panelMain2.Size = new Size(1638, 641);
+            panelMain2.Size = new Size(1638, 665);
             panelMain2.TabIndex = 6;
+            panelMain2.Paint += panelMain2_Paint;
             // 
             // RoomsTabbutton
             // 
@@ -117,7 +118,7 @@
             panel2.Controls.Add(GuestTabbutton);
             panel2.Location = new Point(2, 177);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1636, 101);
+            panel2.Size = new Size(1636, 84);
             panel2.TabIndex = 8;
             // 
             // BookingUserControl

@@ -32,7 +32,6 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
-            UserRoletextBox = new TextBox();
             UserIDtextbox = new TextBox();
             label7 = new Label();
             comboBox1 = new ComboBox();
@@ -83,7 +82,6 @@
             // panel2
             // 
             panel2.BackColor = Color.Snow;
-            panel2.Controls.Add(UserRoletextBox);
             panel2.Controls.Add(UserIDtextbox);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(comboBox1);
@@ -103,17 +101,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1679, 752);
             panel2.TabIndex = 10;
-            // 
-            // UserRoletextBox
-            // 
-            UserRoletextBox.BackColor = Color.White;
-            UserRoletextBox.BorderStyle = BorderStyle.FixedSingle;
-            UserRoletextBox.Font = new Font("Segoe UI Variable Small Light", 9.969231F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            UserRoletextBox.Location = new Point(532, 238);
-            UserRoletextBox.MaxLength = 20;
-            UserRoletextBox.Name = "UserRoletextBox";
-            UserRoletextBox.Size = new Size(263, 30);
-            UserRoletextBox.TabIndex = 24;
             // 
             // UserIDtextbox
             // 
@@ -141,7 +128,7 @@
             comboBox1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Receptionist", "Manager", "Admin" });
-            comboBox1.Location = new Point(532, 275);
+            comboBox1.Location = new Point(532, 238);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(261, 33);
             comboBox1.TabIndex = 21;
@@ -214,7 +201,7 @@
             AddUser_btn.Cursor = Cursors.Hand;
             AddUser_btn.Font = new Font("Segoe UI Variable Small", 11.0769234F, FontStyle.Bold, GraphicsUnit.Point, 0);
             AddUser_btn.ForeColor = Color.White;
-            AddUser_btn.Location = new Point(588, 314);
+            AddUser_btn.Location = new Point(588, 321);
             AddUser_btn.Name = "AddUser_btn";
             AddUser_btn.Size = new Size(150, 51);
             AddUser_btn.TabIndex = 15;
@@ -270,7 +257,7 @@
             UsernametextBox.BackColor = Color.White;
             UsernametextBox.BorderStyle = BorderStyle.FixedSingle;
             UsernametextBox.Font = new Font("Segoe UI Variable Small Light", 9.969231F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            UsernametextBox.Location = new Point(532, 126);
+            UsernametextBox.Location = new Point(532, 131);
             UsernametextBox.MaxLength = 20;
             UsernametextBox.Name = "UsernametextBox";
             UsernametextBox.Size = new Size(263, 30);
@@ -362,6 +349,5 @@
         private Label label6;
         private TextBox UserIDtextbox;
         private Label label7;
-        private TextBox UserRoletextBox;
     }
 }

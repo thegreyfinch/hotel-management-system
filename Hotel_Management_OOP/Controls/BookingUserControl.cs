@@ -19,26 +19,28 @@ namespace Hotel_Management_OOP
     {
         //HomeUserControl Dashboard = new HomeUserControl();
         //BookingUserControl Booking = new BookingUserControl();
-       // BillingUserControl1 Billing = new BillingUserControl1();
+        // BillingUserControl1 Billing = new BillingUserControl1();
         //SettingsUserControl Settings = new SettingsUserControl();
 
         BookingTabUserControl BookingTab = new BookingTabUserControl();
         GuestTabUserControl GuestTab = new GuestTabUserControl();
         RoomsTabUserControl RoomsTab = new RoomsTabUserControl();
+        AddBookingUserControl AddBooking = new AddBookingUserControl();
 
-       /* bookingTabUserControl.Location = new Point(10, 10);
-        bookingTabUserControl.Name = "Booking Tab";
-            bookingTabUserControl.Size = new Size(200, 100);
 
-            this.Controls.Add(bookingTabUserControl);
-            this.Controls.Add(guestTabUserControl);
-            this.Controls.Add(roomsTabUserControl);
-       */
+        /* bookingTabUserControl.Location = new Point(10, 10);
+         bookingTabUserControl.Name = "Booking Tab";
+             bookingTabUserControl.Size = new Size(200, 100);
+
+             this.Controls.Add(bookingTabUserControl);
+             this.Controls.Add(guestTabUserControl);
+             this.Controls.Add(roomsTabUserControl);
+        */
 
         public BookingUserControl()
         {
             InitializeComponent();
-           
+
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -71,12 +73,12 @@ namespace Hotel_Management_OOP
 
         private void Booking_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-         
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -98,6 +100,11 @@ namespace Hotel_Management_OOP
             panelMain2.Controls.Clear();
             panelMain2.Controls.Add(RoomsTab);
             RoomsTab.Dock = DockStyle.Fill;
+        }
+
+        public void panelMain2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -95,7 +95,7 @@ namespace Hotel_Management_OOP
                 string USERID = UserIDtextbox.Text;
                 string USERNAME = UsernametextBox.Text;
                 string PASSWORD = PasswordtextBox.Text;
-                string USERTYPE = UserRoletextBox.Text;
+                string USERTYPE = comboBox1.Text;
 
                 cmd.Parameters.AddWithValue("@userid", USERID);
                 cmd.Parameters.AddWithValue("@username", USERNAME);
@@ -105,8 +105,8 @@ namespace Hotel_Management_OOP
                 dataGridView1.ColumnCount = 4;
                 dataGridView1.Columns[0].Name = "User Id";
                 dataGridView1.Columns[1].Name = "Username";
-                dataGridView1.Columns[1].Name = "Password";
-                dataGridView1.Columns[1].Name = "User Type";
+                dataGridView1.Columns[2].Name = "Password";
+                dataGridView1.Columns[3].Name = "User Type";
                 string[] row = new string[] { USERID, USERNAME, PASSWORD, USERTYPE };
                 dataGridView1.Rows.Add(row);
 
@@ -135,7 +135,7 @@ namespace Hotel_Management_OOP
                 cmd.Parameters.AddWithValue("@userid", UserIDtextbox.Text);
                 cmd.Parameters.AddWithValue("@username", UsernametextBox.Text);
                 cmd.Parameters.AddWithValue("@password", PasswordtextBox.Text);
-                cmd.Parameters.AddWithValue("@usertype", UserRoletextBox.Text);
+                cmd.Parameters.AddWithValue("@usertype", comboBox1.Text);
 
 
                 cmd.ExecuteNonQuery();
@@ -165,7 +165,7 @@ namespace Hotel_Management_OOP
                 cmd.Parameters.AddWithValue("@userid", UserIDtextbox.Text);
                 cmd.Parameters.AddWithValue("@username", UsernametextBox.Text);
                 cmd.Parameters.AddWithValue("@password", PasswordtextBox.Text);
-                cmd.Parameters.AddWithValue("@usertype", UserRoletextBox.Text);
+                cmd.Parameters.AddWithValue("@usertype", comboBox1.Text);
 
                 cmd.ExecuteNonQuery();
                 dataGridView1.Rows.Clear();
