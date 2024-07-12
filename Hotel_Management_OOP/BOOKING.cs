@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
+using System.Diagnostics.Eventing.Reader;
+
 
 namespace Hotel_Management_OOP
 {
@@ -22,11 +25,22 @@ namespace Hotel_Management_OOP
         }
 
         // declare and initialize the variables here
+        public int bookingID = 0;
+        public int custID = 0;
+        public int guestID = 0;
+        public int roomID = 0;
+        public int noOfDays = 0;
+
+        private SQLiteConnection sqlConn;
+        private SQLiteCommand sqlCmd;
+        private DataTable sqlDT = new DataTable();
+        private DataSet DS = new DataSet();
+        private SQLiteDataAdapter DB;
 
         // Method to connect app to database
         private void SetConnectDB()
         {
-            sqlConn = new SQLiteConnection("Data Source = C:\\Users\\QCU\\Downloads\\Hotel_System\\Hotel_Management_OOP\\bin\\Debug\\booking.db"); //change path
+            sqlConn = new SQLiteConnection("Data Source = booking.db"); //change path
         }
 
 
@@ -45,7 +59,7 @@ namespace Hotel_Management_OOP
                 sqlConn.Close();
 
                 // Set the DataSource of your DataGridView to the DataTable
-                dataGridView1.DataSource = sqlDT;
+                //dataGridViewBooking.DataSource = sqlDT;
             }
             catch (Exception ex)
             {

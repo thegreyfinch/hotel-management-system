@@ -98,7 +98,7 @@
             label21.Size = new Size(195, 28);
             label21.TabIndex = 1;
             label21.Text = "4 Days(s), $100.0";
-            label21.Click += label21_Click;
+           // label21.Click += label21_Click;
             // 
             // label24
             // 
@@ -196,7 +196,7 @@
             button3.TabIndex = 0;
             button3.Text = "ADD BOOKING";
             button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            //button3.Click += button3_Click;
             // 
             // BOOKING
             // 

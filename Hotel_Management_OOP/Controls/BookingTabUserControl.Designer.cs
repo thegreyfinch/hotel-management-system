@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             label20 = new Label();
             label2 = new Label();
             dataGridViewBooking = new DataGridView();
@@ -37,8 +37,10 @@
             button3 = new Button();
             comboBox1 = new ComboBox();
             panel2 = new Panel();
-            label1 = new Label();
-            RoomIDtxtbox = new TextBox();
+            label9 = new Label();
+            comboBox5 = new ComboBox();
+            label8 = new Label();
+            label7 = new Label();
             comboBox3 = new ComboBox();
             label5 = new Label();
             dateTimePicker3 = new DateTimePicker();
@@ -58,6 +60,7 @@
             EditBBtn = new Button();
             label6 = new Label();
             textBox1 = new TextBox();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridViewBooking).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -87,20 +90,21 @@
             // 
             dataGridViewBooking.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewBooking.BackgroundColor = Color.FromArgb(255, 224, 192);
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(72, 34, 22);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridViewBooking.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(72, 34, 22);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewBooking.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewBooking.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewBooking.Location = new Point(23, 122);
             dataGridViewBooking.Name = "dataGridViewBooking";
             dataGridViewBooking.RowHeadersWidth = 56;
             dataGridViewBooking.Size = new Size(1593, 240);
             dataGridViewBooking.TabIndex = 51;
+            dataGridViewBooking.CellContentClick += dataGridViewBooking_CellContentClick;
             // 
             // comboBox2
             // 
@@ -150,8 +154,10 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(RoomIDtxtbox);
+            panel2.Controls.Add(label9);
+            panel2.Controls.Add(comboBox5);
+            panel2.Controls.Add(label8);
+            panel2.Controls.Add(label7);
             panel2.Controls.Add(comboBox3);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(dateTimePicker3);
@@ -168,27 +174,52 @@
             panel2.Controls.Add(label22);
             panel2.Location = new Point(23, 384);
             panel2.Name = "panel2";
-            panel2.Size = new Size(802, 226);
+            panel2.Size = new Size(923, 226);
             panel2.TabIndex = 56;
             // 
-            // label1
+            // label9
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Variable Text Semibold", 9F);
-            label1.ForeColor = Color.FromArgb(72, 34, 22);
-            label1.Location = new Point(494, 140);
-            label1.Name = "label1";
-            label1.Size = new Size(72, 20);
-            label1.TabIndex = 56;
-            label1.Text = "Room ID:";
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI Variable Text Semibold", 9F);
+            label9.ForeColor = Color.FromArgb(72, 34, 22);
+            label9.Location = new Point(625, 132);
+            label9.Name = "label9";
+            label9.Size = new Size(66, 20);
+            label9.TabIndex = 34;
+            label9.Text = "PHP0.00";
+            label9.Click += label9_Click;
             // 
-            // RoomIDtxtbox
+            // comboBox5
             // 
-            RoomIDtxtbox.Location = new Point(494, 169);
-            RoomIDtxtbox.Name = "RoomIDtxtbox";
-            RoomIDtxtbox.Size = new Size(254, 29);
-            RoomIDtxtbox.TabIndex = 55;
-            RoomIDtxtbox.TextChanged += RoomIDtxtbox_TextChanged;
+            comboBox5.FormattingEnabled = true;
+            comboBox5.Items.AddRange(new object[] { "Cash", "Card" });
+            comboBox5.Location = new Point(625, 91);
+            comboBox5.Name = "comboBox5";
+            comboBox5.Size = new Size(281, 29);
+            comboBox5.TabIndex = 33;
+            comboBox5.SelectedIndexChanged += comboBox5_SelectedIndexChanged;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Variable Text Semibold", 9F);
+            label8.ForeColor = Color.FromArgb(72, 34, 22);
+            label8.Location = new Point(495, 132);
+            label8.Name = "label8";
+            label8.Size = new Size(68, 20);
+            label8.TabIndex = 31;
+            label8.Text = "Amount:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Variable Text Semibold", 9F);
+            label7.ForeColor = Color.FromArgb(72, 34, 22);
+            label7.Location = new Point(495, 91);
+            label7.Name = "label7";
+            label7.Size = new Size(130, 20);
+            label7.TabIndex = 30;
+            label7.Text = "Payment Method:";
             // 
             // comboBox3
             // 
@@ -221,6 +252,7 @@
             // 
             // textBox6
             // 
+            textBox6.BorderStyle = BorderStyle.FixedSingle;
             textBox6.Location = new Point(149, 128);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(281, 29);
@@ -250,6 +282,7 @@
             // 
             // textBox3
             // 
+            textBox3.BorderStyle = BorderStyle.FixedSingle;
             textBox3.Location = new Point(149, 47);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(281, 29);
@@ -260,7 +293,7 @@
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI Variable Text Semibold", 9F);
             label17.ForeColor = Color.FromArgb(72, 34, 22);
-            label17.Location = new Point(494, 72);
+            label17.Location = new Point(495, 51);
             label17.Name = "label17";
             label17.Size = new Size(119, 20);
             label17.TabIndex = 18;
@@ -279,6 +312,7 @@
             // 
             // textBox2
             // 
+            textBox2.BorderStyle = BorderStyle.FixedSingle;
             textBox2.Location = new Point(149, 7);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(281, 29);
@@ -299,26 +333,28 @@
             // 
             dateTimePicker2.CalendarForeColor = Color.FromArgb(72, 34, 22);
             dateTimePicker2.Font = new Font("Segoe UI Variable Text Light", 8.861538F);
-            dateTimePicker2.Location = new Point(494, 98);
+            dateTimePicker2.Location = new Point(625, 49);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(254, 27);
+            dateTimePicker2.Size = new Size(277, 27);
             dateTimePicker2.TabIndex = 8;
+            dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged_2;
             // 
             // dateTimePicker1
             // 
             dateTimePicker1.CalendarForeColor = Color.FromArgb(72, 34, 22);
             dateTimePicker1.Font = new Font("Segoe UI Variable Text Light", 8.861538F);
-            dateTimePicker1.Location = new Point(494, 32);
+            dateTimePicker1.Location = new Point(625, 10);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(254, 27);
+            dateTimePicker1.Size = new Size(277, 27);
             dateTimePicker1.TabIndex = 4;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged_2;
             // 
             // label22
             // 
             label22.AutoSize = true;
             label22.Font = new Font("Segoe UI Variable Text Semibold", 9F);
             label22.ForeColor = Color.FromArgb(72, 34, 22);
-            label22.Location = new Point(494, 6);
+            label22.Location = new Point(495, 12);
             label22.Name = "label22";
             label22.Size = new Size(105, 20);
             label22.TabIndex = 2;
@@ -361,6 +397,7 @@
             EditBBtn.TabIndex = 67;
             EditBBtn.Text = "Edit";
             EditBBtn.UseVisualStyleBackColor = false;
+            EditBBtn.Click += EditBBtn_Click;
             // 
             // label6
             // 
@@ -381,6 +418,14 @@
             textBox1.Size = new Size(254, 29);
             textBox1.TabIndex = 68;
             // 
+            // panel1
+            // 
+            panel1.Location = new Point(3, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(890, 614);
+            panel1.TabIndex = 70;
+            panel1.Paint += panel1_Paint;
+            // 
             // BookingTabUserControl
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
@@ -399,6 +444,7 @@
             Controls.Add(textBox4);
             Controls.Add(button3);
             Controls.Add(comboBox1);
+            Controls.Add(panel1);
             Name = "BookingTabUserControl";
             Size = new Size(1638, 641);
             ((System.ComponentModel.ISupportInitialize)dataGridViewBooking).EndInit();
@@ -434,10 +480,13 @@
         private Label label22;
         private Button SaveBBtn;
         private Button AddBbtn;
-        private Label label1;
-        private TextBox RoomIDtxtbox;
         private Button EditBBtn;
         private Label label6;
         private TextBox textBox1;
+        public Panel panel1;
+        private Label label9;
+        private ComboBox comboBox5;
+        private Label label8;
+        private Label label7;
     }
 }

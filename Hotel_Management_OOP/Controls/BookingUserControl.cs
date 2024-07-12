@@ -83,6 +83,9 @@ namespace Hotel_Management_OOP
 
         private void button1_Click(object sender, EventArgs e)
         {
+            BookingTabUserControl BookingTab = new BookingTabUserControl();
+            this.Controls.SetChildIndex(panelMain2, 0);
+            BookingTab.panel1.SendToBack();
             panelMain2.Controls.Clear();
             panelMain2.Controls.Add(BookingTab);
             BookingTab.Dock = DockStyle.Fill;

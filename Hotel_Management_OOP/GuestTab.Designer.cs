@@ -368,6 +368,7 @@
             panelHide.Name = "panelHide";
             panelHide.Size = new Size(1690, 1006);
             panelHide.TabIndex = 2;
+            panelHide.Paint += panelHide_Paint;
             // 
             // label1
             // 

@@ -139,7 +139,7 @@
 
         #endregion
 
-        private Panel panelMain2;
+        public Panel panelMain2;
         private Panel panel1;
         private Label label1;
         private TextBox textBox2;

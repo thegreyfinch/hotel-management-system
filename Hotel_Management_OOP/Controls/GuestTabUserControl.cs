@@ -7,20 +7,70 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
+using System.Diagnostics.Eventing.Reader;
+using System.Drawing.Text;
+using System.Linq.Expressions;
+//using Microsoft.Data.Sqlite;
 
 namespace Hotel_Management_OOP.Controls
 {
     public partial class GuestTabUserControl : UserControl
     {
+        private SQLiteConnection sqlConn;
+        private SQLiteCommand sqlCmd;
+        private DataTable sqlDT = new DataTable();
+        private DataSet DS = new DataSet();
+        private SQLiteDataAdapter DB;
+
         public GuestTabUserControl()
         {
             InitializeComponent();
+            SetConnectDB();
+            UpdateDataGridView();
         }
+
+        // Method to connect app to database
+        private void SetConnectDB()
+
+        {
+            sqlConn = new SQLiteConnection("Data Source = C:\\Users\\Cheryl Jeanne\\source\\repos\\Hotel_Management_OOP\\Hotel_Management_OOP\\bin\\Debug\\Hotel.db");
+        }
+
+
+        public void UpdateDataGridView()
+        {
+            try
+            {
+                sqlConn.Open();
+                string CommandText = "SELECT * FROM Guest";
+                DB = new SQLiteDataAdapter(CommandText, sqlConn);
+                DS.Reset();
+                DB.Fill(DS);
+                sqlDT = DS.Tables[0];
+                dataGridViewGuests.DataSource = sqlDT;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
+        }
+
+
 
         private void GuestTabUserControl_Load(object sender, EventArgs e)
         {
 
-             
+
+        }
+
+        private void dataGridViewGuests_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

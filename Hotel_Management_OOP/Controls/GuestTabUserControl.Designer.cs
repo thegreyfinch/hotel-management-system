@@ -32,12 +32,6 @@
             button2 = new Button();
             textBox1 = new TextBox();
             dataGridViewGuests = new DataGridView();
-            Gn = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
             SaveGuestBtn = new Button();
             RemoveGuestbtn = new Button();
             AddGuestbtn = new Button();
@@ -81,52 +75,12 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridViewGuests.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewGuests.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewGuests.Columns.AddRange(new DataGridViewColumn[] { Gn, Column2, Column3, Column4, Column5, Column1 });
             dataGridViewGuests.Location = new Point(27, 77);
             dataGridViewGuests.Name = "dataGridViewGuests";
             dataGridViewGuests.RowHeadersWidth = 56;
             dataGridViewGuests.Size = new Size(1586, 428);
             dataGridViewGuests.TabIndex = 49;
-            // 
-            // Gn
-            // 
-            Gn.FillWeight = 200F;
-            Gn.HeaderText = "Full_Name";
-            Gn.MinimumWidth = 7;
-            Gn.Name = "Gn";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Sex";
-            Column2.MinimumWidth = 7;
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.FillWeight = 250F;
-            Column3.HeaderText = "Contact_Number";
-            Column3.MinimumWidth = 7;
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.FillWeight = 200F;
-            Column4.HeaderText = "Age_Category";
-            Column4.MinimumWidth = 7;
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.FillWeight = 200F;
-            Column5.HeaderText = "Room_Number";
-            Column5.MinimumWidth = 7;
-            Column5.Name = "Column5";
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Status";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
+            dataGridViewGuests.CellContentClick += dataGridViewGuests_CellContentClick;
             // 
             // SaveGuestBtn
             // 
@@ -214,12 +168,6 @@
         private Button button2;
         private TextBox textBox1;
         private DataGridView dataGridViewGuests;
-        private DataGridViewTextBoxColumn Gn;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column1;
         private Button SaveGuestBtn;
         private Button RemoveGuestbtn;
         private Button AddGuestbtn;

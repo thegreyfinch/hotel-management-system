@@ -20,7 +20,7 @@ namespace Hotel_Management_OOP
 
         HomeUserControl Dashboard = new HomeUserControl();
         BookingUserControl Booking = new BookingUserControl();
-        BillingUserControl1 Billing = new BillingUserControl1();
+        //BillingUserControl Billing = new BillingUserControl();
         SettingsUserControl Settings = new SettingsUserControl();
 
         public GuestTab()
@@ -117,8 +117,8 @@ namespace Hotel_Management_OOP
         private void button9_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            panelMain.Controls.Add(Billing);
-            Billing.Dock = DockStyle.Fill;
+            //panelMain.Controls.Add(Billing);
+            //Billing.Dock = DockStyle.Fill;
             //BillingAndInvoicing form = new BillingAndInvoicing();
             //form.ShowDialog();
         }
@@ -201,6 +201,11 @@ namespace Hotel_Management_OOP
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelHide_Paint(object sender, PaintEventArgs e)
         {
 
         }

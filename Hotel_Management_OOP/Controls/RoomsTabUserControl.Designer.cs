@@ -28,14 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             button2 = new Button();
             textBox1 = new TextBox();
             dataGridViewRooms = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            PricePerNight = new DataGridViewTextBoxColumn();
             EditRoomBtn = new Button();
             AddRoomBtn = new Button();
             label1 = new Label();
@@ -69,46 +65,22 @@
             // 
             dataGridViewRooms.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewRooms.BackgroundColor = Color.FromArgb(255, 224, 192);
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(72, 34, 22);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridViewRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(72, 34, 22);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridViewRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewRooms.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewRooms.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, PricePerNight });
             dataGridViewRooms.GridColor = SystemColors.InactiveCaptionText;
             dataGridViewRooms.Location = new Point(20, 79);
             dataGridViewRooms.Name = "dataGridViewRooms";
             dataGridViewRooms.RowHeadersWidth = 56;
             dataGridViewRooms.Size = new Size(1588, 409);
             dataGridViewRooms.TabIndex = 51;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.HeaderText = "Room ID";
-            dataGridViewTextBoxColumn1.MinimumWidth = 7;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.HeaderText = "Room Type";
-            dataGridViewTextBoxColumn2.MinimumWidth = 7;
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.HeaderText = "Room Status";
-            dataGridViewTextBoxColumn3.MinimumWidth = 7;
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // PricePerNight
-            // 
-            PricePerNight.HeaderText = "Price Per Night";
-            PricePerNight.MinimumWidth = 6;
-            PricePerNight.Name = "PricePerNight";
+            dataGridViewRooms.CellContentClick += dataGridViewRooms_CellContentClick;
             // 
             // EditRoomBtn
             // 
@@ -196,10 +168,6 @@
         private Button button2;
         private TextBox textBox1;
         private DataGridView dataGridViewRooms;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn PricePerNight;
         private Button EditRoomBtn;
         private Button AddRoomBtn;
         private Label label1;
