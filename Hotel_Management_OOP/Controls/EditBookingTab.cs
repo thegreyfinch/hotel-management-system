@@ -27,9 +27,9 @@ namespace Hotel_Management_OOP.Controls
         private void SetConnectDB()
 
         {
-            sqlConn = new SQLiteConnection("Data Source = C:\\Users\\Cheryl Jeanne\\source\\repos\\Hotel_Management_OOP\\Hotel_Management_OOP\\bin\\Debug\\Hotel.db");
+            sqlConn = new SQLiteConnection("Data Source = C:\\Users\\QCU\\Downloads\\CloneOfficial2\\Hotel_Management_OOP\\bin\\Debug\\Hotel.db");
         }
-        public EditBookingTab(int bookingID, string custName, string roomType, int noOfGuest, string custSex, string contactNumber, DateTime birthdate, DateTime checkInDate, DateTime checkOutDate)
+        public EditBookingTab(int bookingID, int roomID, string custName, string roomType, int noOfGuest, string custSex, string contactNumber, DateTime birthdate, DateTime checkInDate, DateTime checkOutDate)
         {
             InitializeComponent();
 
@@ -38,6 +38,7 @@ namespace Hotel_Management_OOP.Controls
 
             // Set form fields
             textBox2.Text = custName;
+            textBox4.Text = roomID.ToString();
             comboBox2.Text = roomType;
             //comboBox2.Text = roomStatus;
             textBox1.Text = noOfGuest.ToString();
@@ -57,18 +58,27 @@ namespace Hotel_Management_OOP.Controls
             {
                 sqlConn.Open();
 
-                string getCustIDQuery = "SELECT CustID FROM Booking WHERE BookingID = @BookingID";
+                // Retrieve CustID and Old RoomID based on BookingID
+                string getCustIDQuery = "SELECT CustID, RoomID FROM Booking WHERE BookingID = @BookingID";
                 int custID;
+                int oldRoomID;
                 using (SQLiteCommand getCustIDCmd = new SQLiteCommand(getCustIDQuery, sqlConn))
                 {
                     getCustIDCmd.Parameters.AddWithValue("@BookingID", bookingID);
-                    custID = Convert.ToInt32(getCustIDCmd.ExecuteScalar());
+                    using (SQLiteDataReader reader = getCustIDCmd.ExecuteReader())
+                    {
+                        reader.Read();
+                        custID = Convert.ToInt32(reader["CustID"]);
+                        oldRoomID = Convert.ToInt32(reader["RoomID"]);
+                    }
                 }
 
-                string updateBookingQuery = "UPDATE Booking SET CustName = @CustName, RoomType = @RoomType, NoOfGuest = @NoOfGuest, CustSex = @CustSex, ContactNumber = @ContactNumber, Birthdate = @Birthdate, CheckInDate = @CheckInDate, CheckOutDate = @CheckOutDate WHERE BookingID = @BookingID";
+                // Update Booking details
+                string updateBookingQuery = "UPDATE Booking SET RoomID = @RoomID, CustName = @CustName, RoomType = @RoomType, NoOfGuest = @NoOfGuest, CustSex = @CustSex, ContactNumber = @ContactNumber, Birthdate = @Birthdate, CheckInDate = @CheckInDate, CheckOutDate = @CheckOutDate WHERE BookingID = @BookingID";
 
                 using (SQLiteCommand updateBookingCmd = new SQLiteCommand(updateBookingQuery, sqlConn))
                 {
+                    updateBookingCmd.Parameters.AddWithValue("@RoomID", int.Parse(textBox4.Text));
                     updateBookingCmd.Parameters.AddWithValue("@CustName", textBox2.Text);
                     updateBookingCmd.Parameters.AddWithValue("@RoomType", comboBox2.Text);
                     updateBookingCmd.Parameters.AddWithValue("@NoOfGuest", int.Parse(textBox1.Text));
@@ -82,28 +92,28 @@ namespace Hotel_Management_OOP.Controls
                     updateBookingCmd.ExecuteNonQuery();
                 }
 
-                string updateRoomQuery = "UPDATE Room SET RoomType = @RoomType WHERE RoomID = (SELECT RoomID FROM Booking WHERE BookingID = @BookingID)";
+                // Retrieve the new RoomID
+                int newRoomID = int.Parse(textBox4.Text);
+
+                // Update Room details: change the RoomID in the Room table while retaining other details
+                string updateRoomQuery = "UPDATE Room SET RoomID = @NewRoomID WHERE RoomID = @OldRoomID";
                 using (SQLiteCommand updateRoomCmd = new SQLiteCommand(updateRoomQuery, sqlConn))
                 {
-                    updateRoomCmd.Parameters.AddWithValue("@RoomType", comboBox2.Text);
-                    updateRoomCmd.Parameters.AddWithValue("@BookingID", bookingID);
-
+                    updateRoomCmd.Parameters.AddWithValue("@NewRoomID", newRoomID);
+                    updateRoomCmd.Parameters.AddWithValue("@OldRoomID", oldRoomID);
                     updateRoomCmd.ExecuteNonQuery();
                 }
 
-                string updateGuestQuery = "UPDATE Guest SET CustName = @CustName, CustSex = @CustSex, ContactNumber = @ContactNumber WHERE CustID = @CustID";
+                // Update Guest details
+                string updateGuestQuery = "UPDATE Guest SET RoomID = @RoomID WHERE CustID = @CustID";
                 using (SQLiteCommand updateGuestCmd = new SQLiteCommand(updateGuestQuery, sqlConn))
                 {
-                    updateGuestCmd.Parameters.AddWithValue("@CustName", textBox2.Text);
-                    updateGuestCmd.Parameters.AddWithValue("@CustSex", comboBox3.Text);
-                    updateGuestCmd.Parameters.AddWithValue("@ContactNumber", textBox3.Text);
+                    updateGuestCmd.Parameters.AddWithValue("@RoomID", newRoomID);
                     updateGuestCmd.Parameters.AddWithValue("@CustID", custID);
-
                     updateGuestCmd.ExecuteNonQuery();
                 }
 
                 MessageBox.Show("Booking, Room, and Guest updated successfully.");
-                //this.Close();
             }
             catch (Exception ex)
             {
@@ -114,7 +124,6 @@ namespace Hotel_Management_OOP.Controls
                 sqlConn.Close();
             }
         }
-
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
@@ -144,6 +153,16 @@ namespace Hotel_Management_OOP.Controls
         {
             // Update the booking record
             UpdateBooking();
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditBookingTab_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -18,6 +18,8 @@ namespace Hotel_Management_OOP.Controls
 {
     public partial class BookingTabUserControl : UserControl
     {
+        public event EventHandler BookingUpdated;
+
         public int bookingID = 0;
         public int custID = 0;
         public int noOfDays = 0;
@@ -43,13 +45,14 @@ namespace Hotel_Management_OOP.Controls
             // Subscribe to DataGridView selection changed event
             dataGridViewBooking.SelectionChanged += DataGridViewBooking_SelectionChanged;
 
-
+            //Subscribe to textBox6 TextChanged event for input validation
+            textBox6.TextChanged += textBox6_TextChanged;
         }
         // Method to connect app to database
         private void SetConnectDB()
 
         {
-            sqlConn = new SQLiteConnection("Data Source = C:\\Users\\Cheryl Jeanne\\source\\repos\\Hotel_Management_OOP\\Hotel_Management_OOP\\bin\\Debug\\Hotel.db");
+            sqlConn = new SQLiteConnection("Data Source = C:\\Users\\QCU\\Downloads\\CloneOfficial2\\Hotel_Management_OOP\\bin\\Debug\\Hotel.db");
         }
 
 
@@ -57,7 +60,6 @@ namespace Hotel_Management_OOP.Controls
         {
 
             try
-
             {
                 SetConnectDB();
                 sqlConn.Open();
@@ -68,9 +70,7 @@ namespace Hotel_Management_OOP.Controls
                 DB.Fill(DS);
                 sqlDT = DS.Tables[0];
                 sqlConn.Close();
-                // Set the DataSource of your DataGridView to the DataTable
                 dataGridViewBooking.DataSource = sqlDT;
-
             }
             catch (Exception ex)
             {
@@ -201,6 +201,24 @@ namespace Hotel_Management_OOP.Controls
                 pricePerNight = 300;
             }
 
+            // Validate contact number
+            if (!IsValidContactNumber(textBox6.Text))
+            {
+                MessageBox.Show("Error. Please enter a valid contact number.");
+                return;
+            }
+
+            // Validate number of guests based on room type
+            int numberOfGuests = Convert.ToInt32(textBox3.Text);
+
+            if ((roomType == "Standard" && numberOfGuests > 2) ||
+                (roomType == "Deluxe" && numberOfGuests > 4) ||
+                (roomType == "Suite" && numberOfGuests > 5))
+            {
+                MessageBox.Show($"Error. Maximum {roomType} room capacity exceeded.");
+                return;
+            }
+
             // Compute the AgeCategory based on the Birthdate
             string ageCategory = ComputeAgeCategory(dateTimePicker3.Value);
 
@@ -253,7 +271,7 @@ namespace Hotel_Management_OOP.Controls
             // Solve the total amount to be paid
             ComputeNoOfDays();
             totalAmount = pricePerNight * noOfDays;
-            label9.Text =totalAmount.ToString();
+            label9.Text = totalAmount.ToString();
 
             // Create SQL command and parameters for Guest table
             SQLiteCommand paymentCmd = new SQLiteCommand(paymentCommandText, sqlConn);
@@ -273,9 +291,11 @@ namespace Hotel_Management_OOP.Controls
                 MessageBox.Show("Booking successfully added.");
 
                 // Refresh data grids in all relevant user controls
-                UpdateDataGridView(); // For BookingTabUserControl
-                                      //RefreshGuestDataGrid(); // For GuestTabUserControl
-                                      // RefreshRoomDataGrid(); // For RoomsTabUserControl
+                //UpdateDataGridView(); // For BookingTabUserControl
+                //RefreshGuestDataGrid(); // For GuestTabUserControl
+                // RefreshRoomDataGrid(); // For RoomsTabUserControl
+                // Notify subscribers that booking data has been updated
+                BookingUpdated?.Invoke(this, EventArgs.Empty);
             }
             catch (Exception ex)
             {
@@ -286,6 +306,7 @@ namespace Hotel_Management_OOP.Controls
                 sqlConn.Close(); // close the connection
             }
         }
+
 
         private int GetNextID(string tableName, string columnName)
         {
@@ -319,10 +340,75 @@ namespace Hotel_Management_OOP.Controls
             }
         }
 
-        private void SaveGuestBtn_Click(object sender, EventArgs e)
+        private void DeleteBBtn_Click(object sender, EventArgs e)
         {
+            if (dataGridViewBooking.SelectedRows.Count > 0)
+            {
+                // Get the selected BookingID
+                int selectedRowIndex = dataGridViewBooking.SelectedRows[0].Index;
+                int bookingID = Convert.ToInt32(dataGridViewBooking.Rows[selectedRowIndex].Cells["BookingID"].Value);
 
+                // Get the RoomID associated with the selected BookingID
+                int roomID = Convert.ToInt32(dataGridViewBooking.Rows[selectedRowIndex].Cells["RoomID"].Value);
+
+                // Get the Customer Name associated with the selected BookingID
+                string custName = dataGridViewBooking.Rows[selectedRowIndex].Cells["CustName"].Value.ToString();
+
+                // Set the BookingStatus to "Inactive" for the selected BookingID
+                string updateBookingQuery = $"UPDATE Booking SET BookingStatus = 'Inactive' WHERE BookingID = {bookingID}";
+
+                // Set the RoomStatus to "Available" for the associated RoomID
+                string updateRoomQuery = $"UPDATE Room SET RoomStatus = 'Available' WHERE RoomID = {roomID}";
+
+                // Set the Status to "Inactive" in the Guest table based on CustName
+                string updateGuestQuery = $"UPDATE Guest SET Status = 'Inactive' WHERE CustName = @CustName";
+
+                try
+                {
+                    SetConnectDB();
+                    sqlConn.Open();
+
+                    // Create a transaction to ensure all updates are executed atomically
+                    using (var transaction = sqlConn.BeginTransaction())
+                    {
+                        // Update Booking table
+                        sqlCmd = new SQLiteCommand(updateBookingQuery, sqlConn);
+                        sqlCmd.ExecuteNonQuery();
+
+                        // Update Room table
+                        sqlCmd.CommandText = updateRoomQuery;
+                        sqlCmd.ExecuteNonQuery();
+
+                        // Update Guest table
+                        sqlCmd.CommandText = updateGuestQuery;
+                        sqlCmd.Parameters.AddWithValue("@CustName", custName);
+                        sqlCmd.ExecuteNonQuery();
+
+                        // Commit transaction
+                        transaction.Commit();
+                    }
+
+                    MessageBox.Show("Booking successfully marked as Inactive, Room status updated to Available, and Guest status updated to Inactive.");
+
+                    // Refresh the DataGridView to reflect the changes
+                    //UpdateDataGridView();
+                    BookingUpdated?.Invoke(this, EventArgs.Empty);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating booking, room, and guest status: " + ex.Message);
+                }
+                finally
+                {
+                    sqlConn.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a booking to delete.");
+            }
         }
+
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -424,7 +510,8 @@ namespace Hotel_Management_OOP.Controls
                     MessageBox.Show("Booking successfully marked as Inactive and Room status updated to Available.");
 
                     // Refresh the DataGridView to reflect the changes
-                    UpdateDataGridView();
+                    //UpdateDataGridView();
+                    BookingUpdated?.Invoke(this, EventArgs.Empty);
                 }
                 catch (Exception ex)
                 {
@@ -550,6 +637,7 @@ namespace Hotel_Management_OOP.Controls
             // Get the selected booking details
             int selectedRowIndex = dataGridViewBooking.SelectedRows[0].Index;
             int bookingID = Convert.ToInt32(dataGridViewBooking.Rows[selectedRowIndex].Cells["BookingID"].Value);
+            int roomID = Convert.ToInt32(dataGridViewBooking.Rows[selectedRowIndex].Cells["RoomID"].Value);
             string custName = dataGridViewBooking.Rows[selectedRowIndex].Cells["CustName"].Value.ToString();
             string roomType = dataGridViewBooking.Rows[selectedRowIndex].Cells["RoomType"].Value.ToString();
             //string roomStatus = dataGridViewBooking.Rows[selectedRowIndex].Cells["RoomStatus"].Value.ToString();
@@ -561,7 +649,7 @@ namespace Hotel_Management_OOP.Controls
             DateTime checkOutDate = Convert.ToDateTime(dataGridViewBooking.Rows[selectedRowIndex].Cells["CheckOutDate"].Value);
 
             // Pass details to EditBooking forms
-            EditBookingTab editBooking = new EditBookingTab(bookingID, custName, roomType, noOfGuest, custSex, contactNumber, birthdate, checkInDate, checkOutDate);
+            EditBookingTab editBooking = new EditBookingTab(bookingID, roomID, custName, roomType, noOfGuest, custSex, contactNumber, birthdate, checkInDate, checkOutDate);
             //editBooking.Show();
 
             //BookingUserControl BookingTab = new BookingUserControl();
@@ -575,7 +663,7 @@ namespace Hotel_Management_OOP.Controls
             panel1.Controls.SetChildIndex(editBooking, 0);
         }
 
-       
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -598,6 +686,110 @@ namespace Hotel_Management_OOP.Controls
         }
 
         private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged_1(object sender, EventArgs e)
+        {
+            string contactNumber = textBox6.Text;
+            if (!IsValidContactNumber(contactNumber))
+            {
+                errorProvider1.SetError(textBox6, "Contact number must be numeric and must be 11 or 12 digits long.");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private bool IsValidContactNumber(string contactNumber)
+        {
+            return contactNumber.All(char.IsDigit) && (contactNumber.Length == 11 || contactNumber.Length == 12);
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            string keyword = textBox4.Text.Trim();
+
+            if (string.IsNullOrEmpty(keyword))
+            {
+                // If keyword is empty or null, refresh DataGridView
+                UpdateDataGridView();
+                return;
+            }
+
+            try
+            {
+                SetConnectDB();
+                sqlConn.Open();
+                sqlCmd = sqlConn.CreateCommand();
+
+                // Define the query dynamically to search in any column
+                string CommandText = "SELECT * FROM Booking WHERE ";
+
+                // Build the search conditions based on keyword
+                List<string> searchConditions = new List<string>();
+                searchConditions.Add("CustName LIKE @keyword");
+                searchConditions.Add("RoomType LIKE @keyword");
+                searchConditions.Add("RoomID LIKE @keyword");
+                searchConditions.Add("RoomStatus LIKE @keyword");
+                searchConditions.Add("ContactNumber LIKE @keyword");
+                searchConditions.Add("Birthdate LIKE @keyword"); // Adjust format for date search if needed
+                searchConditions.Add("CheckInDate LIKE @keyword"); // Adjust format for date search if needed
+                searchConditions.Add("CheckOutDate LIKE @keyword"); // Adjust format for date search if needed
+                searchConditions.Add("NoOfGuest LIKE @keyword");
+                // Add specific condition for CustSex to match exact word "Male"
+                if (keyword == "Male")
+                {
+                    searchConditions.Add("CustSex = 'Male'");
+                }
+                else
+                {
+                    searchConditions.Add("CustSex LIKE @keyword");
+                }
+
+                CommandText += string.Join(" OR ", searchConditions);
+
+                sqlCmd.CommandText = CommandText;
+                sqlCmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+
+                // Reset DataSet and fill it with data from database
+                DS.Reset();
+                DB = new SQLiteDataAdapter(sqlCmd);
+                DB.Fill(DS);
+
+                // Update the DataTable and bind to DataGridView
+                sqlDT = DS.Tables[0];
+                dataGridViewBooking.DataSource = sqlDT;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error searching data: " + ex.Message);
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
+        }
+
+        private void textBox4_TextChanged_1(object sender, EventArgs e)
+        {
+            string keyword = textBox4.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(keyword))
+            {
+                // If textBox4 is empty or contains only whitespace, refresh DataGridView to show all bookings
+                UpdateDataGridView();
+            }
+        }
+
+        private void textBox3_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }

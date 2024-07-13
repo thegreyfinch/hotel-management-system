@@ -28,22 +28,51 @@ namespace Hotel_Management_OOP.Controls
             InitializeComponent();
             SetConnectDB();
             UpdateDataGridView();
+            BookingTabUserControl BookingTab = new BookingTabUserControl();
+            // Subscribe to BookingUpdated event
+            BookingTab.BookingUpdated += BookingTabUserControl_BookingUpdated;
+        }
+
+        private void BookingTabUserControl_BookingUpdated(object sender, EventArgs e)
+        {
+            UpdateDataGridView(); // Update data grid view when booking is updated
         }
 
         // Method to connect app to database
         private void SetConnectDB()
 
         {
-            sqlConn = new SQLiteConnection("Data Source = C:\\Users\\Cheryl Jeanne\\source\\repos\\Hotel_Management_OOP\\Hotel_Management_OOP\\bin\\Debug\\Hotel.db");
+            sqlConn = new SQLiteConnection("Data Source = C:\\Users\\QCU\\Downloads\\CloneOfficial2\\Hotel_Management_OOP\\bin\\Debug\\Hotel.db");
         }
 
 
-        public void UpdateDataGridView()
+        // Method to update DataGridView with filtered data
+        public void UpdateDataGridView(string searchKeyword = "")
         {
             try
             {
                 sqlConn.Open();
-                string CommandText = "SELECT * FROM Guest";
+                string CommandText = "SELECT CustID, CustName, CustSex, ContactNumber, AgeCategory, RoomID, Status FROM Guest";
+
+                // Check if the searchKeyword is exactly "Male" with a capital 'M'
+                if (searchKeyword.Trim().Equals("Male"))
+                {
+                    CommandText += " WHERE CustSex = 'Male'";
+                }
+                else if (!string.IsNullOrEmpty(searchKeyword))
+                {
+                    CommandText += " WHERE ";
+
+                    // Build dynamic OR conditions for all fields
+                    CommandText += $"CustID LIKE '%{searchKeyword}%' OR ";
+                    CommandText += $"CustName LIKE '%{searchKeyword}%' OR ";
+                    CommandText += $"CustSex LIKE '%{searchKeyword}%' OR ";
+                    CommandText += $"ContactNumber LIKE '%{searchKeyword}%' OR ";
+                    CommandText += $"AgeCategory LIKE '%{searchKeyword}%' OR ";
+                    CommandText += $"RoomID LIKE '%{searchKeyword}%' OR ";
+                    CommandText += $"Status LIKE '%{searchKeyword}%'";
+                }
+
                 DB = new SQLiteDataAdapter(CommandText, sqlConn);
                 DS.Reset();
                 DB.Fill(DS);
@@ -71,6 +100,27 @@ namespace Hotel_Management_OOP.Controls
         private void dataGridViewGuests_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = textBox1.Text.Trim();
+
+            // Check if the text box is empty
+            if (string.IsNullOrEmpty(keyword))
+            {
+                UpdateDataGridView(); // Reload original data
+            }
+            else
+            {
+                UpdateDataGridView(keyword); // Update DataGridView with filtered data based on keyword
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string keyword = textBox1.Text.Trim();
+            UpdateDataGridView(keyword); // Update DataGridView with filtered data based on keyword
         }
     }
 }

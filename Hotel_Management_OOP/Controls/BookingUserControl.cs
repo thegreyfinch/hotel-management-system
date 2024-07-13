@@ -109,5 +109,10 @@ namespace Hotel_Management_OOP
         {
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

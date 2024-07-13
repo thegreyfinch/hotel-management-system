@@ -45,9 +45,10 @@
             panelMain2.AutoScroll = true;
             panelMain2.BackColor = Color.Snow;
             panelMain2.Dock = DockStyle.Bottom;
-            panelMain2.Location = new Point(0, 260);
+            panelMain2.Location = new Point(0, 186);
+            panelMain2.Margin = new Padding(2, 2, 2, 2);
             panelMain2.Name = "panelMain2";
-            panelMain2.Size = new Size(1638, 665);
+            panelMain2.Size = new Size(1274, 475);
             panelMain2.TabIndex = 6;
             panelMain2.Paint += panelMain2_Paint;
             // 
@@ -55,9 +56,10 @@
             // 
             RoomsTabbutton.BackColor = Color.FromArgb(72, 34, 22);
             RoomsTabbutton.ForeColor = Color.White;
-            RoomsTabbutton.Location = new Point(436, 24);
+            RoomsTabbutton.Location = new Point(339, 17);
+            RoomsTabbutton.Margin = new Padding(2, 2, 2, 2);
             RoomsTabbutton.Name = "RoomsTabbutton";
-            RoomsTabbutton.Size = new Size(156, 53);
+            RoomsTabbutton.Size = new Size(121, 38);
             RoomsTabbutton.TabIndex = 6;
             RoomsTabbutton.Text = "Rooms Tab";
             RoomsTabbutton.UseVisualStyleBackColor = false;
@@ -67,9 +69,10 @@
             // 
             GuestTabbutton.BackColor = Color.FromArgb(72, 34, 22);
             GuestTabbutton.ForeColor = Color.White;
-            GuestTabbutton.Location = new Point(238, 25);
+            GuestTabbutton.Location = new Point(185, 18);
+            GuestTabbutton.Margin = new Padding(2, 2, 2, 2);
             GuestTabbutton.Name = "GuestTabbutton";
-            GuestTabbutton.Size = new Size(156, 53);
+            GuestTabbutton.Size = new Size(121, 38);
             GuestTabbutton.TabIndex = 5;
             GuestTabbutton.Text = "Guests Tab";
             GuestTabbutton.UseVisualStyleBackColor = false;
@@ -79,9 +82,10 @@
             // 
             BookingTabbutton.BackColor = Color.FromArgb(72, 34, 22);
             BookingTabbutton.ForeColor = Color.White;
-            BookingTabbutton.Location = new Point(29, 25);
+            BookingTabbutton.Location = new Point(23, 18);
+            BookingTabbutton.Margin = new Padding(2, 2, 2, 2);
             BookingTabbutton.Name = "BookingTabbutton";
-            BookingTabbutton.Size = new Size(162, 53);
+            BookingTabbutton.Size = new Size(126, 38);
             BookingTabbutton.TabIndex = 4;
             BookingTabbutton.Text = "Booking Tab";
             BookingTabbutton.UseVisualStyleBackColor = false;
@@ -95,8 +99,9 @@
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(2, 2, 2, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1638, 174);
+            panel1.Size = new Size(1274, 124);
             panel1.TabIndex = 7;
             // 
             // label1
@@ -105,9 +110,10 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial Rounded MT Bold", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(31, 94);
+            label1.Location = new Point(24, 67);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(420, 39);
+            label1.Size = new Size(332, 32);
             label1.TabIndex = 0;
             label1.Text = "BOOKING AND GUESTS";
             // 
@@ -116,21 +122,24 @@
             panel2.Controls.Add(RoomsTabbutton);
             panel2.Controls.Add(BookingTabbutton);
             panel2.Controls.Add(GuestTabbutton);
-            panel2.Location = new Point(2, 177);
+            panel2.Location = new Point(2, 126);
+            panel2.Margin = new Padding(2, 2, 2, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1636, 84);
+            panel2.Size = new Size(1272, 60);
             panel2.TabIndex = 8;
+            panel2.Paint += panel2_Paint;
             // 
             // BookingUserControl
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(panelMain2);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "BookingUserControl";
-            Size = new Size(1638, 925);
+            Size = new Size(1274, 661);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

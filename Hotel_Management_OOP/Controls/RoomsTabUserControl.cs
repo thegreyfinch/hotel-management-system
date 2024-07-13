@@ -27,22 +27,44 @@ namespace Hotel_Management_OOP.Controls
             InitializeComponent();
             SetConnectDB();
             UpdateDataGridView();
+            BookingTabUserControl BookingTab = new BookingTabUserControl();
+            // Subscribe to BookingUpdated event
+            BookingTab.BookingUpdated += BookingTabUserControl_BookingUpdated;
+        }
+
+        private void BookingTabUserControl_BookingUpdated(object sender, EventArgs e)
+        {
+            UpdateDataGridView(); // Update data grid view when booking is updated
         }
 
         // Method to connect app to database
         private void SetConnectDB()
 
         {
-            sqlConn = new SQLiteConnection("Data Source = C:\\Users\\Cheryl Jeanne\\source\\repos\\Hotel_Management_OOP\\Hotel_Management_OOP\\bin\\Debug\\Hotel.db");
+            sqlConn = new SQLiteConnection("Data Source = C:\\Users\\QCU\\Downloads\\CloneOfficial2\\Hotel_Management_OOP\\bin\\Debug\\Hotel.db");
         }
 
 
-        public void UpdateDataGridView()
+        // Method to update DataGridView with filtered data
+        public void UpdateDataGridView(string searchKeyword = "")
         {
             try
             {
                 sqlConn.Open();
-                string CommandText = "SELECT * FROM Room";
+                string CommandText = "SELECT RoomID, RoomType, RoomStatus, PricePerNight FROM Room";
+
+                // Add search filter if keyword is provided
+                if (!string.IsNullOrEmpty(searchKeyword))
+                {
+                    CommandText += " WHERE ";
+
+                    // Build dynamic OR conditions for all fields
+                    CommandText += $"RoomID LIKE '%{searchKeyword}%' OR ";
+                    CommandText += $"RoomType LIKE '%{searchKeyword}%' OR ";
+                    CommandText += $"RoomStatus LIKE '%{searchKeyword}%' OR ";
+                    CommandText += $"PricePerNight LIKE '%{searchKeyword}%'";
+                }
+
                 DB = new SQLiteDataAdapter(CommandText, sqlConn);
                 DS.Reset();
                 DB.Fill(DS);
@@ -67,6 +89,27 @@ namespace Hotel_Management_OOP.Controls
         private void dataGridViewRooms_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = textBox1.Text.Trim();
+
+            // Check if the text box is empty
+            if (string.IsNullOrEmpty(keyword))
+            {
+                UpdateDataGridView(); // Reload original data
+            }
+            else
+            {
+                UpdateDataGridView(keyword); // Update DataGridView with filtered data based on keyword
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string keyword = textBox1.Text.Trim();
+            UpdateDataGridView(keyword); // Update DataGridView with filtered data based on keyword
         }
     }
 }

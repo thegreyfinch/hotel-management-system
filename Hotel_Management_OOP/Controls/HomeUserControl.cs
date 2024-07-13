@@ -11,7 +11,12 @@ using System.Data.SQLite;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing.Text;
 using System.Linq.Expressions;
-
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.IO.Font.Constants;
+using iText.Layout.Properties;
+using iText.Kernel.Font;
 namespace Hotel_Management_OOP
 {
     public partial class HomeUserControl : UserControl
@@ -25,7 +30,7 @@ namespace Hotel_Management_OOP
         private void SetConnectDB()
 
         {
-            sqlConn = new SQLiteConnection("Data Source = C:\\Users\\Cheryl Jeanne\\source\\repos\\Hotel_Management_OOP\\Hotel_Management_OOP\\bin\\Debug\\Hotel.db");
+            sqlConn = new SQLiteConnection("Data Source = C:\\Users\\QCU\\Downloads\\CloneOfficial2\\Hotel_Management_OOP\\bin\\Debug\\Hotel.db");
         }
         public HomeUserControl()
         {
@@ -37,6 +42,9 @@ namespace Hotel_Management_OOP
             UpdateFemaleLabel();
             UpdateTotalRevenue();
             UpdateOccupancyRate();
+            UpdateStandardRoom();
+            UpdateDeluxeRoom();
+            UpdateSuiteRoom();
         }
 
         private void userControl11_Load(object sender, EventArgs e)
@@ -187,6 +195,66 @@ namespace Hotel_Management_OOP
             }
         }
 
+        private void UpdateStandardRoom()
+        {
+            try
+            {
+                sqlConn.Open();
+                string query = "SELECT COUNT(*) FROM Room WHERE RoomType = 'Standard'";
+                sqlCmd = new SQLiteCommand(query, sqlConn);
+                int standardRooms = Convert.ToInt32(sqlCmd.ExecuteScalar());
+                label23.Text = $"{standardRooms}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
+        }
+
+        private void UpdateDeluxeRoom()
+        {
+            try
+            {
+                sqlConn.Open();
+                string query = "SELECT COUNT(*) FROM Room WHERE RoomType = 'Deluxe'";
+                sqlCmd = new SQLiteCommand(query, sqlConn);
+                int deluxeRooms = Convert.ToInt32(sqlCmd.ExecuteScalar());
+                label12.Text = $"{deluxeRooms}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
+        }
+
+        private void UpdateSuiteRoom()
+        {
+            try
+            {
+                sqlConn.Open();
+                string query = "SELECT COUNT(*) FROM Room WHERE RoomType = 'Suite'";
+                sqlCmd = new SQLiteCommand(query, sqlConn);
+                int suiteRooms = Convert.ToInt32(sqlCmd.ExecuteScalar());
+                label11.Text = $"{suiteRooms}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -253,6 +321,92 @@ namespace Hotel_Management_OOP
         }
 
         private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void GenerateReport()
+        {
+            // Define the file path for the report
+            string filePath = @"C:\\Users\\QCU\\Downloads\\CloneOfficial2\\Hotel_Management_OOP\\Reports\\report.pdf";
+
+            //string filePath = @"C:\Users\QCU\Downloads\CloneOfficial2\Hotel_Management_OOP\Reports\report.pdf";
+
+            using (var pdfWriter = new PdfWriter(filePath))
+            using (var pdfDocument = new PdfDocument(pdfWriter))
+            using (var document = new Document(pdfDocument))
+            {
+                // Add a title to the document
+                document.Add(new Paragraph("Hotel Report")
+                    .SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA_BOLD))
+                    .SetFontSize(20)
+                    .SetTextAlignment(TextAlignment.CENTER));
+
+                // Add occupancy rate
+                document.Add(new Paragraph($"Occupancy Rate: {label14.Text}")
+                    .SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA))
+                    .SetFontSize(12));
+
+                // Add male and female population
+                document.Add(new Paragraph($"Male Guests: {label16.Text}")
+                    .SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA))
+                    .SetFontSize(12));
+                document.Add(new Paragraph($"Female Guests: {label18.Text}")
+                    .SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA))
+                    .SetFontSize(12));
+                // Add room stats for Standard room tyoe
+                document.Add(new Paragraph($"Number of Occupied Standard Rooms: {label23.Text}")
+                    .SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA))
+                    .SetFontSize(12));
+                // Add room stats for Deluxe room tyoe
+                document.Add(new Paragraph($"Number of Occupied Deluxe Rooms: {label12.Text}")
+                    .SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA))
+                    .SetFontSize(12));
+                // Add room stats for Suite room tyoe
+                document.Add(new Paragraph($"Number of Occupied Suite Rooms: {label11.Text}")
+                    .SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA))
+                    .SetFontSize(12));
+                // Add total revenue
+                document.Add(new Paragraph($"Total Revenue: {label8.Text}")
+                    .SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA))
+                    .SetFontSize(12));
+            }
+
+            MessageBox.Show("Report generated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GenerateReport();
+        }
+
+        private void panel13_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
         {
 
         }
