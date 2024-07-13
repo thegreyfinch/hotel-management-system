@@ -7,13 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.EntityFrameworkCore;
-
+using System.Data.SQLite;
+using System.Diagnostics.Eventing.Reader;
+using System.Drawing.Text;
+using System.Linq.Expressions;
 namespace Hotel_Management_OOP
 {
 
     public partial class GuestTab : Form
     {
+        private SQLiteConnection sqlConn;
+        private SQLiteCommand sqlCmd;
+        private DataTable sqlDT = new DataTable();
+        private DataSet DS = new DataSet();
+        private SQLiteDataAdapter DB;
+
         // Instantiate user controls
         //public UserControl HomeUserControl;
         //public UserControl BookingUserControl;
@@ -31,6 +39,41 @@ namespace Hotel_Management_OOP
             //panelMain.Controls.Add(Dashboard);
             //Dashboard.Dock = DockStyle.Fill;
             //InitializeUserControls();
+            // Disable buttons based on userType
+            
+        }
+
+        // Login method (simplified for demonstration)
+        private void Login(string username, string password)
+        {
+            string query = "SELECT UserType FROM User WHERE Username = @Username AND Password = @Password";
+
+            using (SQLiteConnection connection = new SQLiteConnection("Data Source=FloraSuitesLoginDB.db;"))
+            using (SQLiteCommand command = new SQLiteCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@Username", username);
+                command.Parameters.AddWithValue("@Password", password);
+
+                connection.Open();
+                object userTypeObj = command.ExecuteScalar();
+
+                if (userTypeObj != null)
+                {
+                    string userType = userTypeObj.ToString();
+
+                    // Check UserType and disable buttons accordingly
+                    if (userType == "Manager")
+                    {
+                        button4.Enabled = false; // Dashboard button
+                        button6.Enabled = false; // Booking button
+                        button9.Enabled = false; // Billing button
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password. Please try again.");
+                }
+            }
         }
 
         /*private void InitializeUserControls()

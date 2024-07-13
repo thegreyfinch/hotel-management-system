@@ -30,7 +30,7 @@ namespace Hotel_Management_OOP
         private void SetConnectDB()
 
         {
-            sqlConn = new SQLiteConnection("Data Source = C:\\Users\\QCU\\Downloads\\CloneOfficial2\\Hotel_Management_OOP\\bin\\Debug\\Hotel.db");
+            sqlConn = new SQLiteConnection("Data Source = C:\\Users\\Cheryl Jeanne\\Downloads\\OfficialSystem\\Hotel_Management_OOP\\bin\\Debug\\Hotel.db");
         }
         public HomeUserControl()
         {
@@ -45,6 +45,9 @@ namespace Hotel_Management_OOP
             UpdateStandardRoom();
             UpdateDeluxeRoom();
             UpdateSuiteRoom();
+            UpdateElderly();
+            UpdateYoung();
+            UpdateChild();
         }
 
         private void userControl11_Load(object sender, EventArgs e)
@@ -255,6 +258,66 @@ namespace Hotel_Management_OOP
             }
         }
 
+        private void UpdateElderly()
+        {
+            try
+            {
+                sqlConn.Open();
+                string query = "SELECT COUNT(*) FROM Guest WHERE AgeCategory = 'Elderly'";
+                sqlCmd = new SQLiteCommand(query, sqlConn);
+                int elderly = Convert.ToInt32(sqlCmd.ExecuteScalar());
+                label26.Text = $"{elderly}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
+        }
+
+        private void UpdateYoung()
+        {
+            try
+            {
+                sqlConn.Open();
+                string query = "SELECT COUNT(*) FROM Guest WHERE AgeCategory = 'Young'";
+                sqlCmd = new SQLiteCommand(query, sqlConn);
+                int young = Convert.ToInt32(sqlCmd.ExecuteScalar());
+                label28.Text = $"{young}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
+        }
+
+        private void UpdateChild()
+        {
+            try
+            {
+                sqlConn.Open();
+                string query = "SELECT COUNT(*) FROM Guest WHERE AgeCategory = 'Child'";
+                sqlCmd = new SQLiteCommand(query, sqlConn);
+                int child = Convert.ToInt32(sqlCmd.ExecuteScalar());
+                label30.Text = $"{child}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -333,7 +396,7 @@ namespace Hotel_Management_OOP
         private void GenerateReport()
         {
             // Define the file path for the report
-            string filePath = @"C:\\Users\\QCU\\Downloads\\CloneOfficial2\\Hotel_Management_OOP\\Reports\\report.pdf";
+            string filePath = @"C:\\Users\\Cheryl Jeanne\\Downloads\\OfficialSystem\\Hotel_Management_OOP\\Reports\\report.pdf";
 
             //string filePath = @"C:\Users\QCU\Downloads\CloneOfficial2\Hotel_Management_OOP\Reports\report.pdf";
 
@@ -407,6 +470,26 @@ namespace Hotel_Management_OOP
         }
 
         private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label30_Click(object sender, EventArgs e)
         {
 
         }

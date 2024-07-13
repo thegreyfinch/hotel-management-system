@@ -27,7 +27,7 @@ namespace Hotel_Management_OOP.Controls
         private void SetConnectDB()
 
         {
-            sqlConn = new SQLiteConnection("Data Source = C:\\Users\\QCU\\Downloads\\CloneOfficial2\\Hotel_Management_OOP\\bin\\Debug\\Hotel.db");
+            sqlConn = new SQLiteConnection("Data Source = C:\\Users\\Cheryl Jeanne\\Downloads\\OfficialSystem\\Hotel_Management_OOP\\bin\\Debug\\Hotel.db");
         }
         public EditBookingTab(int bookingID, int roomID, string custName, string roomType, int noOfGuest, string custSex, string contactNumber, DateTime birthdate, DateTime checkInDate, DateTime checkOutDate)
         {

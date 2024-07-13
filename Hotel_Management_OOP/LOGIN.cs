@@ -71,7 +71,7 @@ namespace Hotel_Management_OOP
 
                     else
                     {
-                        MessageBox.Show("User Not Found!", "Error Message", 
+                        MessageBox.Show("User Not Found!", "Error Message",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                         //Close();
                     }
@@ -82,11 +82,16 @@ namespace Hotel_Management_OOP
         public void SuccessfulLogin()
         {
             this.Hide();
-            MessageBox.Show("Successful Login!", "Information Message", 
+            MessageBox.Show("Successful Login!", "Information Message",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
+
             SplashScreen form = new SplashScreen();
             form.ShowDialog();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
