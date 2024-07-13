@@ -104,6 +104,7 @@
             // 
             // panel4
             // 
+            panel4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel4.BackColor = Color.DarkSalmon;
             panel4.Controls.Add(pictureBox7);
             panel4.Controls.Add(panel7);
@@ -112,10 +113,9 @@
             panel4.Controls.Add(panel3);
             panel4.Controls.Add(pictureBox1);
             panel4.Controls.Add(button3);
-            panel4.Dock = DockStyle.Fill;
             panel4.Location = new Point(0, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1920, 1055);
+            panel4.Size = new Size(1898, 1029);
             panel4.TabIndex = 2;
             // 
             // pictureBox7
@@ -310,7 +310,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1920, 74);
+            panel1.Size = new Size(1898, 74);
             panel1.TabIndex = 11;
             // 
             // pictureBox6
@@ -353,9 +353,9 @@
             panelMain.BackColor = Color.White;
             panelMain.Controls.Add(panelHide);
             panelMain.Dock = DockStyle.Right;
-            panelMain.Location = new Point(261, 74);
+            panelMain.Location = new Point(239, 74);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1659, 981);
+            panelMain.Size = new Size(1659, 955);
             panelMain.TabIndex = 12;
             panelMain.Paint += panelMain_Paint;
             // 
@@ -402,7 +402,7 @@
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.White;
-            ClientSize = new Size(1920, 1055);
+            ClientSize = new Size(1898, 1029);
             Controls.Add(panelMain);
             Controls.Add(panel1);
             Controls.Add(button1);

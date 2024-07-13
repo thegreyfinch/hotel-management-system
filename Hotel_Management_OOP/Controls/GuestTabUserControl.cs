@@ -52,7 +52,7 @@ namespace Hotel_Management_OOP.Controls
             try
             {
                 sqlConn.Open();
-                string CommandText = "SELECT CustID, CustName, CustSex, ContactNumber, AgeCategory, RoomID, Status FROM Guest";
+                string CommandText = "SELECT CustName, CustSex, ContactNumber, AgeCategory, RoomID AS RoomNumber, Status FROM Guest";
 
                 // Check if the searchKeyword is exactly "Male" with a capital 'M'
                 if (searchKeyword.Trim().Equals("Male"))
@@ -64,7 +64,7 @@ namespace Hotel_Management_OOP.Controls
                     CommandText += " WHERE ";
 
                     // Build dynamic OR conditions for all fields
-                    CommandText += $"CustID LIKE '%{searchKeyword}%' OR ";
+                    //CommandText += $"CustID LIKE '%{searchKeyword}%' OR ";
                     CommandText += $"CustName LIKE '%{searchKeyword}%' OR ";
                     CommandText += $"CustSex LIKE '%{searchKeyword}%' OR ";
                     CommandText += $"ContactNumber LIKE '%{searchKeyword}%' OR ";

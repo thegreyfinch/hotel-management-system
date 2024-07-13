@@ -11,6 +11,7 @@ using System.Data.SQLite;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing.Text;
 using System.Linq.Expressions;
+using OfficeOpenXml;
 //using Microsoft.Data.Sqlite;
 
 namespace Hotel_Management_OOP.Controls
@@ -30,6 +31,8 @@ namespace Hotel_Management_OOP.Controls
             BookingTabUserControl BookingTab = new BookingTabUserControl();
             // Subscribe to BookingUpdated event
             BookingTab.BookingUpdated += BookingTabUserControl_BookingUpdated;
+            //System.ComponentModel.LicenseManager.UsageMode = System.ComponentModel.LicenseUsageMode.Runtime;
+
         }
 
         private void BookingTabUserControl_BookingUpdated(object sender, EventArgs e)
@@ -51,7 +54,7 @@ namespace Hotel_Management_OOP.Controls
             try
             {
                 sqlConn.Open();
-                string CommandText = "SELECT RoomID, RoomType, RoomStatus, PricePerNight FROM Room";
+                string CommandText = "SELECT RoomID AS RoomNumber, RoomType, RoomStatus, PricePerNight FROM Room";
 
                 // Add search filter if keyword is provided
                 if (!string.IsNullOrEmpty(searchKeyword))
@@ -110,6 +113,11 @@ namespace Hotel_Management_OOP.Controls
         {
             string keyword = textBox1.Text.Trim();
             UpdateDataGridView(keyword); // Update DataGridView with filtered data based on keyword
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

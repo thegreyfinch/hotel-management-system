@@ -493,5 +493,10 @@ namespace Hotel_Management_OOP
         {
 
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

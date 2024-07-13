@@ -367,6 +367,7 @@
             label9.Size = new Size(217, 34);
             label9.TabIndex = 25;
             label9.Text = "Total Revenue";
+            label9.Click += label9_Click;
             // 
             // panel13
             // 

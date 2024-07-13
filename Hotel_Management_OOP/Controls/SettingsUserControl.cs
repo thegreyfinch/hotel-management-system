@@ -396,7 +396,7 @@ namespace Hotel_Management_OOP
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];  // Get the clicked row
-                UserIDtextbox.Text = row.Cells["UserID"].Value?.ToString() ?? string.Empty;  // Set UserIDtextbox value
+                //UserIDtextbox.Text = row.Cells["UserID"].Value?.ToString() ?? string.Empty;  // Set UserIDtextbox value
                 UsernametextBox.Text = row.Cells["Username"].Value?.ToString() ?? string.Empty;  // Set UsernametextBox value
                 PasswordtextBox.Text = row.Cells["Password"].Value?.ToString() ?? string.Empty;  // Set PasswordtextBox value
                 userRoleComboBox.SelectedItem = row.Cells["UserRole"].Value?.ToString() ?? string.Empty;  // Set userRoleComboBox selected item

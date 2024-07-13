@@ -70,7 +70,7 @@ namespace Hotel_Management_OOP.Controls
                 SetConnectDB();
                 sqlConn.Open();
                 sqlCmd = sqlConn.CreateCommand();
-                string CommandText = "SELECT * FROM Booking";
+                string CommandText = "SELECT CheckInDate, CheckOutDate, RoomType, RoomStatus, NoOfGuest, CustName, CustSex, ContactNumber, Birthdate, BookingStatus FROM Booking";
                 DB = new SQLiteDataAdapter(CommandText, sqlConn);
                 DS.Reset();
                 DB.Fill(DS);
@@ -817,6 +817,11 @@ namespace Hotel_Management_OOP.Controls
             using (var document = new Document(pdfDocument))
             {
                 // Add a title to the document
+                document.Add(new Paragraph("Flora Suites Hotel\n")
+                    .SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA_BOLD))
+                    .SetFontSize(18)
+                    .SetTextAlignment(TextAlignment.CENTER));
+
                 document.Add(new Paragraph("Invoice")
                     .SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA_BOLD))
                     .SetFontSize(20)

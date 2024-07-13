@@ -28,7 +28,7 @@ namespace Hotel_Management_OOP
 
         HomeUserControl Dashboard = new HomeUserControl();
         BookingUserControl Booking = new BookingUserControl();
-        //BillingUserControl Billing = new BillingUserControl();
+        BillingUserControl Billing = new BillingUserControl();
         SettingsUserControl Settings = new SettingsUserControl();
 
         public GuestTab()
@@ -40,7 +40,6 @@ namespace Hotel_Management_OOP
             //Dashboard.Dock = DockStyle.Fill;
             //InitializeUserControls();
             // Disable buttons based on userType
-            
         }
 
         // Login method (simplified for demonstration)
@@ -160,10 +159,8 @@ namespace Hotel_Management_OOP
         private void button9_Click(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
-            //panelMain.Controls.Add(Billing);
-            //Billing.Dock = DockStyle.Fill;
-            //BillingAndInvoicing form = new BillingAndInvoicing();
-            //form.ShowDialog();
+            panelMain.Controls.Add(Billing);
+            Billing.Dock = DockStyle.Fill;
         }
 
         private void button2_Click_1(object sender, EventArgs e)
